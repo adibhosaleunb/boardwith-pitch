@@ -188,7 +188,7 @@ export const slides = [
     ],
     timing: { five: 30, twenty: 120 },
     notes: {
-      five: '“That’s why we built Boardwith: one checked companion on the same flights, matched before departure. Not airline help one gate at a time, not a second ticket, not an unchecked stranger: one person across airports. Every companion passes ID, criminal record and police clearance checks first. The family meets them before the trip. And it’s a companion, not a caregiver. As Meena told us, ‘I would not want somebody treating me like a patient.’”',
+      five: '“That’s why we built Boardwith: one checked companion on the same flights, matched before departure. Not airline help one gate at a time, not a second ticket, not an unchecked stranger: one person across airports. The family meets them before the trip. And it’s a companion, not a caregiver. Meena told us, ‘I would not want somebody treating me like a patient.’”',
       twenty: [
         'Said, not shown: Meena’s “I would not want somebody treating me like a patient.” The list at the bottom is what families try today; the full map is backup **A5** (airport escorts from C$282.50, MatchMyFlight at US$25–75, a kind stranger).',
         'Give each alternative its due if asked: airline help is free and families trust it; MatchMyFlight has a head start with our exact customers; community groups are free. Never say we have no competition.',
@@ -313,9 +313,9 @@ export const slides = [
     sources: [
       'Statistics Canada, 2024 tourism (439,000 trips × 2). Parents: 34% aged 55+ × about 30% alone, first time (estimate, being re-sized). Students: 94,605 study permits, 2025 (IRCC). Survey: 58% of the 98 respondents who arrange travel for others said they’d use it. India–US: 2.06 million Indian visitors in 2025 × 2 × 10% (NTTO).',
     ],
-    timing: { five: 30, twenty: 120 },
+    timing: { five: 35, twenty: 120 },
     notes: {
-      five: '“How big is this? 878,000 journeys a year from India to Canada. About 183,000 are parents and students flying alone for the first time: 41 to 59 million dollars a year at our price. 58% of people who arrange travel for others said they’d use it. We plan 372 journeys in year one, 2,772 in year two, 20,000 in year three. And that’s one route: India to the US is twice as big.”',
+      five: '“How big is this? 878,000 journeys a year from India to Canada. About 183,000 are parents and students flying alone for the first time: 41 to 59 million dollars a year at our price. 58% of people who arrange travel for others said they’d use it. We plan 372 journeys in year one, 2,772 in year two, about 20,000 in year three. And that’s one route: India to the US is more than twice as big.”',
       twenty: [
         'Said, not shown: the 183,000 is about 88,000 parents (34% aged 55+ × about 30% alone, first time; the 55+ filter is being re-sized) plus about 95,000 first-time students (94,605 study permits in 2025). The 106,000 is 183,000 × 58%, a stated intention, not a paid one.',
         'The plan by year: Atlantic Canada, then Eastern Canada, then all of Canada; 31, 231 and 1,680 journeys a month (parents 21 / 171 / 1,280, students 10 / 60 / 400). Revenue is C$75 kept per journey. Say “illustrative, not a forecast”; the detail is backup **A3**.',
@@ -348,14 +348,14 @@ export const slides = [
     },
     levers: [
       { value: '≈ C$46', label: 'a trip when companions fly 4 times a year, not 2', tag: { kind: 'assumption' } },
-      { value: 'C$1.51M', label: 'revenue in year 3: 20,160 trips × C$75 kept', tag: { kind: 'projection' } },
+      { value: 'C$1.51M', label: 'revenue in year 3: 20,160 journeys × C$75 kept', tag: { kind: 'projection' } },
     ],
     conservative: 'Conservative on purpose: companions fly twice a year, and one buyer offered C$400 for someone he trusts.',
     caption: 'Checks: a companion’s C$73 spread over 2 trips, plus C$2 for the traveller’s ID. Insurance is a yearly policy in the C$10,000 insurance and legal budget. Support time isn’t counted yet.',
     sources: ['Stripe pricing; Stripe Identity, Certn, Consulate of India. Prices untested. Insurance: use of funds (estimate until quoted).'],
     timing: { five: 30, twenty: 120 },
     notes: {
-      five: '“One trip: Delhi to Toronto to Fredericton. The family pays 275 dollars, and the companion earns 200. Checks on both sides cost about 38, card fees 8, and insurance is a yearly policy already in our budget. We keep about 28. That’s conservative: when companions fly four times a year, it’s about 46. In year three, that’s 1.5 million dollars of revenue.”',
+      five: '“One trip: Delhi to Toronto to Fredericton. The family pays 275 dollars, and the companion earns 200. Checks on both sides cost about 38, card fees 8, and insurance is a yearly policy in our budget. We keep about 28. That’s conservative: when companions fly four times a year, it’s about 46. In year three, that’s 1.5 million dollars of revenue.”',
       twenty: [
         'Said, not shown: the checks are about C$73 per companion (ID and selfie, criminal record, Indian police clearance), spread over two trips a year, plus C$2 to check the traveller’s ID; card fees are 2.9% + C$0.30. Per tier, we keep about C$30 (direct), C$28 (one connection) and C$27 (two or more).',
         'Insurance: a year of liability insurance sits in the C$10,000 insurance and legal line of the raise, so it isn’t taken from each trip. Once quoted, if the insurer prices per trip, it comes out of what we keep.',
@@ -384,9 +384,9 @@ export const slides = [
     sources: [
       'Survey, April–May 2026. Interviews, September 2026. UNB Fall 2025 enrolment summary. Team members’ professional histories. Mitacs application, submitted.',
     ],
-    timing: { five: 30, twenty: 90 },
+    timing: { five: 25, twenty: 90 },
     notes: {
-      five: '“We already have pull. Our first companion has signed up, the Fredericton Association of India is helping us reach families, and UNB’s 454 Indian students are both our families and our future companions. At Copart, I worked on identity verification, which is our first trust check. Adarsh, our CTO, is a software architect at Tavant. Shivani runs companion recruitment and support.”',
+      five: '“We already have pull. Our first companion has signed up, the Fredericton Association of India is helping us reach families, and UNB’s 454 Indian students are our families and future companions. At Copart, I worked on identity verification, which is our first trust check. Adarsh, our CTO, is a software architect at Tavant. Shivani runs companion recruitment and support.”',
       twenty: [
         'Said, not shown: the 401 survey responses came through LinkedIn, UNB groups, community groups and in person; 77% chose verified identity as the top reason to trust a co-passenger.',
         'Next channel: formalize recruitment through UNB’s international student groups and the Graduate Students’ Association before the December break. Students who fly home every year are our companion pool.',
@@ -437,7 +437,7 @@ export const slides = [
       twenty: [
         'Said, not shown: the Mitacs contribution (C$7,500) unlocks a C$15,000 internship award if approved; the founder is the intern, so it funds him full-time on Boardwith. At the cap, C$75,000 is 5% of the company. If only C$30,000 is raised, the 10-trip pilot still runs.',
         'Insurance and legal, C$10,000: a year of liability insurance, and legal review of the terms, the companion agreement and the privacy policy.',
-        'Verification and companion support, C$20,000: companion checks and refunds (C$5,000: the pilot’s 20 checked companions, a refund buffer and checks ahead of year-1 revenue), plus part-time companion operations and the trip support line (C$15,000).',
+        'Verification and companion support, C$20,000: checks and refunds (C$5,000: the pilot’s checks on 20 companions and 10 travellers, a refund buffer and checks ahead of year-1 revenue), plus part-time companion operations and the trip support line (C$15,000).',
         'App and infrastructure, C$25,000: matching, checks, payments and payouts in one flow, so the pilot moves off forms and hand-matching; family updates next.',
         'Marketing and outreach, C$12,500: the Atlantic Canada launch through community associations, UNB and other campuses, and the Moncton introduction.',
         'Month six reports four things: match rate, the price families accept, what we keep per trip, and whether every trip was safe. No paid trip runs before insurance and signed terms.',
