@@ -173,13 +173,25 @@ export const slides = [
       { icon: 'shield', text: 'Checked before the match', detail: 'ID, criminal record and police clearance' },
       { icon: 'companion', text: 'Known before departure', detail: 'Matched on route, language and needs' },
     ],
-    instead: 'Not one airport at a time, not a second ticket, not an unchecked stranger.',
-    sources: ['Interviews, September 2026.'],
+    // What families try today, in the panel's words (dry-run feedback, 5 October).
+    instead: {
+      title: 'What families try today',
+      items: [
+        { name: 'Airline help', gap: 'free, but one airport at a time' },
+        { name: 'Family flies along', gap: 'a second ticket and time off' },
+        { name: 'Matching sites', gap: 'cheap, but no background check' },
+        { name: 'Community groups', gap: 'unchecked, and prone to scams' },
+      ],
+    },
+    sources: [
+      'Interviews, September 2026. MatchMyFlight and TravelSakha websites, September 2026.',
+    ],
     timing: { five: 30, twenty: 120 },
     notes: {
-      five: '“That’s why we built Boardwith: one checked companion on the same flights, matched before departure. One person across airports, instead of a handover at every gate. Every companion passes ID, criminal record and police clearance checks first. The family meets them before the trip. And it’s a companion, not a caregiver. As Meena told us, ‘I would not want somebody treating me like a patient.’”',
+      five: '“That’s why we built Boardwith: one checked companion on the same flights, matched before departure. Not airline help one gate at a time, not a second ticket, not an unchecked stranger: one person across airports. Every companion passes ID, criminal record and police clearance checks first. The family meets them before the trip. And it’s a companion, not a caregiver. As Meena told us, ‘I would not want somebody treating me like a patient.’”',
       twenty: [
-        'Said, not shown: Meena’s “I would not want somebody treating me like a patient.” The last line names the alternatives: airline help, a family member flying along, and unchecked strangers from matching sites and groups.',
+        'Said, not shown: Meena’s “I would not want somebody treating me like a patient.” The list at the bottom is what families try today; the full map is backup **A5** (airport escorts from C$282.50, MatchMyFlight at US$25–75, a kind stranger).',
+        'Give each alternative its due if asked: airline help is free and families trust it; MatchMyFlight has a head start with our exact customers; community groups are free. Never say we have no competition.',
         'Language: “English only would not help me much when I am nervous.” Meena would prefer a woman who speaks Marathi or Hindi. Preferences narrow the pool, so we offer them as preferences, and the pilot measures how often we meet them.',
         'Value in the buyer’s units: hours out of contact removed, a visit not delayed, no second ticket.',
         'Who it’s for: anyone 18 or over who shouldn’t fly alone. We start with parents visiting from India, then first-time international students. Later: travellers with a language barrier on any route, and travellers with low vision.',

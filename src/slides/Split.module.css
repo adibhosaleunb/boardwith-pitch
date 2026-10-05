@@ -116,9 +116,9 @@
 }
 
 .iconLines {
-  margin-top: 56px;
+  margin-top: 40px;
   display: grid;
-  gap: 28px;
+  gap: 20px;
 }
 
 .iconLines li {
@@ -236,18 +236,59 @@
 }
 
 .instead {
-  margin-top: 40px;
-  padding-top: 24px;
+  margin-top: 26px;
+  padding-top: 20px;
   border-top: 1px solid var(--bw-grey-300);
+}
+
+/* Slide 4: what families try today, the competition in four rows. */
+.insteadTitle {
   font-family: var(--font-text);
-  font-size: 32px;
-  line-height: 1.32;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--bw-teal-700);
+}
+
+.insteadList {
+  margin-top: 12px;
+  display: grid;
+  gap: 6px;
+}
+
+.insteadRow {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  column-gap: 20px;
+  font-family: var(--font-text);
+  font-size: 30px;
+  line-height: 1.25;
+}
+
+.insteadRow dt {
+  font-weight: 600;
+  color: var(--bw-teal-900);
+}
+
+.insteadRow dd {
+  margin: 0;
   color: var(--bw-grey-600);
-  text-wrap: pretty;
 }
 
 :global(.is-reading) .instead {
   margin-top: 20px;
   padding-top: 12px;
+}
+
+:global(.is-reading) .insteadTitle {
   font-size: clamp(16px, 4.2vw, 19px);
+}
+
+:global(.is-reading) .insteadRow {
+  grid-template-columns: 1fr;
+  font-size: clamp(16px, 4.2vw, 19px);
+}
+
+:global(.is-reading) .insteadList {
+  gap: 10px;
 }

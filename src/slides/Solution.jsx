@@ -30,7 +30,19 @@ export default function Solution({ slide, active }) {
             );
           })}
         </ul>
-        {slide.instead ? <p className={s.instead}>{slide.instead}</p> : null}
+        {slide.instead ? (
+          <section className={s.instead} aria-label={slide.instead.title}>
+            <h3 className={s.insteadTitle}>{slide.instead.title}</h3>
+            <dl className={s.insteadList}>
+              {slide.instead.items.map(({ name, gap }) => (
+                <div key={name} className={s.insteadRow}>
+                  <dt>{name}</dt>
+                  <dd>{gap}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        ) : null}
         <Sources items={slide.sources} className={s.sources} />
       </div>
     </Slide>
