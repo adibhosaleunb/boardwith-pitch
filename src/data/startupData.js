@@ -288,8 +288,18 @@ export const slides = [
       { value: 878000, display: '878,000', label: 'all visitors from India', tag: { kind: 'evidence', qualifier: 'Statistics Canada' } },
       { value: 182605, display: '183,000', label: 'parents and students flying alone for the first time: **C$41–59M** a year at our price', tag: { kind: 'estimate' } },
       { value: 106000, display: '106,000', label: 'if 58% would use it, as survey respondents who arrange travel said', tag: { kind: 'estimate' } },
-      { value: 20160, display: '20,160', label: 'our year-3 plan: **C$1.51M** revenue', tag: { kind: 'projection' } },
     ],
+    // The three-year plan (backup A3 has the detail). Revenue = journeys × C$75 kept.
+    plan: {
+      title: 'Our plan, one-way journeys a year',
+      tag: { kind: 'projection' },
+      years: [
+        { year: 'Year 1', journeys: 372, display: '372', where: 'Atlantic Canada', revenue: 'C$27,900' },
+        { year: 'Year 2', journeys: 2772, display: '2,772', where: 'Eastern Canada', revenue: 'C$207,900' },
+        { year: 'Year 3', journeys: 20160, display: '20,160', where: 'All of Canada', revenue: 'C$1.51M' },
+      ],
+      revenueLabel: 'revenue',
+    },
     nextTitle: 'Then more routes and more travellers',
     next: {
       route: { from: 'India', now: 'Canada', later: 'US', text: 'India–US: about 412,000 more a year by the same method', tag: { kind: 'estimate' } },
@@ -301,14 +311,15 @@ export const slides = [
       ],
     },
     sources: [
-      'Statistics Canada, 2024 tourism (439,000 trips × 2). Parents: 34% aged 55+ × about 30% alone, first time (estimate, being re-sized). Students: 94,605 study permits, 2025 (IRCC). Survey: 58% of the 98 respondents who arrange travel for others said they’d use it. India–US: 2.06 million Indian visitors in 2025 × 2 × 10% (NTTO, via India Outbound).',
+      'Statistics Canada, 2024 tourism (439,000 trips × 2). Parents: 34% aged 55+ × about 30% alone, first time (estimate, being re-sized). Students: 94,605 study permits, 2025 (IRCC). Survey: 58% of the 98 respondents who arrange travel for others said they’d use it. India–US: 2.06 million Indian visitors in 2025 × 2 × 10% (NTTO).',
     ],
     timing: { five: 30, twenty: 120 },
     notes: {
-      five: '“How big is this? 878,000 journeys a year from India to Canada. About 183,000 are parents and students flying alone for the first time: 41 to 59 million dollars a year at our price. 58% of people who arrange travel for others said they’d use it. Our year-three plan needs 20,000. And that’s one route: India to the US is twice as big.”',
+      five: '“How big is this? 878,000 journeys a year from India to Canada. About 183,000 are parents and students flying alone for the first time: 41 to 59 million dollars a year at our price. 58% of people who arrange travel for others said they’d use it. We plan 372 journeys in year one, 2,772 in year two, 20,000 in year three. And that’s one route: India to the US is twice as big.”',
       twenty: [
         'Said, not shown: the 183,000 is about 88,000 parents (34% aged 55+ × about 30% alone, first time; the 55+ filter is being re-sized) plus about 95,000 first-time students (94,605 study permits in 2025). The 106,000 is 183,000 × 58%, a stated intention, not a paid one.',
-        'Year 3 is 11% of the serviceable journeys: 17.5% of parent journeys and about 5% of student journeys. Adding India–US later brings the share needed to about 3.4%.',
+        'The plan by year: Atlantic Canada, then Eastern Canada, then all of Canada; 31, 231 and 1,680 journeys a month (parents 21 / 171 / 1,280, students 10 / 60 / 400). Revenue is C$75 kept per journey. Say “illustrative, not a forecast”; the detail is backup **A3**.',
+        'Year 3 is 11% of the serviceable journeys (year 1 is 0.2%, year 2 1.5%): 17.5% of parent journeys and about 5% of student journeys. Adding India–US later brings the share needed to about 3.4%.',
         'Cross-check: IRCC issued about 52,900 super visas to parents and grandparents (all countries) in 2025, about 106,000 journeys if each made one round trip.',
         'Headwind, said out loud: study permits for Indian students halved, 188,715 (2024) → 94,605 (2025). That’s why parents lead and students are second.',
         'More travellers on any route: travellers with a language barrier, and later travellers with low vision. Unaccompanied minors stay out of scope. Open **A2**.',
