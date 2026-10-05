@@ -17,9 +17,9 @@ npm run preview    # serve dist/
 
 ### Images
 
-The converted images are committed in `public/images/`. To redo them, put the originals in `source-images/` (the names are listed in `source-images/README.md`) and run `npm run images`, then commit `public/images/` and `public/favicon.png`.
+The converted images are committed in `public/images/`. To redo them, put the originals in `source-images/` (the names are listed in `source-images/README.md`) and run `npm run images`, then commit `public/images/` and `public/favicon.png`. The two airport scenes are drawn as SVGs and committed in `source-images/`; the script renders them too.
 
-**Team photos (slide 8)** are matched by first name. A file with "headshot" in its name, such as `Aditya_headshot_portrait_4x5.jpg`, is used as supplied. Any other photo is cropped with the face positions set in `teamJobs()` in `scripts/prepare-images.mjs`. iPhone `.heic` files are converted with the Mac's built-in `sips`; on other systems, export the photo as a JPEG first. If a photo is missing, the slide shows the person's initials in the window frame.
+**Team photos (slide 9)** are matched by first name. A file with "headshot" in its name, such as `Aditya_headshot_portrait_4x5.jpg`, is used as supplied. Any other photo is cropped with the face positions set in `teamJobs()` in `scripts/prepare-images.mjs`. iPhone `.heic` files are converted with the Mac's built-in `sips`; on other systems, export the photo as a JPEG first. If a photo is missing, the slide shows the person's initials in the window frame.
 
 ## Presenting
 
@@ -41,7 +41,7 @@ The URL hash tracks the slide (`#/4`, `#/a2`), so a reload keeps your place. The
 
 **Phones** (under 600px wide, or a phone held upright) get a scrolling reading version.
 
-**Founder inputs:** none show on the slides. The brief's three still open (the re-sized parents' market and UNB's actual number of new Indian students a year, vesting for Q&A, and confirming the C$75,000 use-of-funds split proposed on 30 September) keep the figures the slides already use: about 88,000 parent journeys (labelled an estimate being re-sized) and about 125 new UNB students (labelled an assumption). If you add one back, write it as `[FOUNDER INPUT: …]` in `src/data/startupData.js`. It then renders as a dashed peach box, and `npm run dev` counts it in a corner badge.
+**Founder inputs:** none show on the slides. One sits in slide 1's 20-minute notes (a detail from your own first arrival). The rest are listed in the brief, section 16; until they're settled the slides keep the figures they already use, such as about 88,000 parent journeys (labelled an estimate being re-sized) and about 125 new UNB students (labelled an assumption). If you add one back, write it as `[FOUNDER INPUT: …]` in `src/data/startupData.js`. It then renders as a dashed peach box, and `npm run dev` counts it in a corner badge.
 
 **Print footer:** every `?print` page carries "Boardwith. Pre-seed. Confidential." bottom left.
 
@@ -65,9 +65,9 @@ Connect the repository in Netlify. `netlify.toml` sets the build command, the pu
 
 ## What's on a slide
 
-Each core slide sits between the brief's full copy and its bare "On the slide" copy: a short headline, one sub line where it adds context, and every number with a short label that says who, where or what it means (about 70–90 words besides the headline). Slides 1, 2, 4, 5, 6, 9 and 10 carry the 1 October brief's headlines word for word, since they hold its new framing (anyone 18 or over flying alone, parents first, first-time students second), so slides 2, 4, 5 and 6 now run to two or three lines. Slides 3, 7 and 8 keep their shorter headlines. Quotes, footnote detail and the working behind each number stay in the speaker notes: a slide's 20-minute notes open with a "Said, not shown" line holding whatever is off the slide. Sources appear in the notes panel, the `?print` PDF and phone reading mode, never on the live stage. Only estimates, assumptions, projections and concept screens carry a tag on the core slides; untagged numbers are evidence. The backups keep their evidence tags.
+Each core slide carries what the panel asked for: one headline, at most one sub line, and three to five points, each a number or a short line the presenter actually says. Quotes, the working behind each number and anything said but not shown stay in the speaker notes; a slide's 20-minute notes open with a "Said, not shown" line. Sources appear in the notes panel, the `?print` PDF and phone reading mode, never on the live stage. On the core slides only estimates, assumptions, projections, concept screens and planned features carry a tag; untagged numbers are evidence. The backups keep every tag, Evidence included.
 
-Slide 9's bars stack parents (base) and students (top, a lighter hatch running the other way), named on the year-3 bar only; the totals sit on top. Backup A2's ladder has five rungs: the total, the three serviceable rungs (parents, students, both) and the obtainable rung, which adds UNB's new students to their parents.
+Backup A3's bars stack parents (base) and students (top, a lighter hatch running the other way), named on the year-3 bar only; the totals sit on top. Backup A2's ladder has five rungs: the total, the three serviceable rungs (parents, students, both) and the obtainable rung, which adds UNB's new students to their parents.
 
 Illustrations (all original, in the palette of the airport scenes):
 
@@ -80,14 +80,14 @@ Illustrations (all original, in the palette of the airport scenes):
 - **Slide 8:** `Waterfall.jsx`, one trip from the C$275 the family pays down to the C$28 Boardwith keeps; insurance is a dashed marker because it's a yearly policy in the budget, not a per-trip cost.
 - **A6:** the visiting mother and a student flying home (`People.jsx`), as before.
 
-To redraw the two scenes, edit the SVGs in `source-images/`, render them at 2800 × 1800 and convert to WebP (2000px wide, quality 82); the cover is the 1040 × 1520 crop starting at x 772, y 280.
+To redraw the two scenes, edit the SVGs in `source-images/` and run `npm run images`: it renders them at 2800 × 1800 and writes 2000px WebPs (quality 82), plus the cover, a 1040 × 1520 crop starting at x 772, y 280.
 
 ## Where the build departs from the brief
 
 - **Fonts are self-hosted** through Fontsource (the brief allows this) instead of loaded from Google Fonts. There's no third-party request, and the layout check measures the real faces. Headlines and the hero use Anek Latin at 87.5% width (semi-condensed), which the brief describes as the signage look.
-- **Slide 3:** the two price anchors sit side by side.
-- **Slide 10:** every use-of-funds segment is white at stepped opacity. None is orange, because the brief's "one orange element per slide" rule is already met by the C$75,000. The plan has five dots, not four: October's sign-ups and quotes stay on the slide ahead of the brief's November, December, month six and month twelve.
-- **Team photos:** the matched headshots (`source-images/*_headshot_portrait_4x5.jpg`, 1200 × 1500) are converted as they are to 600 × 750 WebP, with no re-cropping. The window frame shows them with `object-fit: cover` and `object-position: 50% 40%`. The brief's 600 × 876 is the same framing at a slightly taller ratio.
-- **Backups A2 and A3** are the only slides with body text under 32px. Since 1 October they hold the student rows and rungs as well, so A3's tables and A2's ladder are set at 26px (A2's "who" lines and the assumption under the obtainable rung at 24px), the notes on both at 26px, and A3's two table notes (checks; year 3 by province) are 24px captions. Everything in them only fits at those sizes; cutting words instead would mean cutting brief copy.
-- **Slide 4's concept phones** are 240 × 420, not 480, so the two-line headline and the sources line in `?print` still fit. Each screen's content ends about 300px down, so nothing is cropped.
+- **Diagram and chart labels on core slides are 26–30px** (slide 5's step details and screens, slide 7's ladder labels and traveller names, slide 8's waterfall labels, slide 9's traction labels and team lines). Headlines, the big numbers and the lines the presenter reads stay at 32px or more. `npm run check` lists every size under 32px.
+- **Slide 10:** every use-of-funds segment is white at stepped opacity (100, 78, 58, 40, 24%). None is orange, because the slide's one orange element is the C$75,000.
+- **Team photos:** the matched headshots (`source-images/*_headshot_portrait_4x5.jpg`, 1200 × 1500) are converted as they are to 600 × 750 WebP, with no re-cropping. The window frame shows them with `object-fit: cover` and `object-position: 50% 40%`.
+- **Backups A2 and A4** set their tables at 24–26px; everything in them only fits at those sizes, and cutting words would mean cutting brief copy.
+- **Slide 5's concept phones** are 240 × 420, not 480, so the headline, the sub and the five-step row fit. Each screen's content ends about 300px down, so nothing is cropped.
 - **Lighthouse** scores weren't measured in this environment. Run Lighthouse on the Netlify preview to confirm the 95+ accessibility and 90+ performance targets.

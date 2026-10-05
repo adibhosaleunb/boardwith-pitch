@@ -13,6 +13,10 @@ import sharp from 'sharp';
 const SRC = 'source-images';
 const OUT = 'public/images';
 const WEBP = { quality: 81 };
+const SCENE = { quality: 82 };
+
+// The scene SVGs are drawn on a 1400 × 900 canvas; render them at 2×.
+const renderScene = (src) => sharp(src, { density: 144 }).resize(2800, 1800).png().toBuffer();
 
 const find = (...names) => {
   if (!existsSync(SRC)) return null;
@@ -60,43 +64,29 @@ const jobs = [
       await sharp(square).resize(192, 192).png().toFile('public/favicon.png');
     },
   },
+  // The two airport scenes (5 October 2026) are redrawn as SVGs in
+  // source-images/: the mother alone, then with her companion. The original
+  // PNG scenes ("Lost at the Airport", "With someone") showed a couple and are
+  // no longer used; don't convert them, or slide 4 goes back to the couple.
   {
-    label: 'problem-alone.webp (slide 2)',
-    src: find('Lost_at_the_Airport@2x.png', 'Lost_at_the_Airport2x.png'),
-    run: (src) => sharp(src).resize({ width: 2000 }).webp(WEBP).toFile(join(OUT, 'problem-alone.webp')),
-  },
-  {
-    label: 'solution-together.webp (slide 3)',
-    src: find('With_someone@2x.png', 'With_someone2x.png'),
-    run: (src) => sharp(src).resize({ width: 2000 }).webp(WEBP).toFile(join(OUT, 'solution-together.webp')),
-  },
-  {
-    label: 'cover-parent.webp (slide 1)',
-    src: find('pexels-tafsinnaeem-35444544.jpg'),
-    // Portrait crop around both figures, about 1040 × 1520, object-position 50% 40%.
+    label: 'story-alone.webp + cover-story.webp (slide 1)',
+    src: find('story-alone.svg'),
     async run(src) {
-      const { width, height } = await sharp(src).rotate().metadata();
-      const target = 1040 / 1520;
-      let w = width;
-      let h = Math.round(width / target);
-      if (h > height) {
-        h = height;
-        w = Math.round(height * target);
-      }
-      const left = Math.round((width - w) * 0.5);
-      const top = Math.round((height - h) * 0.4);
-      await sharp(src)
-        .rotate()
-        .extract({ left, top, width: w, height: h })
-        .resize(1040, 1520)
-        .webp(WEBP)
-        .toFile(join(OUT, 'cover-parent.webp'));
+      const png = await renderScene(src);
+      await sharp(png).resize({ width: 2000 }).webp(SCENE).toFile(join(OUT, 'story-alone.webp'));
+      // The cover: a portrait crop around the mother, for the window frame.
+      await sharp(png).extract({ left: 772, top: 280, width: 1040, height: 1520 }).webp(SCENE).toFile(join(OUT, 'cover-story.webp'));
     },
+  },
+  {
+    label: 'solution-together.webp (slide 4)',
+    src: find('solution-together.svg'),
+    run: async (src) => sharp(await renderScene(src)).resize({ width: 2000 }).webp(SCENE).toFile(join(OUT, 'solution-together.webp')),
   },
   ...teamJobs(),
 ];
 
-// ── Team photos (slide 8, brief 12.4) ───────────────────────────────
+// ── Team photos (slide 9, brief 12.4) ───────────────────────────────
 // Matched by first name (any capitals or extension). Every photo gets the
 // same framing: head and shoulders, eyes 38% from the top, and the same head
 // size, measured as the eye-to-chin distance. x/y is the midpoint between the
@@ -117,7 +107,7 @@ function teamJobs() {
     const ready = files.find((f) => f.toLowerCase().startsWith(key) && f.toLowerCase().includes('headshot'));
     if (ready) {
       return {
-        label: `team-${key}.webp (slide 8, used as supplied)`,
+        label: `team-${key}.webp (slide 9, used as supplied)`,
         src: join(SRC, ready),
         run: (src) => sharp(src).rotate().resize({ width: 600 }).webp({ quality: 82 }).toFile(join(OUT, `team-${key}.webp`)),
       };
@@ -126,7 +116,7 @@ function teamJobs() {
     const hits = files.filter((f) => f.toLowerCase().startsWith(key) && /\.(jpe?g|png|webp|heic|heif)$/i.test(f));
     hits.sort((x, y) => /\.hei[cf]$/i.test(x) - /\.hei[cf]$/i.test(y));
     return {
-      label: `team-${key}.webp (slide 8)`,
+      label: `team-${key}.webp (slide 9)`,
       src: hits[0] ? join(SRC, hits[0]) : null,
       async run(src) {
         const input = await readable(src);
