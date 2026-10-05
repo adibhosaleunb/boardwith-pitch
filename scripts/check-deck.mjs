@@ -139,8 +139,8 @@ async function shoot() {
     await p.evaluate(() => document.fonts.ready);
     for (const s of SLIDES) {
       await p.evaluate((h) => (window.location.hash = h), `#/${s}`);
-      // Slide 3's colour reveal ends 2.3s after entry; shoot it settled.
-      await p.waitForTimeout(w === 1920 ? (s === '3' ? 2600 : 1000) : 300);
+      // Slide 4's colour reveal ends 2.1s after entry; shoot it settled.
+      await p.waitForTimeout(w === 1920 ? (s === '4' ? 2600 : 1000) : 300);
       if (w === 1920 || ['1', '4', '7', '10'].includes(s)) {
         await p.screenshot({ path: `${OUT}/${w}x${h}-${s}.png` });
       }
