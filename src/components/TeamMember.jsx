@@ -3,9 +3,10 @@ import frame from './WindowFrame.module.css';
 import styles from './TeamMember.module.css';
 
 // Photo in a small window frame, then name, role and two short lines.
-export default function TeamMember({ person }) {
+// `row`: the photo sits beside the text (slide 9, under the traction row).
+export default function TeamMember({ person, row = false }) {
   return (
-    <article className={styles.member}>
+    <article className={`${styles.member} ${row ? styles.row : ''}`}>
       <WindowFrame
         size="small"
         eager={false}

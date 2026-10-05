@@ -1,0 +1,83 @@
+.figure {
+  margin: 0;
+}
+
+.svg {
+  display: block;
+  width: 1680px;
+  height: 400px;
+  overflow: visible;
+}
+
+.band {
+  fill: #f1f3f4;
+}
+
+.alone {
+  fill: none;
+  stroke: #98a1a4;
+  stroke-width: 4;
+  stroke-dasharray: 2 14;
+  stroke-linecap: round;
+}
+
+.help {
+  stroke: var(--bw-teal-700);
+  stroke-width: 12;
+  stroke-linecap: round;
+}
+
+.node {
+  fill: var(--bw-paper);
+  stroke: var(--bw-teal-700);
+  stroke-width: 6;
+}
+
+.tick {
+  fill: var(--bw-paper);
+  stroke: #98a1a4;
+  stroke-width: 4;
+}
+
+.plane {
+  fill: #98a1a4;
+}
+
+.code {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 600;
+  font-stretch: 87.5%;
+  fill: var(--bw-teal-900);
+}
+
+.city {
+  font-family: var(--font-text);
+  font-size: 30px;
+  font-weight: 400;
+  fill: var(--bw-grey-600);
+}
+
+.step {
+  font-family: var(--font-text);
+  font-size: 28px;
+  fill: var(--bw-grey-600);
+}
+
+.alonelabel {
+  font-family: var(--font-text);
+  font-size: 32px;
+  font-weight: 600;
+  fill: var(--bw-grey-600);
+}
+
+.key {
+  font-family: var(--font-text);
+  font-size: 26px;
+  fill: var(--bw-grey-600);
+}
+
+:global(.is-reading) .svg {
+  width: 100%;
+  height: auto;
+}

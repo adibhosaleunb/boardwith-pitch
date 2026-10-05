@@ -3,7 +3,7 @@ import styles from './FundingAllocation.module.css';
 
 // Use-of-funds bar on teal: white segments at stepped opacity. The ask
 // number above is the slide's single orange element, so no segment is orange.
-const OPACITY = [1, 0.7, 0.45, 0.25];
+const OPACITY = [1, 0.78, 0.58, 0.4, 0.24];
 
 export default function FundingAllocation({ label, funds }) {
   const total = funds.reduce((sum, f) => sum + f.value, 0);

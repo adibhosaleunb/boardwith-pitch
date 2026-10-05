@@ -1,0 +1,79 @@
+/* Template L3: headline, the route diagram, then three numbers in a row. */
+.wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.diagram {
+  margin-top: 36px;
+}
+
+.numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 56px;
+  margin: 24px 0 0;
+}
+
+.number {
+  display: grid;
+  row-gap: 10px;
+  align-content: start;
+}
+
+.figure {
+  font-family: var(--font-display);
+  font-size: 96px;
+  line-height: 0.9;
+  font-weight: 600;
+  font-stretch: 75%;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  color: var(--bw-teal-900);
+}
+
+.unit {
+  font-size: 44px;
+  font-stretch: 87.5%;
+}
+
+.label {
+  margin: 0;
+  font-family: var(--font-text);
+  font-size: 30px;
+  line-height: 1.3;
+  text-wrap: pretty;
+}
+
+.sources {
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+:global(.is-reading) .wrap {
+  height: auto;
+}
+
+:global(.is-reading) .diagram {
+  margin: 20px -8px 0;
+}
+
+:global(.is-reading) .numbers {
+  grid-template-columns: 1fr;
+  row-gap: 16px;
+  margin-top: 20px;
+}
+
+:global(.is-reading) .figure {
+  font-size: clamp(40px, 11vw, 52px);
+}
+
+:global(.is-reading) .label {
+  font-size: clamp(16px, 4.2vw, 19px);
+}
+
+:global(.is-reading) .sources {
+  padding-top: 20px;
+}
+.pct { font-size: 64px; font-stretch: 87.5%; }

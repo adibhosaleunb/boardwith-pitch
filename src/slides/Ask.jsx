@@ -5,28 +5,22 @@ import Lockup from '../components/Lockup.jsx';
 import Timeline from '../components/Timeline.jsx';
 import FundingAllocation from '../components/FundingAllocation.jsx';
 import Sources from '../components/Sources.jsx';
-import typo from '../styles/type.module.css';
 import s from './Ask.module.css';
 
+// Slide 10: the amount, what it pays for and the milestone it gets us to
+// (the panel's three asks), with today's honest status under the milestones.
 export default function Ask({ slide, active }) {
-  const { today, next, ask } = slide;
+  const { next, ask } = slide;
   return (
     <Slide slide={slide} active={active} theme="teal">
       <Headline size="ask" className={s.headline}>
         {slide.headline}
       </Headline>
       <div className={s.cols}>
-        <section className={s.col} aria-label={today.title}>
-          <h3 className={s.colTitle}>{today.title}</h3>
-          <ul className={s.today}>
-            {today.lines.map((l) => (
-              <li key={l}>{l}</li>
-            ))}
-          </ul>
-        </section>
         <section className={s.col} aria-label={next.title}>
           <h3 className={s.colTitle}>{next.title}</h3>
           <Timeline steps={next.steps} />
+          <p className={s.todayLine}>{next.today}</p>
         </section>
         <section className={s.col} aria-label={ask.title}>
           <h3 className={s.colTitle}>{ask.title}</h3>

@@ -37,6 +37,37 @@
   color: var(--bw-grey-600);
 }
 
+/* Slide 9: photo beside the text. */
+.row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  column-gap: 26px;
+  align-items: center;
+}
+
+.row .text {
+  margin-top: 0;
+}
+
+.row .name {
+  font-size: 38px;
+}
+
+.row .role {
+  font-size: 28px;
+}
+
+.row .lines {
+  margin-top: 8px;
+  gap: 2px;
+  font-size: 28px;
+}
+
+.row figure {
+  width: 150px;
+  height: 219px;
+}
+
 /* Reading mode: photo 120px wide beside the name. */
 :global(.is-reading) .member {
   display: grid;

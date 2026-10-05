@@ -8,12 +8,12 @@ const Y = 1030;
 // Geometry: full width on most slides; under the text column on L2 slides.
 function geometry(compact) {
   return compact
-    ? { start: 120, step: 60, gap: 64, bstep: 36, counterX: 900 }
-    : { start: 120, step: 150, gap: 90, bstep: 40, counterX: 1800 };
+    ? { start: 120, step: 56, gap: 52, bstep: 30, counterX: 950 }
+    : { start: 120, step: 140, gap: 84, bstep: 34, counterX: 1800 };
 }
 
 // Flight-path progress along the bottom: ten dots for the core slides,
-// four hollow ones for the backups, a small orange plane at the current slide.
+// a hollow one per backup, a small orange plane at the current slide.
 export default function FlightPath({ index, onGo }) {
   const current = slides[index];
   const compact = current.layout === 'L2';

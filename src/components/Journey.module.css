@@ -1,7 +1,7 @@
 .journey {
   display: grid;
-  /* the widest step title needs ~430px on one line */
-  grid-template-columns: 440px 440px 440px 1fr;
+  /* five steps across the 1680px content width */
+  grid-template-columns: repeat(4, 340px) 1fr;
 }
 
 .step {
@@ -69,7 +69,7 @@
 
 .detail {
   margin-top: 2px;
-  white-space: nowrap;
+  white-space: normal;
   font-family: var(--font-text);
   font-size: 28px;
   line-height: 1.3;

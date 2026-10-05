@@ -1,9 +1,48 @@
-/* Three columns of 544px (x 120, 688, 1256), separated by whitespace; the
-   people the team works with in one row under a hairline at the bottom. */
+/* Slide 9: four traction facts across the top, the three founders in a row,
+   the people we work with on one line at the bottom. */
+.traction {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 48px;
+  margin-top: 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--bw-grey-300);
+}
+
+.tValue {
+  font-family: var(--font-display);
+  font-size: 104px;
+  line-height: 0.95;
+  font-weight: 600;
+  font-stretch: 87.5%;
+  font-variant-numeric: tabular-nums;
+  color: var(--bw-teal-900);
+}
+
+.tName {
+  min-height: 99px;
+  display: flex;
+  align-items: flex-end;
+  font-family: var(--font-display);
+  font-size: 46px;
+  line-height: 1.05;
+  font-weight: 600;
+  font-stretch: 87.5%;
+  color: var(--bw-teal-900);
+}
+
+.tLabel {
+  margin-top: 10px;
+  font-family: var(--font-text);
+  font-size: 30px;
+  line-height: 1.3;
+  text-wrap: pretty;
+}
+
 .people {
   display: grid;
-  grid-template-columns: repeat(3, 544px);
-  column-gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
   margin-top: 40px;
 }
 
@@ -14,39 +53,16 @@
   bottom: 96px;
   display: grid;
   gap: 6px;
-  padding-top: 18px;
-  border-top: 1px solid var(--bw-grey-300);
 }
 
-.foot {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 40px;
-}
-
-.partnersTitle {
-  font-family: var(--font-text);
-  font-size: 28px;
-  line-height: 1.3;
-  font-weight: 600;
-  color: var(--bw-grey-600);
-}
-
-.partners {
-  display: grid;
-  grid-template-columns: repeat(3, 544px);
-  column-gap: 24px;
-  margin-bottom: 4px;
-  font-family: var(--font-text);
-  font-size: 28px;
-  line-height: 1.3;
-}
-
-.partners li {
+.partnersLine {
   display: flex;
   align-items: flex-start;
   gap: 14px;
-  padding-right: 24px;
+  font-family: var(--font-text);
+  font-size: 28px;
+  line-height: 1.3;
+  color: var(--bw-grey-600);
 }
 
 .partnerIcon {
@@ -55,12 +71,25 @@
   color: var(--bw-teal-700);
 }
 
-.partnerName {
-  font-weight: 600;
+:global(.is-reading) .traction {
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 16px;
+  margin-top: 20px;
+  padding-bottom: 20px;
 }
 
-.gap {
-  color: var(--bw-grey-600);
+:global(.is-reading) .tValue {
+  font-size: clamp(36px, 10vw, 48px);
+}
+
+:global(.is-reading) .tName {
+  min-height: 0;
+  font-size: clamp(20px, 5.4vw, 24px);
+}
+
+:global(.is-reading) .tLabel,
+:global(.is-reading) .partnersLine {
+  font-size: clamp(15px, 4.2vw, 18px);
 }
 
 :global(.is-reading) .people {
@@ -72,20 +101,6 @@
 :global(.is-reading) .bottom {
   position: static;
   margin-top: 24px;
-}
-
-:global(.is-reading) .foot {
-  display: grid;
-}
-
-:global(.is-reading) .partnersTitle,
-:global(.is-reading) .partners {
-  font-size: clamp(15px, 4.2vw, 18px);
-}
-
-:global(.is-reading) .partners {
-  grid-template-columns: 1fr;
-  row-gap: 8px;
 }
 
 :global(.is-reading) .partnerIcon {

@@ -1,6 +1,8 @@
 # Boardwith investor deck
 
-Web presentation for the Shadow Institute Gate 1 pitch (7 October 2026) and 20-minute investor meetings. 10 core slides plus 4 backups (A1–A4), built with React and Vite and deployed on Netlify.
+Web presentation for the Shadow Institute Gate 1 pitch (7 October 2026) and 20-minute investor meetings. 10 core slides plus 7 backups (A1–A7), built with React and Vite and deployed on Netlify.
+
+**Order (5 October 2026):** the dry-run panel's rebuilt five-minute pitch: 1 your story, 2 the problem, 3 why now, 4 the solution, 5 how it works, 6 trust and safety, 7 market, 8 business model, 9 traction and team, 10 the ask. Backups: A1 six conversations, A2 market sizing, A3 three-year scenario, A4 unit economics, A5 competition, A6 go-to-market, A7 trust, safety and trip terms. The 5-minute script is about 600 words (about 4:30 spoken).
 
 All copy lives in `src/data/startupData.js`. Slide components only lay it out.
 
@@ -28,14 +30,14 @@ The converted images are committed in `public/images/`. To redo them, put the or
 | Home / End | Slide 1 / slide 10 |
 | 1–9, 0 | Slides 1–9, 10 |
 | A | Backups (A1) |
-| Esc | Overview of all 14 slides |
+| Esc | Overview of all 17 slides |
 | F | Fullscreen |
 | N | Speaker notes (5-min script and 20-min points) |
 | T / R | Start or pause / reset the timer |
 
 The URL hash tracks the slide (`#/4`, `#/a2`), so a reload keeps your place. The timer counts down from 5:00 or 20:00, depending on which notes tab is open. It shows each slide's target from the timing table and turns orange when you fall behind.
 
-**PDF:** open `/?print` and use Chrome's "Save as PDF". You get 14 pages at 1920 × 1080.
+**PDF:** open `/?print` and use Chrome's "Save as PDF". You get 17 pages at 1920 × 1080: the send-ahead deck, with sources on every page. Keep a copy as the backup for the live pitch.
 
 **Phones** (under 600px wide, or a phone held upright) get a scrolling reading version.
 
@@ -67,7 +69,18 @@ Each core slide sits between the brief's full copy and its bare "On the slide" c
 
 Slide 9's bars stack parents (base) and students (top, a lighter hatch running the other way), named on the year-3 bar only; the totals sit on top. Backup A2's ladder has five rungs: the total, the three serviceable rungs (parents, students, both) and the obtainable rung, which adds UNB's new students to their parents.
 
-Illustrations: slides 2 and 3 use the airport scenes. On the live stage, slide 3's scene enters black and white and fills with its own colour (a 700ms wait, then 1600ms with a light sepia midway), replaying on every visit; in phone reading mode it runs once when half the picture is in view, and reduced motion, `?print` and the overview show it in full colour. Slide 6 draws the two sides of the market as vector people in the same palette (`src/components/People.jsx`: the visiting mother with her daughter, and a student flying home); slide 5's price tiers carry small route drawings (`RouteGlyph.jsx`) showing direct, one connection and two or more.
+Illustrations (all original, in the palette of the airport scenes):
+
+- **Slide 1:** `cover-story.webp`, a portrait crop of `story-alone.webp`: the founder's mother alone in a grey terminal, holding a phone with no Wi-Fi, under signs pointing every way. It's the original grey airport scene with the husband removed (the interviews found need follows being alone). Source: `source-images/story-alone.svg`.
+- **Slide 2:** `JourneyGap.jsx` draws Delhi → Toronto → Fredericton: airline help is a short solid teal stretch at each airport; the flights and the Toronto layover (immigration, bags, new gate) are dashed and marked "alone", with the mother standing in the layover.
+- **Slide 3:** `WhyNowScene.jsx`, an assistance desk with a wheelchair sign and a new fee tag (the slide's one orange element), wheelchairs parked for the people who need them, and the mother beside her suitcase.
+- **Slide 4:** `solution-together.webp`, the warm scene with the husband removed: the mother's hand on the companion's arm while he points the way. It enters black and white and fills with colour each time the slide is shown. Source: `source-images/solution-together.svg`.
+- **Slide 6:** `TrustBadges.jsx`, four badges: two ID cards under a shield, a card locked until the plane lands, a rematch, and language, mobility and nerves.
+- **Slide 7:** a route drawing (India → Canada now, India → US next) and `TravellerBadge` figures in `People.jsx`: parents, first-time students, a traveller facing a language barrier, a traveller with low vision.
+- **Slide 8:** `Waterfall.jsx`, one trip from the C$275 the family pays down to the C$28 Boardwith keeps; insurance is a dashed marker because it's a yearly policy in the budget, not a per-trip cost.
+- **A6:** the visiting mother and a student flying home (`People.jsx`), as before.
+
+To redraw the two scenes, edit the SVGs in `source-images/`, render them at 2800 × 1800 and convert to WebP (2000px wide, quality 82); the cover is the 1040 × 1520 crop starting at x 772, y 280.
 
 ## Where the build departs from the brief
 

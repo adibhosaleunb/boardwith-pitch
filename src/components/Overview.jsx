@@ -7,7 +7,7 @@ const THUMB_W = 300;
 const SCALE = THUMB_W / 1920;
 const THUMB_CTX = { mode: 'thumb' };
 
-// Thumbnail grid of all 14 slides (Esc).
+// Thumbnail grid of every slide, core and backups (Esc).
 export default function Overview({ index, onPick, onClose }) {
   const ref = useRef(null);
 

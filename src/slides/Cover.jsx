@@ -14,6 +14,7 @@ export default function Cover({ slide, active }) {
         <Headline as="h1" size="hero" className={s.hero}>
           {slide.headline}
         </Headline>
+        {slide.sub ? <p className={`${typo.sub} ${s.sub}`}>{slide.sub}</p> : null}
         <div className={`${typo.body} ${s.contact}`}>
           <p>
             <span className={typo.name}>{company.founder.name}</span>, {company.founder.title}

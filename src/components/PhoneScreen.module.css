@@ -256,3 +256,43 @@
   font-size: 13px;
   color: var(--bw-grey-600);
 }
+
+/* Slide 5, step 2: companion and traveller, each with a small avatar row. */
+.side {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.side .avatar {
+  width: 36px;
+  height: 36px;
+}
+
+.side .avatar svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Step 4: the two of them, side by side. */
+.pair {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin: 6px 0 2px;
+}
+
+.pair .avatar {
+  width: 62px;
+  height: 62px;
+  box-shadow: 0 0 0 4px var(--bw-paper);
+}
+
+.pair .avatar + .avatar {
+  margin-left: -12px;
+}
+
+.avatarWarm {
+  background: var(--bw-peach);
+  color: var(--bw-orange-ink);
+}

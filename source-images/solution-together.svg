@@ -1,0 +1,568 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900" role="img" aria-label="The same older woman in a warm, bright airport, her hand on the arm of a young companion with a backpack, who points the way to their gate.">
+<title>Someone With Them</title>
+
+<defs>
+  <linearGradient id="skyGrad2" x1="0" y1="129" x2="0" y2="470" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#9CC4E4"/>
+    <stop offset="0.55" stop-color="#C7DEEE"/>
+    <stop offset="1" stop-color="#EDE4D2"/>
+  </linearGradient>
+  <linearGradient id="ceilGrad2" x1="0" y1="0" x2="0" y2="126" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#C9BFA9"/>
+    <stop offset="1" stop-color="#EDE6D8"/>
+  </linearGradient>
+  <linearGradient id="floorGrad2" x1="0" y1="655" x2="0" y2="900" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#F3EADA"/>
+    <stop offset="0.45" stop-color="#E4D5BC"/>
+    <stop offset="1" stop-color="#D2BE9F"/>
+  </linearGradient>
+  <linearGradient id="wallGrad2" x1="0" y1="486" x2="0" y2="658" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#EDE3D0"/>
+    <stop offset="1" stop-color="#DDCFB6"/>
+  </linearGradient>
+  <linearGradient id="gateGlow" x1="0" y1="318" x2="0" y2="394" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#F0A93A"/>
+    <stop offset="1" stop-color="#D8862A"/>
+  </linearGradient>
+
+  <radialGradient id="warmPool2" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#FFE7B4" stop-opacity="0.5"/>
+    <stop offset="1" stop-color="#FFE7B4" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="cafeGlow" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#FFC978" stop-opacity="0.85"/>
+    <stop offset="1" stop-color="#FFC978" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="vignette2" cx="0.5" cy="0.5" r="0.75">
+    <stop offset="0.55" stop-color="#8A6A3A" stop-opacity="0"/>
+    <stop offset="1" stop-color="#8A6A3A" stop-opacity="0.16"/>
+  </radialGradient>
+
+  <linearGradient id="reflFade2" x1="0" y1="776" x2="0" y2="890" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#ffffff" stop-opacity="0.6"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <mask id="reflMask2">
+    <rect x="0" y="774" width="1400" height="126" fill="url(#reflFade2)"/>
+  </mask>
+
+  <filter id="softBlur2" x="-30%" y="-20%" width="160%" height="140%">
+    <feGaussianBlur stdDeviation="1.9 0.7"/>
+  </filter>
+  <filter id="softBlur3" x="-30%" y="-20%" width="160%" height="140%">
+    <feGaussianBlur stdDeviation="1.1 0.4"/>
+  </filter>
+  <filter id="farBlur2" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="9 6"/>
+  </filter>
+  <filter id="shaftBlur" x="-25%" y="-25%" width="150%" height="150%">
+    <feGaussianBlur stdDeviation="16"/>
+  </filter>
+  <filter id="softShadow2" x="-60%" y="-160%" width="220%" height="420%">
+    <feGaussianBlur stdDeviation="8"/>
+  </filter>
+  <filter id="reflBlur2" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="4.5"/>
+  </filter>
+  <filter id="signGlow" x="-60%" y="-60%" width="220%" height="220%">
+    <feGaussianBlur stdDeviation="22"/>
+  </filter>
+
+  <!-- crowd silhouettes: head top at y=0, feet at y=200, mirrored about local x=50 -->
+  <g id="figStride">
+    <circle cx="50" cy="19" r="15"/>
+    <path d="M36,37 C31,46 29,72 30,104 L70,104 C71,72 69,46 64,37 Z"/>
+    <path d="M37,47 L25,82 L33,98" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M64,47 L76,80 L70,96" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M42,102 L33,148 L28,196" fill="none" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60,102 L69,150 L76,196" fill="none" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g id="figWalkbag">
+    <circle cx="50" cy="19" r="15"/>
+    <path d="M36,37 C31,46 29,74 30,106 L70,106 C71,74 69,46 64,37 Z"/>
+    <path d="M37,47 L28,78 L36,92" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M65,47 L78,74 L86,86" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M44,104 L38,150 L34,196" fill="none" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M58,104 L66,150 L72,196" fill="none" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M86,86 L96,128" fill="none" stroke-width="4" stroke-linecap="round"/>
+    <rect x="84" y="128" width="26" height="46" rx="4"/>
+    <circle cx="90" cy="178" r="4"/>
+    <circle cx="104" cy="178" r="4"/>
+  </g>
+  <g id="figStand">
+    <circle cx="50" cy="19" r="15"/>
+    <path d="M36,37 C32,47 30,74 31,106 L69,106 C70,74 68,47 64,37 Z"/>
+    <path d="M37,47 L31,80 L33,98" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M64,47 L70,80 L68,98" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M43,104 L42,150 L41,196" fill="none" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M59,104 L60,150 L61,196" fill="none" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g id="figChat">
+    <circle cx="50" cy="19" r="15"/>
+    <path d="M36,37 C32,47 30,74 31,106 L69,106 C70,74 68,47 64,37 Z"/>
+    <path d="M37,47 L28,74 L40,68" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M64,47 L72,76 L66,96" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M43,104 L40,150 L38,196" fill="none" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M59,104 L62,150 L64,196" fill="none" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g id="figSeated">
+    <circle cx="50" cy="19" r="15"/>
+    <path d="M36,37 C32,47 31,70 32,96 L68,96 C69,70 68,47 64,37 Z"/>
+    <path d="M38,50 L32,76 L48,82" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M64,50 L70,74 L58,82" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M40,96 L86,100 L88,140" fill="none" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M56,96 L92,102 L96,140" fill="none" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g id="arrowGlyph2">
+    <path d="M-24,-4 h30 v-9 l18,13 l-18,13 v-9 h-30 z"/>
+  </g>
+  <g id="icoPlane2">
+    <path d="M0,-14 C2,-14 3,-11 3,-7 L3,-3 L15,3 L15,7 L3,4 L2,11 L7,15 L7,18 L0,15.5 L-7,18 L-7,15 L-2,11 L-3,4 L-15,7 L-15,3 L-3,-3 L-3,-7 C-3,-11 -2,-14 0,-14 Z"/>
+  </g>
+  <g id="icoCase2">
+    <rect x="-12" y="-5" width="24" height="19" rx="2.5"/>
+    <path d="M-6,-5 L-6,-10 a6,6 0 0 1 12,0 L6,-5" fill="none" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <g id="icoCup">
+    <path d="M-9,-8 L9,-8 L7,10 L-7,10 Z"/>
+    <path d="M9,-4 a6,6 0 0 1 0,10" fill="none" stroke-width="3"/>
+  </g>
+  <g id="icoPerson2">
+    <circle cx="0" cy="-10" r="4.6"/>
+    <path d="M0,-4 L0,7 M0,7 L-6,16 M0,7 L6,16 M-8,0 L8,0" fill="none" stroke-width="3.2" stroke-linecap="round"/>
+  </g>
+  <g id="leafClump">
+    <path d="M0,0 C-26,-12 -40,-42 -30,-70 C-14,-56 -4,-30 0,0 Z"/>
+    <path d="M0,0 C26,-12 40,-42 30,-70 C14,-56 4,-30 0,0 Z"/>
+    <path d="M0,0 C-10,-26 -8,-62 6,-84 C16,-58 12,-24 0,0 Z"/>
+    <path d="M0,-4 C-34,-4 -54,-24 -54,-46 C-34,-42 -14,-24 0,-4 Z"/>
+    <path d="M0,-4 C34,-6 56,-22 58,-44 C38,-40 16,-24 0,-4 Z"/>
+  </g>
+</defs>
+
+<!-- ===================== CEILING ===================== -->
+<rect x="0" y="0" width="1400" height="126" fill="url(#ceilGrad2)"/>
+<g fill="#FFFAEC" opacity="0.9">
+  <path d="M46,16 L1354,16 L1312,28 L88,28 Z"/>
+  <path d="M118,44 L1282,44 L1250,55 L150,55 Z"/>
+  <path d="M182,71 L1218,71 L1192,81 L208,81 Z"/>
+  <path d="M244,96 L1156,96 L1136,105 L264,105 Z"/>
+</g>
+<g fill="none" stroke="#B3A78E" stroke-width="3" opacity="0.5">
+  <path d="M0,34 C300,4 1100,4 1400,34"/>
+  <path d="M0,66 C320,40 1080,40 1400,66"/>
+  <path d="M0,98 C340,78 1060,78 1400,98"/>
+</g>
+<rect x="0" y="122" width="1400" height="7" fill="#AC9F86"/>
+
+<!-- ===================== GLASS WALL ===================== -->
+<rect x="0" y="129" width="1400" height="341" fill="url(#skyGrad2)"/>
+<g fill="#FFFFFF" opacity="0.5">
+  <ellipse cx="240" cy="196" rx="88" ry="26"/>
+  <ellipse cx="300" cy="182" rx="56" ry="20"/>
+  <ellipse cx="1060" cy="220" rx="104" ry="28"/>
+  <ellipse cx="1140" cy="206" rx="62" ry="21"/>
+</g>
+<circle cx="1312" cy="186" r="46" fill="#FFF3C8" opacity="0.75"/>
+<circle cx="1312" cy="186" r="70" fill="#FFF3C8" opacity="0.3"/>
+
+<!-- outside: apron, tower, aircraft -->
+<rect x="0" y="424" width="1400" height="46" fill="#C9B79A"/>
+<g fill="#E4DAC6">
+  <rect x="436" y="286" width="20" height="140"/>
+  <path d="M416,268 L476,268 L484,288 L410,288 Z"/>
+  <rect x="418" y="248" width="56" height="21" rx="4"/>
+</g>
+<g fill="#F2F0EA">
+  <path d="M948,410 C990,396 1120,390 1238,392 C1280,393 1302,398 1304,404 C1302,411 1280,415 1238,417 L968,419 C950,419 942,415 948,410 Z"/>
+  <path d="M1066,404 L1012,442 L1046,442 L1098,410 Z"/>
+  <ellipse cx="1074" cy="416" rx="19" ry="9"/>
+  <rect x="1156" y="416" width="6" height="16"/>
+  <rect x="1006" y="416" width="6" height="16"/>
+</g>
+<path d="M1228,392 L1256,340 L1276,340 L1288,393 Z" fill="#C2542F"/>
+<path d="M980,402 L1210,398" stroke="#C2542F" stroke-width="5" opacity="0.8"/>
+<g stroke="#E3D6BC" stroke-width="3" stroke-dasharray="26 22" opacity="0.9">
+  <path d="M0,452 L1400,452"/>
+</g>
+
+<!-- mullions -->
+<g stroke="#C6BBA4" stroke-width="4">
+  <path d="M96,129 L96,470"/><path d="M192,129 L192,470"/><path d="M288,129 L288,470"/>
+  <path d="M384,129 L384,470"/><path d="M480,129 L480,470"/><path d="M576,129 L576,470"/>
+  <path d="M672,129 L672,470"/><path d="M768,129 L768,470"/><path d="M864,129 L864,470"/>
+  <path d="M960,129 L960,470"/><path d="M1056,129 L1056,470"/><path d="M1152,129 L1152,470"/>
+  <path d="M1248,129 L1248,470"/><path d="M1344,129 L1344,470"/>
+</g>
+<rect x="0" y="296" width="1400" height="5" fill="#C6BBA4"/>
+<rect x="0" y="466" width="1400" height="20" fill="#B8AB92"/>
+
+<!-- ===================== BACK CONCOURSE WALL ===================== -->
+<rect x="0" y="486" width="1400" height="172" fill="url(#wallGrad2)"/>
+
+<!-- café -->
+<ellipse cx="386" cy="586" rx="140" ry="92" fill="url(#cafeGlow)"/>
+<rect x="300" y="506" width="176" height="114" rx="5" fill="#E8D9BC"/>
+<rect x="308" y="540" width="160" height="80" rx="4" fill="#FFD08A"/>
+<g fill="#8C5A2E">
+  <rect x="300" y="506" width="176" height="9" rx="4"/>
+</g>
+<g>
+  <path d="M296,516 L480,516 L480,538 L296,538 Z" fill="#C2542F"/>
+  <g fill="#F5ECDA">
+    <rect x="318" y="516" width="22" height="22"/>
+    <rect x="362" y="516" width="22" height="22"/>
+    <rect x="406" y="516" width="22" height="22"/>
+    <rect x="450" y="516" width="22" height="22"/>
+  </g>
+</g>
+<g transform="translate(388,574) scale(1.1)" fill="#8C5A2E" stroke="#8C5A2E"><use href="#icoCup"/></g>
+<g fill="#A9762F">
+  <rect x="330" y="602" width="5" height="34"/><ellipse cx="332" cy="600" rx="20" ry="6"/>
+  <rect x="438" y="602" width="5" height="34"/><ellipse cx="440" cy="600" rx="20" ry="6"/>
+</g>
+
+<!-- shops -->
+<g fill="#E2D5B8">
+  <rect x="60" y="506" width="200" height="112" rx="5"/>
+  <rect x="1000" y="510" width="180" height="108" rx="5"/>
+  <rect x="1210" y="518" width="140" height="100" rx="5"/>
+</g>
+<g fill="#6E8E6A">
+  <rect x="80" y="520" width="98" height="11" rx="5"/>
+  <rect x="1020" y="524" width="86" height="11" rx="5"/>
+</g>
+<rect x="1228" y="532" width="64" height="10" rx="5" fill="#C2542F"/>
+<g fill="#F4E9D2" opacity="0.8">
+  <rect x="74" y="544" width="172" height="66" rx="4"/>
+  <rect x="1014" y="546" width="152" height="62" rx="4"/>
+  <rect x="1222" y="552" width="116" height="58" rx="4"/>
+</g>
+
+<!-- info screens -->
+<g fill="#22405C">
+  <rect x="520" y="498" width="112" height="70" rx="4"/>
+  <rect x="800" y="498" width="112" height="70" rx="4"/>
+</g>
+<g fill="#7FB0D6">
+  <rect x="530" y="508" width="44" height="6" rx="3"/>
+  <rect x="530" y="520" width="88" height="5" rx="2.5"/>
+  <rect x="530" y="531" width="70" height="5" rx="2.5"/>
+  <rect x="530" y="542" width="82" height="5" rx="2.5"/>
+  <rect x="530" y="553" width="52" height="5" rx="2.5"/>
+  <rect x="810" y="508" width="44" height="6" rx="3"/>
+  <rect x="810" y="520" width="76" height="5" rx="2.5"/>
+  <rect x="810" y="542" width="60" height="5" rx="2.5"/>
+  <rect x="810" y="553" width="80" height="5" rx="2.5"/>
+</g>
+<rect x="810" y="531" width="88" height="5" rx="2.5" fill="#7BC08A"/>
+<rect x="0" y="648" width="1400" height="10" fill="#B8AB92"/>
+
+<!-- ===================== DEPARTURE BOARD ===================== -->
+<g>
+  <rect x="120" y="126" width="6" height="40" fill="#AC9F86"/>
+  <rect x="336" y="126" width="6" height="40" fill="#AC9F86"/>
+  <rect x="88" y="162" width="290" height="190" rx="7" fill="#1E3550"/>
+  <rect x="96" y="170" width="274" height="174" rx="3" fill="#16283E"/>
+  <rect x="106" y="178" width="118" height="9" rx="3" fill="#8FBEDE"/>
+  <rect x="300" y="178" width="58" height="9" rx="3" fill="#5A88AC"/>
+  <g>
+    <rect x="106" y="200" width="52" height="7" rx="2" fill="#F0B84E"/><rect x="168" y="200" width="94" height="7" rx="2" fill="#D9A345"/><rect x="272" y="200" width="32" height="7" rx="2" fill="#F0B84E"/><rect x="314" y="200" width="44" height="7" rx="2" fill="#7BC08A"/>
+    <rect x="106" y="218" width="52" height="7" rx="2" fill="#E5AE49"/><rect x="168" y="218" width="76" height="7" rx="2" fill="#CE9B40"/><rect x="272" y="218" width="32" height="7" rx="2" fill="#E5AE49"/><rect x="314" y="218" width="36" height="7" rx="2" fill="#7BC08A"/>
+    <rect x="106" y="236" width="52" height="7" rx="2" fill="#F0B84E"/><rect x="168" y="236" width="102" height="7" rx="2" fill="#D9A345"/><rect x="272" y="236" width="32" height="7" rx="2" fill="#F0B84E"/><rect x="314" y="236" width="48" height="7" rx="2" fill="#7BC08A"/>
+    <rect x="106" y="254" width="52" height="7" rx="2" fill="#E5AE49"/><rect x="168" y="254" width="66" height="7" rx="2" fill="#CE9B40"/><rect x="272" y="254" width="32" height="7" rx="2" fill="#E5AE49"/><rect x="314" y="254" width="40" height="7" rx="2" fill="#7BC08A"/>
+    <rect x="100" y="268" width="266" height="20" rx="3" fill="#2E6E8E" opacity="0.7"/>
+    <rect x="106" y="272" width="52" height="7" rx="2" fill="#FFFFFF"/><rect x="168" y="272" width="88" height="7" rx="2" fill="#E9F3F8"/><rect x="272" y="272" width="32" height="7" rx="2" fill="#FFFFFF"/><rect x="314" y="272" width="30" height="7" rx="2" fill="#B6ECC1"/>
+    <rect x="106" y="290" width="52" height="7" rx="2" fill="#E5AE49"/><rect x="168" y="290" width="58" height="7" rx="2" fill="#CE9B40"/><rect x="272" y="290" width="32" height="7" rx="2" fill="#E5AE49"/><rect x="314" y="290" width="44" height="7" rx="2" fill="#7BC08A"/>
+    <rect x="106" y="308" width="52" height="7" rx="2" fill="#F0B84E"/><rect x="168" y="308" width="98" height="7" rx="2" fill="#D9A345"/><rect x="272" y="308" width="32" height="7" rx="2" fill="#F0B84E"/><rect x="314" y="308" width="38" height="7" rx="2" fill="#7BC08A"/>
+    <rect x="106" y="326" width="52" height="7" rx="2" fill="#E5AE49"/><rect x="168" y="326" width="72" height="7" rx="2" fill="#CE9B40"/><rect x="272" y="326" width="32" height="7" rx="2" fill="#E5AE49"/><rect x="314" y="326" width="46" height="7" rx="2" fill="#7BC08A"/>
+  </g>
+</g>
+
+<!-- ===================== OVERHEAD SIGN GANTRY (all one direction) ===================== -->
+<g>
+  <rect x="566" y="126" width="5" height="80" fill="#AC9F86"/>
+  <rect x="1036" y="126" width="5" height="80" fill="#AC9F86"/>
+  <rect x="548" y="200" width="510" height="88" rx="6" fill="#2E6E8E"/>
+  <rect x="548" y="200" width="510" height="8" rx="4" fill="#4A8BAA"/>
+  <g stroke="#4A8BAA" stroke-width="1.6">
+    <path d="M674,212 L674,278"/><path d="M800,212 L800,278"/><path d="M926,212 L926,278"/>
+  </g>
+  <g fill="#FFFFFF" stroke="#FFFFFF">
+    <use href="#arrowGlyph2" transform="translate(586,234)"/>
+    <g transform="translate(640,232) scale(0.85)"><use href="#icoPlane2"/></g>
+    <use href="#arrowGlyph2" transform="translate(712,234)"/>
+    <g transform="translate(766,232) scale(0.85)"><use href="#icoCase2"/></g>
+    <use href="#arrowGlyph2" transform="translate(838,234)"/>
+    <g transform="translate(892,232) scale(0.85)"><use href="#icoCup"/></g>
+    <use href="#arrowGlyph2" transform="translate(964,234)"/>
+    <g transform="translate(1018,232) scale(0.85)"><use href="#icoPerson2"/></g>
+  </g>
+  <g fill="#CFE6F2">
+    <rect x="572" y="258" width="86" height="7" rx="3.5"/><rect x="582" y="270" width="62" height="6" rx="3"/>
+    <rect x="698" y="258" width="78" height="7" rx="3.5"/><rect x="706" y="270" width="54" height="6" rx="3"/>
+    <rect x="824" y="258" width="90" height="7" rx="3.5"/><rect x="836" y="270" width="58" height="6" rx="3"/>
+    <rect x="950" y="258" width="72" height="7" rx="3.5"/><rect x="958" y="270" width="66" height="6" rx="3"/>
+  </g>
+</g>
+
+<!-- ===================== THE GATE SIGN THEY ARE HEADED FOR ===================== -->
+<g>
+  <rect x="1132" y="126" width="5" height="192" fill="#AC9F86"/>
+  <rect x="1288" y="126" width="5" height="192" fill="#AC9F86"/>
+  <rect x="1096" y="314" width="232" height="84" rx="8" fill="#F0A93A" opacity="0.35" filter="url(#signGlow)"/>
+  <rect x="1104" y="318" width="216" height="76" rx="7" fill="url(#gateGlow)"/>
+  <g fill="#FFFFFF" stroke="#FFFFFF">
+    <g transform="translate(1146,356) scale(1.15)"><use href="#icoPlane2"/></g>
+    <use href="#arrowGlyph2" transform="translate(1272,356)"/>
+  </g>
+  <g fill="#FFF6E2">
+    <rect x="1186" y="338" width="62" height="12" rx="6"/>
+    <rect x="1186" y="358" width="44" height="10" rx="5"/>
+    <rect x="1186" y="374" width="54" height="8" rx="4"/>
+  </g>
+</g>
+
+<!-- ===================== HANGING CLOCK ===================== -->
+<g>
+  <rect x="820" y="126" width="5" height="56" fill="#AC9F86"/>
+  <circle cx="822" cy="228" r="47" fill="#B9A886"/>
+  <circle cx="822" cy="228" r="39" fill="#FBF5E6"/>
+  <g stroke="#B09C79" stroke-width="2.6" stroke-linecap="round">
+    <path d="M822,195 L822,202"/><path d="M855,228 L848,228"/>
+    <path d="M822,261 L822,254"/><path d="M789,228 L796,228"/>
+  </g>
+  <path d="M822,228 L842,221" stroke="#5C4A2E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M822,228 L816,201" stroke="#5C4A2E" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="822" cy="228" r="3.6" fill="#5C4A2E"/>
+</g>
+
+<!-- ===================== FLOOR ===================== -->
+<rect x="0" y="655" width="1400" height="245" fill="url(#floorGrad2)"/>
+<g stroke="#C3AF90" stroke-width="1.6" opacity="0.45" fill="none">
+  <path d="M700,658 L-200,900"/>
+  <path d="M700,658 L110,900"/>
+  <path d="M700,658 L380,900"/>
+  <path d="M700,658 L700,900"/>
+  <path d="M700,658 L1020,900"/>
+  <path d="M700,658 L1290,900"/>
+  <path d="M700,658 L1600,900"/>
+</g>
+<g stroke="#C3AF90" stroke-width="1.4" opacity="0.32" fill="none">
+  <path d="M0,692 L1400,692"/>
+  <path d="M0,736 L1400,736"/>
+  <path d="M0,794 L1400,794"/>
+  <path d="M0,866 L1400,866"/>
+</g>
+
+<!-- sunlight falling across the concourse -->
+<g filter="url(#shaftBlur)">
+  <path d="M700,129 L856,129 L520,900 L296,900 Z" fill="#FFF8E6" opacity="0.5"/>
+  <path d="M980,129 L1062,129 L800,900 L654,900 Z" fill="#FFF8E6" opacity="0.42"/>
+  <path d="M1188,129 L1248,129 L1104,900 L978,900 Z" fill="#FFF8E6" opacity="0.34"/>
+  <path d="M296,129 L360,129 L136,900 L20,900 Z" fill="#FFF8E6" opacity="0.3"/>
+</g>
+
+<!-- planters -->
+<g>
+  <g transform="translate(206,638) scale(0.82)" fill="#6E8E6A"><use href="#leafClump"/></g>
+  <g transform="translate(206,638) scale(0.58)" fill="#88A97E"><use href="#leafClump"/></g>
+  <path d="M176,636 L238,636 L230,682 L184,682 Z" fill="#B9683F"/>
+  <rect x="172" y="630" width="70" height="10" rx="4" fill="#C87A4C"/>
+</g>
+<g>
+  <g transform="translate(1268,642) scale(0.9)" fill="#63855F"><use href="#leafClump"/></g>
+  <g transform="translate(1268,642) scale(0.62)" fill="#84A67A"><use href="#leafClump"/></g>
+  <path d="M1234,640 L1302,640 L1294,690 L1244,690 Z" fill="#B9683F"/>
+  <rect x="1230" y="634" width="76" height="10" rx="4" fill="#C87A4C"/>
+</g>
+
+<!-- bench with someone resting -->
+<g>
+  <g fill="#8C6A46" opacity="0.35" filter="url(#softShadow2)"><ellipse cx="1040" cy="712" rx="70" ry="10"/></g>
+  <g fill="#4F6E9B" stroke="#4F6E9B" filter="url(#softBlur3)">
+    <use href="#figSeated" transform="translate(986,548) scale(0.8)"/>
+  </g>
+  <rect x="976" y="686" width="118" height="12" rx="5" fill="#A9762F"/>
+  <rect x="976" y="668" width="118" height="9" rx="4" fill="#BE8942"/>
+  <g fill="#8A9296"><rect x="988" y="698" width="8" height="16"/><rect x="1074" y="698" width="8" height="16"/></g>
+</g>
+
+<!-- ===================== FAR CROWD ===================== -->
+<g filter="url(#softBlur2)" opacity="0.92">
+  <use href="#figStride"  transform="translate(100,554) scale(0.54)" fill="#C2705A" stroke="#C2705A"/>
+  <use href="#figWalkbag" transform="translate(176,554) scale(0.56)" fill="#5C6B8A" stroke="#5C6B8A"/>
+  <use href="#figChat"    transform="translate(286,560) scale(0.50)" fill="#7E9459" stroke="#7E9459"/>
+  <use href="#figChat"    transform="translate(322,560) scale(0.50) translate(100,0) scale(-1,1)" fill="#B2833C" stroke="#B2833C"/>
+  <use href="#figStride"  transform="translate(386,558) scale(0.525) translate(100,0) scale(-1,1)" fill="#4E8C8A" stroke="#4E8C8A"/>
+  <use href="#figStand"   transform="translate(452,552) scale(0.59)" fill="#8A5A7A" stroke="#8A5A7A"/>
+  <use href="#figStand"   transform="translate(486,578) scale(0.36)" fill="#D2913C" stroke="#D2913C"/>
+  <use href="#figStride"  transform="translate(524,559) scale(0.51)" fill="#4F6E9B" stroke="#4F6E9B"/>
+  <use href="#figStand"   transform="translate(900,558) scale(0.53)" fill="#A85B4C" stroke="#A85B4C"/>
+  <use href="#figChat"    transform="translate(936,557) scale(0.55) translate(100,0) scale(-1,1)" fill="#6E8E6A" stroke="#6E8E6A"/>
+  <use href="#figStride"  transform="translate(1018,558) scale(0.52) translate(100,0) scale(-1,1)" fill="#B2833C" stroke="#B2833C"/>
+  <use href="#figWalkbag" transform="translate(1090,556) scale(0.56)" fill="#5C6B8A" stroke="#5C6B8A"/>
+  <use href="#figStride"  transform="translate(1160,561) scale(0.50)" fill="#C2705A" stroke="#C2705A"/>
+  <use href="#figStand"   transform="translate(1358,553) scale(0.58)" fill="#4E8C8A" stroke="#4E8C8A"/>
+</g>
+
+<!-- ===================== MID CROWD ===================== -->
+<g fill="#A08862" opacity="0.32" filter="url(#softShadow2)">
+  <ellipse cx="108" cy="716" rx="52" ry="9"/>
+  <ellipse cx="228" cy="708" rx="50" ry="9"/>
+  <ellipse cx="358" cy="724" rx="54" ry="9"/>
+  <ellipse cx="470" cy="712" rx="50" ry="9"/>
+  <ellipse cx="960" cy="720" rx="54" ry="9"/>
+  <ellipse cx="1124" cy="726" rx="55" ry="10"/>
+  <ellipse cx="1234" cy="714" rx="51" ry="9"/>
+</g>
+<g filter="url(#softBlur3)">
+  <use href="#figChat"    transform="translate(70,536) scale(0.88)" fill="#B2833C" stroke="#B2833C"/>
+  <use href="#figChat"    transform="translate(146,538) scale(0.86) translate(100,0) scale(-1,1)" fill="#4E8C8A" stroke="#4E8C8A"/>
+  <use href="#figWalkbag" transform="translate(280,536) scale(0.84)" fill="#8A5A7A" stroke="#8A5A7A"/>
+  <use href="#figStride"  transform="translate(406,534) scale(0.93) translate(100,0) scale(-1,1)" fill="#C2705A" stroke="#C2705A"/>
+  <use href="#figStand"   transform="translate(922,536) scale(0.91)" fill="#5C6B8A" stroke="#5C6B8A"/>
+  <use href="#figStand"   transform="translate(968,576) scale(0.55)" fill="#D2913C" stroke="#D2913C"/>
+  <use href="#figWalkbag" transform="translate(1086,534) scale(0.94) translate(100,0) scale(-1,1)" fill="#6E8E6A" stroke="#6E8E6A"/>
+  <use href="#figStride"  transform="translate(1196,536) scale(0.87)" fill="#4F6E9B" stroke="#4F6E9B"/>
+</g>
+
+<!-- warm pool the three of them stand in -->
+<ellipse cx="704" cy="800" rx="270" ry="80" fill="url(#warmPool2)"/>
+
+<!-- ===================== THE THREE OF THEM ===================== -->
+<g fill="#8C6A46" opacity="0.34" filter="url(#softShadow2)">
+  <ellipse cx="700" cy="778" rx="112" ry="15"/>
+  <ellipse cx="572" cy="760" rx="46" ry="9"/>
+</g>
+
+<g id="trio">
+
+  <!-- ---------- SUITCASE, SET DOWN ---------- -->
+  <rect x="540" y="690" width="52" height="68" rx="7" fill="#A9682F"/>
+  <rect x="540" y="690" width="9" height="68" rx="4" fill="#8A5122" opacity="0.7"/>
+  <rect x="553" y="690" width="7" height="68" fill="#7E4820"/>
+  <rect x="573" y="690" width="7" height="68" fill="#7E4820"/>
+  <rect x="540" y="714" width="52" height="4" fill="#7E4820" opacity="0.6"/>
+  <path d="M558,690 C560,678 572,678 574,690" stroke="#7E4820" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+  <g fill="#8A5122"><rect x="540" y="754" width="10" height="6" rx="2"/><rect x="582" y="754" width="10" height="6" rx="2"/></g>
+  <path d="M586,718 C594,712 610,712 618,718 L614,758 L590,758 Z" fill="#B8564A"/>
+  <path d="M592,718 C594,706 610,706 612,718" stroke="#933F36" stroke-width="3.4" fill="none"/>
+
+  <!-- ---------- WOMAN ---------- -->
+  <ellipse cx="624" cy="762" rx="13" ry="6.5" fill="#4A3327"/>
+  <ellipse cx="659" cy="764" rx="13" ry="6.5" fill="#4A3327"/>
+  <path d="M631,698 L626,756" stroke="#8E4A46" stroke-width="17" fill="none" stroke-linecap="round"/>
+  <path d="M653,698 L658,758" stroke="#8E4A46" stroke-width="17" fill="none" stroke-linecap="round"/>
+
+  <path d="M618,596 C609,606 604,634 602,666 C600,692 601,712 604,722 L682,722 C684,706 683,676 679,648 C675,618 668,602 660,594 C646,586 628,588 618,596 Z" fill="#E3A13C"/>
+  <path d="M618,596 C609,606 604,634 602,666 C600,692 601,712 604,722 L625,722 C618,700 616,656 620,626 C623,608 627,600 631,594 Z" fill="#9A6D1E" opacity="0.42"/>
+  <path d="M645,606 C641,640 642,684 647,720" stroke="#9A6D1E" stroke-width="3" fill="none" opacity="0.35"/>
+  <path d="M662,602 C670,626 674,678 678,714" stroke="#FFD98A" stroke-width="3.5" fill="none" opacity="0.65"/>
+
+  <path d="M619,594 C607,604 600,628 598,656 C597,676 599,692 602,702 L615,700 C611,680 611,648 616,624 C619,608 624,600 630,594 Z" fill="#C4453C"/>
+  <path d="M619,594 C605,604 600,628 599,652 C603,634 609,614 621,602 Z" fill="#9E332C" opacity="0.5"/>
+  <path d="M660,594 C669,604 675,626 677,652 C678,670 677,684 674,694 L662,692 C665,674 665,646 661,624 C658,608 654,600 650,594 Z" fill="#C4453C"/>
+  <path d="M618,592 C632,582 654,582 664,592 C656,602 638,604 627,601 Z" fill="#C4453C"/>
+  <path d="M624,594 C636,588 652,588 660,593 C650,598 636,598 624,594 Z" fill="#9E332C" opacity="0.4"/>
+
+  <path d="M635,580 L655,580 L653,598 L637,598 Z" fill="#AC7048"/>
+
+  <g transform="rotate(-2 644 590)">
+    <ellipse cx="642" cy="564" rx="20" ry="22" fill="#E7E2D7"/>
+    <circle cx="621" cy="573" r="9.5" fill="#E7E2D7"/>
+    <circle cx="621" cy="573" r="9.5" fill="#CFC8B9" opacity="0.4"/>
+    <ellipse cx="647" cy="568" rx="16" ry="18.5" fill="#CE9970"/>
+    <path d="M631,554 C638,544 656,543 663,555 C654,550 641,550 631,554 Z" fill="#E7E2D7"/>
+    <ellipse cx="633" cy="571" rx="4" ry="6" fill="#B8875A"/>
+    <path d="M641,560 C644,558 647,558 649,559" stroke="#A79880" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    <path d="M654,561 C657,559 660,560 661,562" stroke="#A79880" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    <g fill="#FFFFFF" fill-opacity="0.3" stroke="#4B4E52" stroke-width="1.6">
+      <circle cx="646" cy="569" r="5.6"/>
+      <circle cx="658" cy="570" r="5.4"/>
+    </g>
+    <path d="M651.6,569.3 L652.6,569.4" stroke="#4B4E52" stroke-width="1.6"/>
+    <path d="M640.5,568.6 L634,570" stroke="#4B4E52" stroke-width="1.4" fill="none"/>
+    <path d="M648,579 C652,584 658,584 661,578" stroke="#8A5236" stroke-width="1.9" fill="none" stroke-linecap="round"/>
+    <path d="M639,578 C641,581 643,582 645,582" stroke="#B8875A" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- her left hand holds the itinerary loosely; her right hand rests on his arm -->
+  <path d="M620,603 C612,628 611,652 615,668" stroke="#E3A13C" stroke-width="15" fill="none" stroke-linecap="round"/>
+  <g transform="rotate(14 614 690)">
+    <rect x="596" y="668" width="36" height="44" rx="2" fill="#F7EBD2"/>
+    <path d="M596,668 L632,668 L632,712" fill="none" stroke="#DBC9A3" stroke-width="1.6"/>
+    <g fill="#BAAB88">
+      <rect x="602" y="676" width="20" height="2.6" rx="1.3"/>
+      <rect x="602" y="684" width="24" height="2.4" rx="1.2"/>
+      <rect x="602" y="692" width="16" height="2.4" rx="1.2"/>
+    </g>
+  </g>
+  <ellipse cx="615" cy="670" rx="7.4" ry="6.4" fill="#CE9970"/>
+  <path d="M661,603 C668,620 672,634 680,644" stroke="#E3A13C" stroke-width="15" fill="none" stroke-linecap="round"/>
+  
+
+  <g transform="translate(-60,2)"><!-- ---------- THE COMPANION ---------- -->
+  <ellipse cx="786" cy="772" rx="17" ry="7.5" fill="#F0EDE4"/>
+  <ellipse cx="824" cy="774" rx="17" ry="7.5" fill="#F0EDE4"/>
+  <path d="M784,765 a17,7.5 0 0 0 17,0" fill="#4A4540" opacity="0.6"/>
+  <path d="M822,767 a17,7.5 0 0 0 17,0" fill="#4A4540" opacity="0.6"/>
+  <path d="M776,656 L800,656 L796,766 L779,766 Z" fill="#3A4B66"/>
+  <path d="M802,656 L828,656 L828,768 L810,768 Z" fill="#3A4B66"/>
+  <path d="M776,656 L784,656 L781,766 L779,766 Z" fill="#2B3850" opacity="0.6"/>
+  <path d="M790,690 C794,706 794,730 792,752" stroke="#2B3850" stroke-width="2.4" fill="none" opacity="0.5"/>
+  <path d="M816,690 C819,706 820,730 819,752" stroke="#2B3850" stroke-width="2.4" fill="none" opacity="0.5"/>
+
+  <path d="M778,578 C768,588 764,612 763,636 C762,652 764,664 766,672 L836,672 C838,660 839,634 837,610 C835,590 828,578 820,572 C808,564 788,568 778,578 Z" fill="#2F6FB5"/>
+  <path d="M778,578 C768,588 764,612 763,636 C762,652 764,664 766,672 L782,672 C778,652 777,616 781,594 C783,584 786,576 790,572 Z" fill="#245A96" opacity="0.55"/>
+  <path d="M790,570 L800,600 L812,568 C805,565 796,566 790,570 Z" fill="#E0A93A"/>
+  <path d="M800,600 L800,670" stroke="#245A96" stroke-width="2.6" fill="none" opacity="0.6"/>
+  <path d="M826,578 C834,596 838,630 837,666" stroke="#6BA5DE" stroke-width="3.2" fill="none" opacity="0.6"/>
+  <path d="M818,572 C828,584 834,600 836,616" stroke="#E0A93A" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.95"/>
+
+  <path d="M790,548 L810,548 L809,568 L792,568 Z" fill="#96683C"/>
+
+  <g transform="rotate(-9 800 556)">
+    <ellipse cx="799" cy="530" rx="19" ry="21.5" fill="#2E2621"/>
+    <ellipse cx="796" cy="534" rx="16.5" ry="19" fill="#A8743F"/>
+    <path d="M779,524 C782,510 800,504 814,512 C818,515 819,522 818,528 C812,518 794,514 779,524 Z" fill="#2E2621"/>
+    <ellipse cx="812" cy="536" rx="4.2" ry="6" fill="#95642F"/>
+    <path d="M786,528 C789,526 793,526 795,528" stroke="#43362B" stroke-width="2.1" fill="none" stroke-linecap="round"/>
+    <path d="M802,528 C805,526 809,527 810,529" stroke="#43362B" stroke-width="2.1" fill="none" stroke-linecap="round"/>
+    <circle cx="790" cy="535" r="2.1" fill="#3A2E24"/>
+    <circle cx="805" cy="536" r="2.1" fill="#3A2E24"/>
+    <path d="M788,547 C792,552 800,552 804,546" stroke="#6E4527" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M789,548 C793,551 800,551 803,547 C798,553 793,553 789,548 Z" fill="#F4EDE2"/>
+  </g>
+
+  <!-- companion's near arm, hers resting on it -->
+  <path d="M776,588 C766,606 760,624 758,638" stroke="#2F6FB5" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <ellipse cx="757" cy="644" rx="8" ry="7" fill="#A8743F"/>
+  <path d="M750,640 C754,637 760,637 764,639" stroke="#95642F" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+
+  <!-- companion's far arm, pointing at the gate sign -->
+  <path d="M822,586 L844,566 L864,546" stroke="#2F6FB5" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#A8743F">
+    <ellipse cx="866" cy="544" rx="8.6" ry="8"/>
+    <rect x="869" y="528" width="5" height="17" rx="2.5" transform="rotate(38 871 536)"/>
+    <rect x="866" y="536" width="4.6" height="11" rx="2.3" transform="rotate(38 868 541)"/>
+    <rect x="862" y="540" width="4.4" height="10" rx="2.2" transform="rotate(38 864 545)"/>
+  </g>
+</g>
+</g>
+
+<!-- her hand on the companion's arm, drawn over it -->
+<ellipse cx="684" cy="648" rx="7.6" ry="6.4" fill="#CE9970"/>
+<!-- floor reflection -->
+<use href="#trio" transform="translate(0,1552) scale(1,-1)" opacity="0.18" filter="url(#reflBlur2)" mask="url(#reflMask2)"/>
+
+<!-- ===================== ONE SOFT FOREGROUND FIGURE, WELL OUT OF THE WAY ===================== -->
+<g filter="url(#farBlur2)" opacity="0.4">
+  <use href="#figWalkbag" transform="translate(-40,520) scale(2.4)" fill="#8A7A62" stroke="#8A7A62"/>
+</g>
+
+<!-- warm haze over the whole frame -->
+<rect x="0" y="0" width="1400" height="900" fill="#FFD9A0" opacity="0.07"/>
+<rect x="0" y="0" width="1400" height="900" fill="url(#vignette2)"/>
+</svg>

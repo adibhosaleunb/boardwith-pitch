@@ -1,8 +1,8 @@
-import { Check, ShieldCheck, Languages, UserRound } from 'lucide-react';
+import { Check, ShieldCheck, Languages, UserRound, Lock, Video, HeartHandshake } from 'lucide-react';
 import EvidenceTag from './EvidenceTag.jsx';
 import styles from './PhoneScreen.module.css';
 
-// Concept screens for slide 4 (brief, 12.6). Sample data only: no real
+// Concept screens for slide 5 (brief, 12.6). Sample data only: no real
 // airlines, people, ratings or logos.
 
 function Chips() {
@@ -32,32 +32,47 @@ function AddFlights() {
         <Languages size={14} strokeWidth={2} aria-hidden="true" /> Language
       </p>
       <Chips />
-      <div className={styles.toggleRow}>
-        <span>Prefers a woman companion</span>
-        <span className={styles.toggle} aria-hidden="true" />
+      <p className={styles.label}>
+        <HeartHandshake size={14} strokeWidth={2} aria-hidden="true" /> Needs
+      </p>
+      <div className={styles.chips}>
+        <span className={styles.chip}>First flight alone</span>
+        <span className={styles.chip}>Some English</span>
       </div>
       <span className={styles.button}>Find a companion</span>
     </>
   );
 }
 
+function Tick({ children }) {
+  return (
+    <li>
+      <span className={styles.tick} aria-hidden="true">
+        <Check size={13} strokeWidth={3} />
+      </span>
+      {children}
+    </li>
+  );
+}
+
 function Checked() {
-  const rows = ['ID and selfie: verified', 'Criminal record: clear', 'Indian police clearance: received'];
   return (
     <>
-      <div className={styles.centre}>
+      <div className={styles.side}>
         <Avatar />
         <p className={styles.h}>Companion</p>
       </div>
       <ul className={styles.checks}>
-        {rows.map((r) => (
-          <li key={r}>
-            <span className={styles.tick} aria-hidden="true">
-              <Check size={13} strokeWidth={3} />
-            </span>
-            {r}
-          </li>
-        ))}
+        <Tick>ID and selfie: verified</Tick>
+        <Tick>Criminal record: clear</Tick>
+        <Tick>Police clearance: received</Tick>
+      </ul>
+      <div className={styles.side}>
+        <Avatar />
+        <p className={styles.h}>Traveller</p>
+      </div>
+      <ul className={styles.checks}>
+        <Tick>ID and selfie: verified</Tick>
       </ul>
     </>
   );
@@ -78,11 +93,34 @@ function Matched() {
       <p className={styles.line}>
         <ShieldCheck size={14} strokeWidth={2} aria-hidden="true" /> All checks complete
       </p>
-      <p className={styles.line}>Trust record: first trip</p>
+      <p className={styles.line}>
+        <Lock size={14} strokeWidth={2} aria-hidden="true" /> Payment held until arrival
+      </p>
       <div className={styles.buttons}>
         <span className={styles.ghost}>Say hello</span>
         <span className={styles.button}>Confirm match</span>
       </div>
+    </>
+  );
+}
+
+function Meet() {
+  return (
+    <>
+      <div className={styles.pair} aria-hidden="true">
+        <span className={styles.avatar}>
+          <UserRound size={30} strokeWidth={2} />
+        </span>
+        <span className={`${styles.avatar} ${styles.avatarWarm}`}>
+          <UserRound size={30} strokeWidth={2} />
+        </span>
+      </div>
+      <p className={styles.h}>Meet your companion</p>
+      <p className={styles.line}>
+        <Video size={14} strokeWidth={2} aria-hidden="true" /> Video call, 12 Dec, 7 pm
+      </p>
+      <p className={styles.line}>Family joins too</p>
+      <span className={styles.button}>Join the call</span>
     </>
   );
 }
@@ -112,7 +150,7 @@ function Together() {
   );
 }
 
-const SCREENS = [AddFlights, Checked, Matched, Together];
+const SCREENS = [AddFlights, Checked, Matched, Meet, Together];
 
 export default function PhoneScreen({ index }) {
   const Screen = SCREENS[index];

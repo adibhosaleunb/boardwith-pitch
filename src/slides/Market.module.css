@@ -1,0 +1,213 @@
+/* Template L3: headline; the ladder on the left; routes and travellers on the right. */
+.wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1020px 1fr;
+  column-gap: 60px;
+  margin-top: 40px;
+}
+
+.colTitle {
+  font-family: var(--font-text);
+  font-size: 30px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: var(--bw-grey-600);
+}
+
+.ladder {
+  display: grid;
+  gap: 26px;
+  margin-top: 22px;
+}
+
+.rung {
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 24px;
+  align-items: center;
+}
+
+.value {
+  grid-row: span 2;
+  font-family: var(--font-display);
+  font-size: 72px;
+  line-height: 1;
+  font-weight: 600;
+  font-stretch: 87.5%;
+  font-variant-numeric: tabular-nums;
+  color: var(--bw-teal-900);
+  white-space: nowrap;
+}
+
+.track {
+  display: block;
+  height: 26px;
+}
+
+.bar {
+  display: block;
+  height: 100%;
+  border-radius: 0 6px 6px 0;
+}
+
+.label {
+  margin-top: 6px;
+  font-family: var(--font-text);
+  font-size: 30px;
+  line-height: 1.28;
+  text-wrap: pretty;
+}
+
+/* total: a grey ceiling */
+.rung0 .bar {
+  background: var(--bw-grey-300);
+}
+
+/* serviceable: the hero number */
+.rung1 .value {
+  font-size: 92px;
+}
+
+.rung1 .bar {
+  background: var(--bw-teal-700);
+}
+
+/* would use */
+.rung2 .bar {
+  background: var(--bw-teal-500);
+}
+
+/* year-3 plan: a projection, dashed and hatched */
+.rung3 .bar {
+  background: repeating-linear-gradient(45deg, var(--bw-teal-100) 0 4px, var(--bw-paper) 4px 9px);
+  outline: 2px dashed var(--bw-teal-700);
+  outline-offset: -2px;
+}
+
+.next {
+  display: flex;
+  flex-direction: column;
+}
+
+.routes {
+  display: block;
+  margin-top: 14px;
+  width: 600px;
+  height: 210px;
+}
+
+.place {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 600;
+  font-stretch: 87.5%;
+  fill: var(--bw-teal-900);
+}
+
+.when {
+  font-family: var(--font-text);
+  font-size: 26px;
+  font-weight: 500;
+  fill: var(--bw-grey-600);
+}
+
+.routeText {
+  margin-top: 10px;
+  font-family: var(--font-text);
+  font-size: 30px;
+  line-height: 1.3;
+  text-wrap: pretty;
+}
+
+.travellers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 16px;
+  margin-top: 30px;
+}
+
+.travellers li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  font-family: var(--font-text);
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--bw-teal-900);
+}
+
+.sources {
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+:global(.is-reading) .wrap {
+  height: auto;
+}
+
+:global(.is-reading) .grid {
+  grid-template-columns: 1fr;
+  row-gap: 28px;
+  margin-top: 20px;
+}
+
+:global(.is-reading) .colTitle {
+  font-size: clamp(15px, 4vw, 18px);
+}
+
+:global(.is-reading) .rung {
+  grid-template-columns: 1fr;
+}
+
+:global(.is-reading) .value,
+:global(.is-reading) .rung1 .value {
+  grid-row: auto;
+  font-size: clamp(32px, 9vw, 40px);
+}
+
+:global(.is-reading) .bar {
+  max-width: 100%;
+}
+
+:global(.is-reading) .track {
+  height: 14px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+:global(.is-reading) .label,
+:global(.is-reading) .routeText {
+  font-size: clamp(16px, 4.2vw, 19px);
+}
+
+:global(.is-reading) .routes {
+  width: 100%;
+  height: auto;
+}
+
+:global(.is-reading) .travellers {
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 16px;
+}
+
+:global(.is-reading) .travellers li {
+  font-size: clamp(14px, 3.8vw, 17px);
+}
+
+:global(.is-reading) .travellers svg {
+  width: 96px;
+  height: 96px;
+}
+
+:global(.is-reading) .sources {
+  padding-top: 20px;
+}

@@ -13,8 +13,16 @@
   color: var(--bw-paper);
 }
 
+.sub {
+  margin-top: 28px;
+  max-width: 900px;
+  font-size: 40px;
+  line-height: 1.3;
+  color: var(--bw-paper);
+}
+
 .contact {
-  margin-top: 48px;
+  margin-top: 56px;
   margin-bottom: auto;
   color: var(--bw-teal-100);
 }
@@ -52,6 +60,11 @@
 
 :global(.is-reading) .hero {
   margin-top: 28px;
+}
+
+:global(.is-reading) .sub {
+  margin-top: 12px;
+  font-size: clamp(17px, 4.5vw, 20px);
 }
 
 :global(.is-reading) .contact {

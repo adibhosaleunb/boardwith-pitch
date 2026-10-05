@@ -1,12 +1,11 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { DeckContext } from './lib/DeckContext.js';
-import { deck, PROBLEM_INDEX, SOLUTION_INDEX, counterFor } from './slides/index.js';
+import { deck, CORE_COUNT, counterFor } from './slides/index.js';
 import useDeckNavigation from './hooks/useDeckNavigation.js';
 import useStageScale from './hooks/useStageScale.js';
 import useReadingMode from './hooks/useReadingMode.js';
 import Stage from './components/Stage.jsx';
 import FlightPath from './components/FlightPath.jsx';
-import { StoryLayer } from './components/StoryImage.jsx';
 import NotesPanel from './components/NotesPanel.jsx';
 import Timer from './components/Timer.jsx';
 import Overview from './components/Overview.jsx';
@@ -35,16 +34,8 @@ function Presenter() {
   const [version, setVersion] = useState('five');
   const [elapsed, setElapsed] = useState(0);
   const [running, setRunning] = useState(false);
-  const [fade, setFade] = useState(200);
-  const prevIndex = useRef(index);
+  const fade = 200;
   const touch = useRef(null);
-
-  // 300ms text crossfade for the slide 2 ↔ 3 pair, 200ms everywhere else.
-  useEffect(() => {
-    const pair = [prevIndex.current, index].sort().join();
-    setFade(pair === [PROBLEM_INDEX, SOLUTION_INDEX].sort().join() ? 300 : 200);
-    prevIndex.current = index;
-  }, [index]);
 
   useEffect(() => {
     if (!running) return undefined;
@@ -90,11 +81,11 @@ function Presenter() {
           break;
         case 'End':
           e.preventDefault();
-          goTo(9);
+          goTo(CORE_COUNT - 1);
           break;
         case 'a':
         case 'A':
-          goTo(10);
+          goTo(CORE_COUNT);
           break;
         case 'f':
         case 'F':
@@ -162,7 +153,6 @@ function Presenter() {
           {deck.map(({ slide, Component }, i) => (
             <Component key={slide.id} slide={slide} active={i === index} />
           ))}
-          <StoryLayer activeIndex={index} problemIndex={PROBLEM_INDEX} solutionIndex={SOLUTION_INDEX} />
           <FlightPath index={index} onGo={goTo} />
         </Stage>
 
@@ -234,7 +224,7 @@ function ReadingDeck() {
   );
 }
 
-// ── ?print: all 14 slides, one per 1920 × 1080 page, no chrome ────────
+// ── ?print: every slide (core and backups), one per 1920 × 1080 page ───
 function PrintDeck() {
   const pages = useMemo(
     () =>

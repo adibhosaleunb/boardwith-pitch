@@ -28,6 +28,10 @@ export default function BackupSafety({ slide, active }) {
             <h3 className={s.colTitle}>{backup.title}</h3>
             <p className={typo.body}>{backup.text}</p>
           </section>
+          <section>
+            <h3 className={s.colTitle}>{open.title}</h3>
+            <p className={typo.body}>{open.text}</p>
+          </section>
         </div>
         <div className={s.stack}>
           <section>
@@ -42,10 +46,6 @@ export default function BackupSafety({ slide, active }) {
               ))}
               <li className={typo.body}>{incident.last}</li>
             </ul>
-          </section>
-          <section>
-            <h3 className={s.colTitle}>{open.title}</h3>
-            <p className={typo.body}>{open.text}</p>
           </section>
         </div>
       </div>

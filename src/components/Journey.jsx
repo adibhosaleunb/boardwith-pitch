@@ -1,8 +1,9 @@
 import PhoneScreen from './PhoneScreen.jsx';
+import EvidenceTag from './EvidenceTag.jsx';
 import styles from './Journey.module.css';
 
-// Four steps joined by a route line; the numbers belong here because this
-// is a real sequence.
+// Five steps joined by a route line; the numbers belong here because this
+// is a real sequence. A step whose detail is "Planned" shows it as a tag.
 export default function Journey({ steps }) {
   return (
     <ol className={styles.journey}>
@@ -19,7 +20,13 @@ export default function Journey({ steps }) {
               <span className="sr-only">Step {i + 1}: </span>
               {step.title}
             </p>
-            {step.detail ? <p className={styles.detail}>{step.detail}</p> : null}
+            {step.detail === 'Planned' ? (
+              <p className={styles.detail}>
+                <EvidenceTag kind="projection" text="Planned" />
+              </p>
+            ) : step.detail ? (
+              <p className={styles.detail}>{step.detail}</p>
+            ) : null}
           </div>
         </li>
       ))}

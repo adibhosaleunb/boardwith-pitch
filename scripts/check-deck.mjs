@@ -12,7 +12,7 @@ import { chromium } from 'playwright-core';
 
 const EXEC = process.env.CHROMIUM_PATH ?? '/opt/pw-browsers/chromium';
 const OUT = 'screenshots';
-const SLIDES = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'a1', 'a2', 'a3', 'a4'];
+const SLIDES = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7'];
 const SAFE = { left: 118, right: 1802, bottom: 1000 }; // flight path lives below y 1000
 const LAYOUT_ONLY = process.argv.includes('--layout-only');
 const MIN_BODY = 32;

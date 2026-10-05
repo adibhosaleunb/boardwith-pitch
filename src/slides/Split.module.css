@@ -228,3 +228,26 @@
 :global(.is-reading) .iconLines li {
   gap: 12px;
 }
+
+/* Slide 4: "A companion, not a caregiver." reads as a promise, not a caption. */
+.subStrong {
+  color: var(--bw-teal-700);
+  font-weight: 600;
+}
+
+.instead {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--bw-grey-300);
+  font-family: var(--font-text);
+  font-size: 32px;
+  line-height: 1.32;
+  color: var(--bw-grey-600);
+  text-wrap: pretty;
+}
+
+:global(.is-reading) .instead {
+  margin-top: 20px;
+  padding-top: 12px;
+  font-size: clamp(16px, 4.2vw, 19px);
+}

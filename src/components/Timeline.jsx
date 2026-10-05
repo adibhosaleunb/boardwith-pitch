@@ -1,6 +1,6 @@
 import styles from './Timeline.module.css';
 
-// A vertical line of four dots, one per milestone.
+// A vertical line of dots, one per milestone.
 export default function Timeline({ steps }) {
   return (
     <ol className={styles.timeline}>
