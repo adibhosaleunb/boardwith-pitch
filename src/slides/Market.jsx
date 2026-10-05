@@ -31,6 +31,36 @@ function Routes({ route }) {
   );
 }
 
+// The three-year plan: three numbers, each over a small hatched projection
+// bar drawn to scale against year 3 (year 1's bar is a sliver, on purpose).
+const PLAN_TRACK = 220;
+
+function Plan({ plan }) {
+  const top = Math.max(...plan.years.map((y) => y.journeys));
+  return (
+    <section className={s.plan} aria-label={plan.title}>
+      <h3 className={s.planTitle}>
+        {plan.title} <Tag tag={plan.tag} />
+      </h3>
+      <ol className={s.planYears}>
+        {plan.years.map((y) => (
+          <li key={y.year} className={s.planYear}>
+            <span className={s.planWhen}>{y.year}</span>
+            <span className={s.planValue}>{y.display}</span>
+            <span className={s.planTrack} aria-hidden="true">
+              <span className={s.planBar} style={{ width: Math.max(6, Math.round((y.journeys / top) * PLAN_TRACK)) }} />
+            </span>
+            <span className={s.planWhere}>{y.where}</span>
+            <span className={s.planRevenue}>
+              <strong>{y.revenue}</strong> {plan.revenueLabel}
+            </span>
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
+}
+
 export default function Market({ slide, active }) {
   const max = Math.max(...slide.ladder.map((r) => r.value));
   return (
@@ -53,6 +83,7 @@ export default function Market({ slide, active }) {
                 </li>
               ))}
             </ol>
+            {slide.plan ? <Plan plan={slide.plan} /> : null}
           </section>
           <section className={s.next} aria-label={slide.nextTitle}>
             <h3 className={s.colTitle}>{slide.nextTitle}</h3>
