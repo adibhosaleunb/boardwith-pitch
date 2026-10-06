@@ -73,7 +73,7 @@ export const slides = [
     sub: 'Checked travel companions on the same flights, for anyone who shouldn’t fly alone. Starting between Canada and India.',
     timing: { five: 30, twenty: 90 },
     notes: {
-      five: '“Hi, I’m Aditya Bhosale, founder of Boardwith. When I came to Canada to study, it was my first flight alone. Then my mother flew home to India alone for the first time. I watched her through the glass at Fredericton airport, trying to get onto the Wi-Fi, and I couldn’t reach her. In Dubai, a stranger walked her to her connection. She got lucky.”',
+      five: '“Hi, I’m Aditya Bhosale, founder of Boardwith. When I came to Canada to study, it was my first flight alone. Then my mother flew home to India alone for the first time: four flights, three connections. I watched her through the glass at Fredericton airport, trying to get onto the Wi-Fi, and I couldn’t reach her. In Dubai, a stranger walked her to her connection. She got lucky.”',
       twenty: [
         'Said, not shown: the illustration is the founder’s mother at Fredericton airport, alone with her phone, under signs that point in every direction.',
         'Introduce yourself and the co-founders by name. One line on the company: a registered New Brunswick corporation at Energia Ventures, Fredericton.',
