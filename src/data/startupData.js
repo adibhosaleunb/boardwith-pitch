@@ -307,7 +307,6 @@ export const slides = [
         { figure: 'parent', label: 'Parents visiting' },
         { figure: 'student', label: 'First-time students' },
         { figure: 'language', label: 'A language barrier' },
-        { figure: 'vision', label: 'Low vision (later)' },
       ],
     },
     sources: [
@@ -322,7 +321,7 @@ export const slides = [
         'Year 3 is 11% of the serviceable journeys (year 1 is 0.2%, year 2 1.5%): 17.5% of parent journeys and about 5% of student journeys. Adding India–US later brings the share needed to about 3.4%.',
         'Cross-check: IRCC issued about 52,900 super visas to parents and grandparents (all countries) in 2025, about 106,000 journeys if each made one round trip.',
         'Headwind, said out loud: study permits for Indian students halved, 188,715 (2024) → 94,605 (2025). That’s why parents lead and students are second.',
-        'More travellers on any route: travellers with a language barrier, and later travellers with low vision. Unaccompanied minors stay out of scope. Open **A2**.',
+        'More travellers on any route: travellers with a language barrier. Unaccompanied minors stay out of scope. Open **A2**.',
       ],
     },
   },
@@ -429,11 +428,11 @@ export const slides = [
         { label: 'Mitacs contribution', value: 7500, display: 'C$7,500' },
       ],
     },
-    close: 'Every first flight alone, with someone checked beside them.',
+    close: 'Boardwith with someone you matched right, so you can travel light.',
     sources: ['Use of funds proposed 30 September 2026 for twelve months: the pilot, then a first year in Atlantic Canada. Mitacs Accelerate program terms.'],
     timing: { five: 20, twenty: 120 },
     notes: {
-      five: '“We’re raising 75,000 dollars on a SAFE. It pays for insurance and legal, verification, the app and outreach. It gets us to ten safe pilot trips by month six, then 31 journeys a month in Atlantic Canada. Every first flight alone should have someone checked beside them. Thank you.”',
+      five: '“We’re raising 75,000 dollars on a SAFE. It pays for insurance and legal, verification, the app and outreach. It gets us to ten safe pilot trips by month six, then 31 journeys a month in Atlantic Canada. Boardwith with someone you matched right, so you can travel light. Thank you.”',
       twenty: [
         'Said, not shown: the Mitacs contribution (C$7,500) unlocks a C$15,000 internship award if approved; the founder is the intern, so it funds him full-time on Boardwith. At the cap, C$75,000 is 5% of the company. If only C$30,000 is raised, the 10-trip pilot still runs.',
         'Insurance and legal, C$10,000: a year of liability insurance, and legal review of the terms, the companion agreement and the privacy policy.',

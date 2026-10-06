@@ -94,7 +94,7 @@ export default function Market({ slide, active }) {
             <ul className={s.travellers}>
               {slide.next.travellers.map((t) => (
                 <li key={t.figure}>
-                  <TravellerBadge figure={t.figure} size={140} />
+                  <TravellerBadge figure={t.figure} size={180} />
                   <span>{t.label}</span>
                 </li>
               ))}
