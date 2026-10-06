@@ -71,9 +71,9 @@ export const slides = [
     theme: 'teal',
     headline: 'Fly alone, with peace of mind.',
     sub: 'Checked travel companions on the same flights, for anyone who shouldn’t fly alone. Starting between Canada and India.',
-    timing: { five: 30, twenty: 90 },
+    timing: { five: 55, twenty: 90 },
     notes: {
-      five: '“Hi, I’m Aditya Bhosale, founder of Boardwith. When I came to Canada to study, it was my first flight alone. Then my mother flew home to India alone for the first time: four flights, three connections. I watched her through the glass at Fredericton airport, trying to get onto the Wi-Fi, and I couldn’t reach her. In Dubai, a stranger walked her to her connection. She got lucky.”',
+      five: '“Four flights. Three connections. My mother’s first time flying alone: Fredericton, Toronto, Dubai, Delhi, and home to Indore. I couldn’t go with her. Work, classes, and the cost of a second ticket. I searched Facebook and WhatsApp groups for someone on her route. Nobody. At Fredericton airport, I watched her through the glass, struggling to get onto the WiFi, and I couldn’t reach her. In Dubai, she made her connection only because a stranger walked her to the right terminal and got her online. She got lucky. Every parent flying alone is counting on that same luck. I’m Aditya Bhosale, founder of Boardwith. We replace that luck with a background-checked companion on the same flights.”',
       twenty: [
         'Said, not shown: the illustration is the founder’s mother at Fredericton airport, alone with her phone, under signs that point in every direction.',
         'Introduce yourself and the co-founders by name. One line on the company: a registered New Brunswick corporation at Energia Ventures, Fredericton.',
@@ -113,7 +113,7 @@ export const slides = [
     ],
     timing: { five: 30, twenty: 150 },
     notes: {
-      five: '“Airline help is free, but it stops at each gate. No one stays with them on the flight or through the layover. Shashikant’s mother missed her Toronto connection; he couldn’t reach her for 45 minutes. Meena, 67, was alone after Toronto immigration, despite a wheelchair booking. It isn’t age: it’s being alone and new to flying. In our survey, 59% found trustworthy help hard to find.”',
+      five: '“It isn’t just my mother. Airline help stops at each gate, and no one stays with them on the flight or through the layover. Shashikant’s mother missed her Toronto connection; he couldn’t reach her for 45 minutes. Meena, 67, was left alone after Toronto immigration, despite a wheelchair booking. In our survey of 401 people, 59% found trustworthy help hard to find.”',
       twenty: [
         'Said, not shown: the route drawn is the beachhead’s typical trip, Delhi to Toronto to Fredericton. The learning from interviews: need follows being alone, new to flying and short on English, not age.',
         'What families already spend: wheelchair assistance booked for parents who can walk (four or five families the founder knows); C$282.50 for one airport’s escort at Toronto; a second ticket plus time off; Shashikant delayed his mother’s next visit three months; Nikhil paid C$70 more for a longer connection.',
@@ -186,9 +186,9 @@ export const slides = [
     sources: [
       'Interviews, September 2026. MatchMyFlight and TravelSakha websites, September 2026.',
     ],
-    timing: { five: 30, twenty: 120 },
+    timing: { five: 25, twenty: 120 },
     notes: {
-      five: '“That’s why we built Boardwith: one checked companion on the same flights, matched before departure. Not airline help one gate at a time, not a second ticket, not an unchecked stranger: one person across airports. The family meets them before the trip. And it’s a companion, not a caregiver. Meena told us, ‘I would not want somebody treating me like a patient.’”',
+      five: '“That’s why we built Boardwith: one checked companion on the same flights, matched before departure. Not airline help one gate at a time, not a second ticket, not an unchecked stranger. The family meets them before the trip. A companion, not a caregiver. Meena told us, “I would not want somebody treating me like a patient.””',
       twenty: [
         'Said, not shown: Meena’s “I would not want somebody treating me like a patient.” The list at the bottom is what families try today; the full map is backup **A5** (airport escorts from C$282.50, MatchMyFlight at US$25–75, a kind stranger).',
         'Give each alternative its due if asked: airline help is free and families trust it; MatchMyFlight has a head start with our exact customers; community groups are free. Never say we have no competition.',
@@ -220,9 +220,9 @@ export const slides = [
       'Stripe Identity (C$2.00 per ID-and-selfie check), Certn (C$24.99–29.99), Consulate General of India, Toronto (police clearance fees).',
       'Status: in talks with Stripe Identity, Jumio and Certn.',
     ],
-    timing: { five: 30, twenty: 150 },
+    timing: { five: 25, twenty: 150 },
     notes: {
-      five: '“The family books the ticket, then tells us the flights, the traveller’s language and any needs. We verify both sides: companions pass three checks, travellers verify their ID. Then we match on route and needs. Whole routes rarely overlap, but every route we heard passed through Toronto or Montreal, so we match those legs. They meet before departure, and the family gets updates.”',
+      five: '“The family books the ticket and tells us the flights, the traveller’s language and any needs. We verify both sides: companions pass three checks, travellers verify their ID. Whole routes rarely overlap, but every route we heard passed through Toronto or Montreal, so we match those legs.”',
       twenty: [
         'What each step means: (1) after booking, the family enters flight numbers, dates, the traveller’s language and needs; (2) companions: ID and selfie, criminal record and Indian police clearance, about C$73 each; travellers: an ID and selfie check, C$2; (3) the whole route if possible, otherwise the legs through the Canadian arrival airport, with language, mobility and nerves considered; (4) a call before departure; (5) trip updates for the family are planned, not designed.',
         'The screens are concepts; the pilot runs on a sign-up form, matching by hand and Stripe payment links. The app takes four to six months, the length of the planned Mitacs internship.',
@@ -262,9 +262,9 @@ export const slides = [
     ],
     foot: 'No paid trip before insurance and signed terms. Ratings after every trip and a travel history on each companion (planned).',
     sources: ['Boardwith trip terms, draft, 5 October 2026 (see backup A7). Check costs: Stripe Identity, Certn, Consulate of India.'],
-    timing: { five: 30, twenty: 150 },
+    timing: { five: 20, twenty: 150 },
     notes: {
-      five: '“Trust is the product. We verify both sides before any match, and we pay for the checks. Families pay up front, and we hold the money until they arrive, so nobody goes around us. If a companion cancels, we rematch or refund. If a flight is delayed, the companion stays and the pay doesn’t change. And we match on needs: language, mobility, nerves.”',
+      five: '“Trust is the product. Families pay up front, and we hold the money until they arrive, so nobody goes around us. If a companion cancels, we rematch or refund. If a flight is delayed, the companion stays and the pay doesn’t change. And we match on needs: language, mobility, nerves.”',
       twenty: [
         'Said, not shown: no paid trip runs before insurance and signed terms. Companions aren’t caregivers: no medical or personal care, and we don’t serve travellers who need it, or anyone under 18.',
         'Cancellations: companion cancels or doesn’t show → we rematch; if we can’t, full refund. Family cancels → full refund before a match; after a match, the companion’s payout is kept.',
@@ -312,9 +312,9 @@ export const slides = [
     sources: [
       'Statistics Canada, 2024 tourism (439,000 trips × 2). Parents: 34% aged 55+ × about 30% alone, first time (estimate, being re-sized). Students: 94,605 study permits, 2025 (IRCC). Survey: 58% of the 98 respondents who arrange travel for others said they’d use it. India–US: 2.06 million Indian visitors in 2025 × 2 × 10% (NTTO).',
     ],
-    timing: { five: 35, twenty: 120 },
+    timing: { five: 30, twenty: 120 },
     notes: {
-      five: '“How big is this? 878,000 journeys a year from India to Canada. About 183,000 are parents and students flying alone for the first time: 41 to 59 million dollars a year at our price. 58% of people who arrange travel for others said they’d use it. We plan 372 journeys in year one, 2,772 in year two, about 20,000 in year three. And that’s one route: India to the US is more than twice as big.”',
+      five: '“How big is this? Of 878,000 journeys a year from India to Canada, about 183,000 are parents and students flying alone for the first time: 41 to 59 million dollars at our price. We plan 372 journeys in year one, 2,772 in year two, and about 20,000 in year three: 1.5 million dollars of revenue. And India to the US is more than twice as big.”',
       twenty: [
         'Said, not shown: the 183,000 is about 88,000 parents (34% aged 55+ × about 30% alone, first time; the 55+ filter is being re-sized) plus about 95,000 first-time students (94,605 study permits in 2025). The 106,000 is 183,000 × 58%, a stated intention, not a paid one.',
         'The plan by year: Atlantic Canada, then Eastern Canada, then all of Canada; 31, 231 and 1,680 journeys a month (parents 21 / 171 / 1,280, students 10 / 60 / 400). Revenue is C$75 kept per journey. Say “illustrative, not a forecast”; the detail is backup **A3**.',
@@ -352,9 +352,9 @@ export const slides = [
     conservative: 'Conservative on purpose: companions fly twice a year, and one buyer offered C$400 for someone he trusts.',
     caption: 'Checks: a companion’s C$73 spread over 2 trips, plus C$2 for the traveller’s ID. Insurance is a yearly policy in the C$10,000 insurance and legal budget. Support time isn’t counted yet.',
     sources: ['Stripe pricing; Stripe Identity, Certn, Consulate of India. Prices untested. Insurance: use of funds (estimate until quoted).'],
-    timing: { five: 30, twenty: 120 },
+    timing: { five: 20, twenty: 120 },
     notes: {
-      five: '“One trip: Delhi to Toronto to Fredericton. The family pays 275 dollars, and the companion earns 200. Checks on both sides cost about 38, card fees 8, and insurance is a yearly policy in our budget. We keep about 28. That’s conservative: when companions fly four times a year, it’s about 46. In year three, that’s 1.5 million dollars of revenue.”',
+      five: '“One trip: Delhi to Toronto to Fredericton. The family pays 275 dollars, and the companion earns 200. Checks on both sides cost about 38, card fees 8, and insurance is a yearly policy in our budget. We keep about 28. That’s conservative: when companions fly four times a year, it’s about 46.”',
       twenty: [
         'Said, not shown: the checks are about C$73 per companion (ID and selfie, criminal record, Indian police clearance), spread over two trips a year, plus C$2 to check the traveller’s ID; card fees are 2.9% + C$0.30. Per tier, we keep about C$30 (direct), C$28 (one connection) and C$27 (two or more).',
         'Insurance: a year of liability insurance sits in the C$10,000 insurance and legal line of the raise, so it isn’t taken from each trip. Once quoted, if the insurer prices per trip, it comes out of what we keep.',
@@ -383,7 +383,7 @@ export const slides = [
     sources: [
       'Survey, April–May 2026. Interviews, September 2026. UNB Fall 2025 enrolment summary. Team members’ professional histories. Mitacs application, submitted.',
     ],
-    timing: { five: 25, twenty: 90 },
+    timing: { five: 30, twenty: 90 },
     notes: {
       five: '“We already have pull. Our first companion has signed up, the Fredericton Association of India is helping us reach families, and UNB’s 454 Indian students are our families and future companions. At Copart, I worked on identity verification, which is our first trust check. Adarsh, our CTO, is a software architect at Tavant. Shivani runs companion recruitment and support.”',
       twenty: [
@@ -430,9 +430,9 @@ export const slides = [
     },
     close: 'Boardwith with someone you matched right, so you can travel light.',
     sources: ['Use of funds proposed 30 September 2026 for twelve months: the pilot, then a first year in Atlantic Canada. Mitacs Accelerate program terms.'],
-    timing: { five: 20, twenty: 120 },
+    timing: { five: 25, twenty: 120 },
     notes: {
-      five: '“We’re raising 75,000 dollars on a SAFE. It pays for insurance and legal, verification, the app and outreach. It gets us to ten safe pilot trips by month six, then 31 journeys a month in Atlantic Canada. Boardwith with someone you matched right, so you can travel light. Thank you.”',
+      five: '“We’re raising 75,000 dollars on a SAFE. It pays for insurance and legal, verification, the app and outreach. It gets us to ten safe pilot trips by month six, then 31 journeys a month in Atlantic Canada. My mother got lucky. Boardwith with someone you matched right, so you can travel light. Thank you.”',
       twenty: [
         'Said, not shown: the Mitacs contribution (C$7,500) unlocks a C$15,000 internship award if approved; the founder is the intern, so it funds him full-time on Boardwith. At the cap, C$75,000 is 5% of the company. If only C$30,000 is raised, the 10-trip pilot still runs.',
         'Insurance and legal, C$10,000: a year of liability insurance, and legal review of the terms, the companion agreement and the privacy policy.',
