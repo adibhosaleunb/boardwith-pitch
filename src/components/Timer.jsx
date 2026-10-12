@@ -1,4 +1,4 @@
-import { slides } from '../data/startupData.js';
+import { slides, pitch } from '../data/startupData.js';
 import { CORE_COUNT } from '../slides/index.js';
 import styles from './Timer.module.css';
 
@@ -17,10 +17,10 @@ export function targets(version) {
   });
 }
 
-// Counts down from 5:00 or 20:00 (the active notes tab) and turns orange-ink
-// when the presenter is behind the timing table (brief, section 7).
+// Counts down from the short pitch (3:00 on this branch) or 20:00, by the
+// active notes tab, and turns orange-ink when the presenter is behind.
 export default function Timer({ version, elapsed, running, index, onToggle, onReset, compact = false }) {
-  const total = version === 'five' ? 300 : 1200;
+  const total = version === 'five' ? pitch.shortSeconds : pitch.longSeconds;
   const target = targets(version)[index];
   const behind = target ? elapsed > target.by : elapsed > total;
   const remaining = total - elapsed;

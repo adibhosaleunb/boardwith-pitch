@@ -12,7 +12,7 @@ import { chromium } from 'playwright-core';
 
 const EXEC = process.env.CHROMIUM_PATH ?? '/opt/pw-browsers/chromium';
 const OUT = 'screenshots';
-const SLIDES = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7'];
+const SLIDES = ['1', '2', '3', '4', '5', 'a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7'];
 const SAFE = { left: 118, right: 1802, bottom: 1000 }; // flight path lives below y 1000
 const LAYOUT_ONLY = process.argv.includes('--layout-only');
 const MIN_BODY = 32;
@@ -139,9 +139,9 @@ async function shoot() {
     await p.evaluate(() => document.fonts.ready);
     for (const s of SLIDES) {
       await p.evaluate((h) => (window.location.hash = h), `#/${s}`);
-      // Slide 4's colour reveal ends 2.1s after entry; shoot it settled.
-      await p.waitForTimeout(w === 1920 ? (s === '4' ? 2600 : 1000) : 300);
-      if (w === 1920 || ['1', '4', '7', '10'].includes(s)) {
+      // Slide 3's colour reveal ends 2.1s after entry; shoot it settled.
+      await p.waitForTimeout(w === 1920 ? (s === '3' ? 2600 : 1000) : 300);
+      if (w === 1920 || ['1', '3', '5'].includes(s)) {
         await p.screenshot({ path: `${OUT}/${w}x${h}-${s}.png` });
       }
       const hScroll = await p.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);

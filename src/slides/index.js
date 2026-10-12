@@ -1,36 +1,29 @@
 import { slides } from '../data/startupData.js';
 import Cover from './Cover.jsx';
 import Problem from './Problem.jsx';
-import WhyNow from './WhyNow.jsx';
 import Solution from './Solution.jsx';
-import Product from './Product.jsx';
-import Trust from './Trust.jsx';
-import Market from './Market.jsx';
-import BusinessModel from './BusinessModel.jsx';
+import Opportunity from './Opportunity.jsx';
+import Close from './Close.jsx';
 import GoToMarket from './GoToMarket.jsx';
 import Competition from './Competition.jsx';
-import Team from './Team.jsx';
 import Projections from './Projections.jsx';
-import Ask from './Ask.jsx';
 import BackupEvidence from './BackupEvidence.jsx';
 import BackupMarket from './BackupMarket.jsx';
 import BackupEconomics from './BackupEconomics.jsx';
 import BackupSafety from './BackupSafety.jsx';
 
+// 3min-pitch: five core slides. The Gate 1 components for why now, how it
+// works, trust, market, business model, team and the ask stay in the repo
+// (gate1-final uses them) but aren't in this deck.
 const COMPONENTS = {
   cover: Cover,
   problem: Problem,
-  'why-now': WhyNow,
   solution: Solution,
-  product: Product,
-  trust: Trust,
-  market: Market,
-  'business-model': BusinessModel,
+  opportunity: Opportunity,
+  close: Close,
   'go-to-market': GoToMarket,
   competition: Competition,
-  team: Team,
   projections: Projections,
-  ask: Ask,
   evidence: BackupEvidence,
   'market-detail': BackupMarket,
   economics: BackupEconomics,

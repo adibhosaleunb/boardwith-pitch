@@ -6,13 +6,17 @@ import styles from './FlightPath.module.css';
 const Y = 1030;
 
 // Geometry: full width on most slides; under the text column on L2 slides.
+// The core dots spread over the same span (1260px, or 504px on L2) however
+// many core slides there are.
 function geometry(compact) {
+  const span = compact ? 504 : 1260;
+  const step = span / Math.max(1, CORE_COUNT - 1);
   return compact
-    ? { start: 120, step: 56, gap: 52, bstep: 30, counterX: 950 }
-    : { start: 120, step: 140, gap: 84, bstep: 34, counterX: 1800 };
+    ? { start: 120, step, gap: 52, bstep: 30, counterX: 950 }
+    : { start: 120, step, gap: 84, bstep: 34, counterX: 1800 };
 }
 
-// Flight-path progress along the bottom: ten dots for the core slides,
+// Flight-path progress along the bottom: one dot per core slide,
 // a hollow one per backup, a small orange plane at the current slide.
 export default function FlightPath({ index, onGo }) {
   const current = slides[index];

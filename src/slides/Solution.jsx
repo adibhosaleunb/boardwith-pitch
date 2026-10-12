@@ -1,4 +1,4 @@
-import { Plane, ShieldCheck, HeartHandshake } from 'lucide-react';
+import { Plane, ShieldCheck, HeartHandshake, LockKeyhole } from 'lucide-react';
 import { images } from '../data/startupData.js';
 import Slide from '../components/Slide.jsx';
 import Headline from '../components/Headline.jsx';
@@ -7,7 +7,7 @@ import StoryImage from '../components/StoryImage.jsx';
 import typo from '../styles/type.module.css';
 import s from './Split.module.css';
 
-const ICONS = { plane: Plane, shield: ShieldCheck, companion: HeartHandshake };
+const ICONS = { plane: Plane, shield: ShieldCheck, companion: HeartHandshake, hold: LockKeyhole };
 
 export default function Solution({ slide, active }) {
   return (

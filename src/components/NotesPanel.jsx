@@ -1,8 +1,10 @@
+import { pitch } from '../data/startupData.js';
 import Rich from './Rich.jsx';
 import Timer from './Timer.jsx';
 import styles from './NotesPanel.module.css';
 
-// Drawer under the stage (outside the scaled canvas) with 5- and 20-minute notes.
+// Drawer under the stage (outside the scaled canvas) with the short live
+// script and the longer talking points.
 export default function NotesPanel({ slide, index, version, onVersion, timer }) {
   const notes = slide.notes ?? { five: '', twenty: [] };
   return (
@@ -10,8 +12,8 @@ export default function NotesPanel({ slide, index, version, onVersion, timer }) 
       <header className={styles.head}>
         <div className={styles.tabs} role="tablist" aria-label="Notes version">
           {[
-            ['five', '5 min'],
-            ['twenty', '20 min'],
+            ['five', pitch.shortLabel],
+            ['twenty', pitch.longLabel],
           ].map(([key, label]) => (
             <button
               key={key}

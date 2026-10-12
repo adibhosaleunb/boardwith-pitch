@@ -1,0 +1,96 @@
+/* Slide 4 (3-minute pitch): the market ladder on the left, one journey's
+   money on the right, split by a single rule. Ladder styles come from
+   Market.module.css. */
+.grid {
+  display: grid;
+  grid-template-columns: 980px 1fr;
+  margin-top: 44px;
+}
+
+.grid > section + section {
+  margin-left: 64px;
+  padding-left: 64px;
+  border-left: 1px solid var(--bw-grey-300);
+}
+
+.rung {
+  grid-template-columns: 300px 1fr;
+}
+
+.nextRoute {
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid var(--bw-grey-300);
+  font-family: var(--font-text);
+  font-size: 30px;
+  line-height: 1.3;
+  text-wrap: pretty;
+}
+
+.money {
+  display: flex;
+  flex-direction: column;
+}
+
+.rows {
+  display: grid;
+  gap: 26px;
+  margin-top: 22px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 4px;
+}
+
+.value {
+  font-family: var(--font-display);
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 600;
+  font-stretch: 87.5%;
+  font-variant-numeric: tabular-nums;
+  color: var(--bw-teal-900);
+  white-space: nowrap;
+}
+
+.label {
+  margin: 0;
+  font-family: var(--font-text);
+  font-size: 30px;
+  line-height: 1.28;
+  text-wrap: pretty;
+}
+
+:global(.is-reading) .grid {
+  grid-template-columns: 1fr;
+  row-gap: 28px;
+  margin-top: 20px;
+}
+
+:global(.is-reading) .grid > section + section {
+  margin-left: 0;
+  padding-left: 0;
+  padding-top: 20px;
+  border-left: 0;
+  border-top: 1px solid var(--bw-grey-300);
+}
+
+:global(.is-reading) .rung {
+  grid-template-columns: 1fr;
+}
+
+:global(.is-reading) .nextRoute,
+:global(.is-reading) .label {
+  font-size: clamp(16px, 4.2vw, 19px);
+}
+
+:global(.is-reading) .rows {
+  gap: 16px;
+  margin-top: 12px;
+}
+
+:global(.is-reading) .value {
+  font-size: clamp(28px, 8vw, 36px);
+}

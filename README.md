@@ -1,5 +1,15 @@
 # Boardwith investor deck
 
+> **Branch `3min-pitch`** (12 October 2026): the Summer Institute opening-ceremony pitch, **3 minutes, 5 slides**, cut from `gate1-final`.
+>
+> 1. Your story: "Fly alone, with peace of mind."
+> 2. The problem: airline help stops at each gate (45 min, 59%), with the why-now (30%+ wheelchair requests; India's new fee) as the third number
+> 3. The solution: a checked companion on the same flights; both sides checked; payment held until arrival; what families try today
+> 4. Market and money: 878,000 → 183,000 → 106,000 journeys, and one journey (C$225–325 paid, C$75 kept, ≈ C$28 after checks today, ≈ C$46 at 4 trips a year)
+> 5. Traction, team and ask: 401 / 1 / 0, the team, C$75,000, and what we need from the room (an insurer and a lawyer; families and students flying in December)
+>
+> Backups A1–A7 are unchanged. The notes tab and timer read **3 min** (3:00 countdown; script about 360 words). Keys 1–5 jump to the core slides; End goes to slide 5. The Gate 1 components that this deck drops (why now, how it works, trust, market, business model, team, ask) stay in the repo so the branches merge cleanly. The rest of this README describes the 10-slide Gate 1 deck.
+
 Web presentation for the Shadow Institute Gate 1 pitch (7 October 2026) and 20-minute investor meetings. 10 core slides plus 7 backups (A1–A7), built with React and Vite and deployed on Netlify.
 
 **Order (5 October 2026):** the dry-run panel's rebuilt five-minute pitch: 1 your story, 2 the problem, 3 why now, 4 the solution, 5 how it works, 6 trust and safety, 7 market, 8 business model, 9 traction and team, 10 the ask. Backups: A1 six conversations, A2 market sizing, A3 three-year scenario, A4 unit economics, A5 competition, A6 go-to-market, A7 trust, safety and trip terms. The 5-minute script is about 600 words (about 4:30 spoken).
