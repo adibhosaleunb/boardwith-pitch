@@ -1,0 +1,98 @@
+/* Six teal stops joined by a dashed grey route (slide 2). */
+.route {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(var(--n), 1fr);
+  column-gap: 16px;
+}
+
+/* The route runs from the first stop's centre to the last one's. */
+.route::before {
+  content: '';
+  position: absolute;
+  top: 47px;
+  left: calc(100% / var(--n) / 2);
+  right: calc(100% / var(--n) / 2);
+  border-top: 3px dashed var(--bw-grey-300);
+}
+
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--bw-teal-700);
+  color: var(--bw-paper);
+}
+
+.name {
+  margin-top: 20px;
+  font-family: var(--font-text);
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+.tool {
+  margin-top: 6px;
+  font-family: var(--font-text);
+  font-size: 28px;
+  line-height: 1.25;
+  color: var(--bw-grey-600);
+  text-wrap: balance;
+}
+
+/* Phones: a vertical route, stop on the left, name and tool beside it. */
+:global(.is-reading) .route {
+  grid-template-columns: 1fr;
+  row-gap: 14px;
+}
+
+:global(.is-reading) .route::before {
+  top: 24px;
+  bottom: 24px;
+  left: 23px;
+  right: auto;
+  border-top: 0;
+  border-left: 2px dashed var(--bw-grey-300);
+}
+
+:global(.is-reading) .step {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  column-gap: 14px;
+  align-items: center;
+  text-align: left;
+}
+
+:global(.is-reading) .stop {
+  grid-row: span 2;
+  width: 48px;
+  height: 48px;
+}
+
+:global(.is-reading) .stop svg {
+  width: 24px;
+  height: 24px;
+}
+
+:global(.is-reading) .name {
+  margin-top: 0;
+  font-size: clamp(16px, 4.3vw, 19px);
+}
+
+:global(.is-reading) .tool {
+  margin-top: 0;
+  font-size: clamp(14px, 3.8vw, 17px);
+}

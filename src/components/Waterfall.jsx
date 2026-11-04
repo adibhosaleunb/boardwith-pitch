@@ -10,6 +10,25 @@ const BASE = 360; // y of the baseline
 const TOP = 70; // y of the tallest bar's top
 const COL = 166;
 const BAR = 112;
+const LINE = 34; // second line of a two-line label
+
+// Labels longer than a column split into two balanced lines
+// ("Checks, all on this trip" → "Checks, all" / "on this trip").
+function labelLines(label) {
+  if (label.length <= 14) return [label];
+  const words = label.split(' ');
+  let best = [label];
+  let diff = Infinity;
+  for (let i = 1; i < words.length; i++) {
+    const a = words.slice(0, i).join(' ');
+    const b = words.slice(i).join(' ');
+    if (Math.abs(a.length - b.length) < diff) {
+      diff = Math.abs(a.length - b.length);
+      best = [a, b];
+    }
+  }
+  return best;
+}
 
 export default function Waterfall({ caption, steps }) {
   const total = steps[0].value;
@@ -59,7 +78,11 @@ export default function Waterfall({ caption, steps }) {
               {b.display}
             </text>
             <text className={styles.label} x={b.x + BAR / 2} y={BASE + 44} textAnchor="middle">
-              {b.label}
+              {labelLines(b.label).map((ln, j) => (
+                <tspan key={ln} x={b.x + BAR / 2} dy={j ? LINE : 0}>
+                  {ln}
+                </tspan>
+              ))}
             </text>
             {b.note ? (
               <text className={styles.note} x={b.x + BAR / 2} y={BASE + 78} textAnchor="middle">

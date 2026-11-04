@@ -1,40 +1,36 @@
 import { slides } from '../data/startupData.js';
-import Cover from './Cover.jsx';
-import Problem from './Problem.jsx';
-import Solution from './Solution.jsx';
-import Opportunity from './Opportunity.jsx';
-import Close from './Close.jsx';
-import GoToMarket from './GoToMarket.jsx';
-import Competition from './Competition.jsx';
-import Projections from './Projections.jsx';
-import BackupEvidence from './BackupEvidence.jsx';
-import BackupMarket from './BackupMarket.jsx';
-import BackupEconomics from './BackupEconomics.jsx';
-import BackupSafety from './BackupSafety.jsx';
+import { fillDeep } from '../lib/budget.js';
+import PfCover from './PfCover.jsx';
+import PfTest from './PfTest.jsx';
+import PfDollars from './PfDollars.jsx';
+import PfKnow from './PfKnow.jsx';
+import PfMargin from './PfMargin.jsx';
+import PfTimeline from './PfTimeline.jsx';
+import PfAsk from './PfAsk.jsx';
+import PfSources from './PfSources.jsx';
 
-// 3min-pitch: five core slides. The Gate 1 components for why now, how it
-// works, trust, market, business model, team and the ask stay in the repo
-// (gate1-final uses them) but aren't in this deck.
+// prototype-funding-pitch: seven core slides and one backup (A1). The Gate 1
+// and 3-minute components (Cover, Problem, Solution, Opportunity, Close, the
+// backups and the rest) stay in the repo, unused here, so the pitch
+// branches stay mergeable (gate1-final and 3min-pitch use them).
 const COMPONENTS = {
-  cover: Cover,
-  problem: Problem,
-  solution: Solution,
-  opportunity: Opportunity,
-  close: Close,
-  'go-to-market': GoToMarket,
-  competition: Competition,
-  projections: Projections,
-  evidence: BackupEvidence,
-  'market-detail': BackupMarket,
-  economics: BackupEconomics,
-  safety: BackupSafety,
+  'pf-cover': PfCover,
+  'pf-test': PfTest,
+  'pf-dollars': PfDollars,
+  'pf-know': PfKnow,
+  'pf-margin': PfMargin,
+  'pf-timeline': PfTimeline,
+  'pf-ask': PfAsk,
+  'pf-sources': PfSources,
 };
 
-export const deck = slides.map((slide) => ({ slide, Component: COMPONENTS[slide.id] }));
+// Copy tokens such as {ask} are filled from src/lib/budget.js here, so every
+// component, the notes panel and the screen-reader line get the numbers.
+export const deck = slides.map((slide) => ({ slide: fillDeep(slide), Component: COMPONENTS[slide.id] }));
 
 export const CORE_COUNT = slides.filter((s) => typeof s.number === 'number').length;
 
-// '#/1' … '#/10', '#/a1' … '#/a7'
+// '#/1' … '#/7', '#/a1'
 export const hashFor = (index) => `#/${String(slides[index].number).toLowerCase()}`;
 
 export function indexFromHash(hash) {

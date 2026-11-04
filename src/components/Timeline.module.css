@@ -38,6 +38,20 @@
   color: var(--bw-paper);
 }
 
+/* On white (prototype-funding slide 6): teal dots and line, teal-900 dates. */
+.paper::before {
+  background: var(--bw-teal-500);
+  opacity: 0.5;
+}
+
+.paper .dot {
+  background: var(--bw-teal-700);
+}
+
+.paper .when {
+  color: var(--bw-teal-900);
+}
+
 :global(.is-reading) .timeline {
   font-size: clamp(16px, 4.3vw, 19px);
   gap: 12px;

@@ -1,14 +1,24 @@
 # Boardwith investor deck
 
-> **Branch `3min-pitch`** (12 October 2026): the Summer Institute opening-ceremony pitch, **3 minutes, 5 slides**, cut from `gate1-final`.
+> **Branch `prototype-funding-pitch`** (4 November 2026): the Accelerator Prototype Funding pitch (J Herbert Smith Centre, **Fri 6 Nov 2026, 2:40–2:50 pm**): about 3 minutes of pitch, then questions. **7 slides plus one backup**, cut from `3min-pitch`. The ask is C$390.
 >
-> 1. Your story: "Fly alone, with peace of mind."
-> 2. The problem: airline help stops at each gate (45 min, 59%), with the why-now (30%+ wheelchair requests; India's new fee) as the third number
-> 3. The solution: a checked companion on the same flights; both sides checked; payment held until arrival; what families try today
-> 4. Market and money: 878,000 → 183,000 → 106,000 journeys, and one journey (C$225–325 paid, C$75 kept, ≈ C$28 after checks today, ≈ C$46 at 4 trips a year)
-> 5. Traction, team and ask: 401 / 1 / 0, the team, C$75,000, and what we need from the room (an insurer and a lawyer; families and students flying in December)
+> 1. One trip, end to end, on our own stack: the ask up front (C$390 requested; C$385 on 2 Nov plus C$5 after re-checking Twilio)
+> 2. The test: six steps from sign-up to masked calls, each on our own systems; three companions verified; every team-hour logged
+> 3. What each dollar buys: every line from a published price, C$387.22 rounded up to C$390; C$34.48 to verify one companion; US$0.0225 a masked-call minute
+> 4. What we'll know by Friday 8 January: cost and time per check, team-hours per trip, which steps ran on our stack
+> 5. Does C$28 a trip hold up? One trip with every companion check on it keeps C$32.25 (C$27.65 after the free ID checks); about 66 minutes of hands-on work uses that up
+> 6. Timeline, and what we report if the trip slips
+> 7. The ask: C$390, and the C$110 of the C$500 we're not asking for
 >
-> Backups A1–A7 are unchanged. The notes tab and timer read **3 min** (3:00 countdown; script about 360 words). Keys 1–5 jump to the core slides; End goes to slide 5. The Gate 1 components that this deck drops (why now, how it works, trust, market, business model, team, ask) stay in the repo so the branches merge cleanly. The rest of this README describes the 10-slide Gate 1 deck.
+> **A1** (backup): where every price comes from.
+>
+> **Numbers.** Budget inputs are `budget` in `src/data/startupData.js`; `src/lib/budget.js` computes every derived figure, and slide copy refers to them as tokens (`{ask}`, `{clearOne}` …) that `src/slides/index.js` fills in. `npm run check` runs `scripts/check-numbers.mjs` first, which asserts every expected value from the brief (section 6.4) and that slide 3's rounded rows add up, then the layout check. **To keep the original C$385 request,** set `ask: 385` in `budget`: slides 1 and 7 show C$385, the "plus C$5" lines disappear, C$110 becomes C$115, and slide 3's Request row stays C$390 with the label "Cost rounded up; we're asking for C$385". The speaker notes are plain text, so say 385 instead of 390 in the script.
+>
+> The notes tabs read **3 min** (the live script, 3:00 countdown) and **Q&A** (the answers by slide, 7:00). Keys 1–7 jump to the core slides, A opens the backup and End goes to slide 7; the hash tracks `#/1` … `#/7` and `#/a1`. `/?print` gives 8 pages with "Boardwith. Accelerator Prototype Funding, 6 Nov 2026." bottom left.
+>
+> **Deployed on Vercel** as the project `boardwith-prototype-pitch` (production branch `prototype-funding-pitch`), using `vercel.json`. `netlify.toml` stays for the other branches; Vercel ignores it.
+>
+> The Gate 1 and 3-minute slide components stay in the repo, unused here, so the branches merge cleanly. The rest of this README describes the 10-slide Gate 1 deck.
 
 Web presentation for the Shadow Institute Gate 1 pitch (7 October 2026) and 20-minute investor meetings. 10 core slides plus 7 backups (A1–A7), built with React and Vite and deployed on Netlify.
 

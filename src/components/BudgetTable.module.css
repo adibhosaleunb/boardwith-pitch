@@ -1,0 +1,76 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-text);
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.table th,
+.table td {
+  padding: 8px 18px 6px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--bw-grey-300);
+}
+
+.table thead th {
+  background: var(--bw-teal-700);
+  color: var(--bw-paper);
+  font-weight: 600;
+  border-bottom: 0;
+}
+
+.table tbody th {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.table tbody td {
+  color: var(--bw-grey-600);
+}
+
+.table .amount {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.table td.amount {
+  color: var(--bw-teal-900);
+  font-size: 32px;
+  font-weight: 600;
+  font-stretch: 87.5%;
+  line-height: 1.1;
+}
+
+/* Total and Request: mist fill, bold. */
+.strong th,
+.strong td {
+  background: var(--bw-mist);
+  font-weight: 700;
+}
+
+.strong td {
+  color: var(--bw-teal-900);
+}
+
+.strong td.amount {
+  font-weight: 700;
+}
+
+:global(.is-reading) .table {
+  font-size: clamp(13px, 3.5vw, 16px);
+}
+
+:global(.is-reading) .table th,
+:global(.is-reading) .table td {
+  padding: 6px 6px 5px;
+}
+
+:global(.is-reading) .table tbody th {
+  white-space: normal;
+}
+
+:global(.is-reading) .table td.amount {
+  font-size: clamp(14px, 3.8vw, 17px);
+}

@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "images": "node scripts/prepare-images.mjs",
-    "check": "node scripts/check-deck.mjs"
+    "check": "node scripts/check-numbers.mjs && node scripts/check-deck.mjs"
   },
   "dependencies": {
     "@fontsource-variable/anek-latin": "^5.3.0",
