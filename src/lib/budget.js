@@ -62,7 +62,7 @@ export function compute(b = input) {
   const twilioUsd = sum(b.lines.filter((l) => l.id.startsWith('tw')), own);
   const amounts = { ...rows, hst, fxFee, total, request };
 
-  // One trip (slide 5).
+  // One trip (slide 4 and backup A1).
   const t = b.trip;
   const clearOne = (line.certn.unit + line.oneid.unit) * (1 + b.hst);
   const cardFee = t.price * t.cardRate + t.cardFixed;

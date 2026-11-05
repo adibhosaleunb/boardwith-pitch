@@ -6,7 +6,7 @@ import Sources from '../components/Sources.jsx';
 import { money } from '../lib/budget.js';
 import s from './Pf.module.css';
 
-// Slide 5: one trip with every companion check on it (values from
+// Backup A1: one trip with every companion check on it (values from
 // src/lib/budget.js), and what decides the margin. The "Left before team
 // time" bar is the one orange element.
 export default function PfMargin({ slide, active }) {

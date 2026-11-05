@@ -1,4 +1,4 @@
-// All deck copy lives here. Copy is final (brief, section 4): headlines,
+// All deck copy lives here. Copy is final (5-slide update brief, section 2): headlines,
 // numbers and labels are word for word. Slide components only lay it out.
 //
 // Branch prototype-funding-pitch (4 November 2026): the Accelerator

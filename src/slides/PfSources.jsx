@@ -2,7 +2,7 @@ import Slide from '../components/Slide.jsx';
 import Headline from '../components/Headline.jsx';
 import s from './Pf.module.css';
 
-// Backup A1: the published price behind every line on slide 3. No orange.
+// Backup A2: the published price behind every line on slide 3. No orange.
 export default function PfSources({ slide, active }) {
   const { table } = slide;
   return (
