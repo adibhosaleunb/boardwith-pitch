@@ -38,7 +38,17 @@
   color: var(--bw-paper);
 }
 
-/* On white (prototype-funding slide 6): teal dots and line, teal-900 dates. */
+/* A step set in bold (prototype-funding slide 5: the 8 January report). */
+.strong {
+  font-weight: 700;
+  color: var(--bw-paper);
+}
+
+.strong .when {
+  font-weight: 700;
+}
+
+/* On white: teal dots and line, teal-900 dates. */
 .paper::before {
   background: var(--bw-teal-500);
   opacity: 0.5;

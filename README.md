@@ -1,20 +1,18 @@
 # Boardwith investor deck
 
-> **Branch `prototype-funding-pitch`** (4 November 2026): the Accelerator Prototype Funding pitch (J Herbert Smith Centre, **Fri 6 Nov 2026, 2:40–2:50 pm**): about 3 minutes of pitch, then questions. **7 slides plus one backup**, cut from `3min-pitch`. The ask is C$390.
+> **Branch `prototype-funding-pitch`** (5 November 2026): the Accelerator Prototype Funding pitch (J Herbert Smith Centre, **Fri 6 Nov 2026, 2:40–2:50 pm**): about 2:50 of pitch against the 3:00 timer, then questions, in a 10-minute slot. **5 slides plus three backups (A1–A3)**, cut from `3min-pitch`. The ask is C$390.
 >
-> 1. One trip, end to end, on our own stack: the ask up front (C$390 requested; C$385 on 2 Nov plus C$5 after re-checking Twilio)
+> 1. One trip, end to end, on our own stack: the ask up front (C$390 requested)
 > 2. The test: six steps from sign-up to masked calls, each on our own systems; three companions verified; every team-hour logged
-> 3. What each dollar buys: every line from a published price, C$387.22 rounded up to C$390; C$34.48 to verify one companion; US$0.0225 a masked-call minute
-> 4. What we'll know by Friday 8 January: cost and time per check, team-hours per trip, which steps ran on our stack
-> 5. Does C$28 a trip hold up? One trip with every companion check on it keeps C$32.25 (C$27.65 after the free ID checks); about 66 minutes of hands-on work uses that up
-> 6. Timeline, and what we report if the trip slips
-> 7. The ask: C$390, and the C$110 of the C$500 we're not asking for
+> 3. What each dollar buys: every line from a published price, C$387.22 rounded up to C$390; C$34.48 to verify one companion; the only place the C$385 → C$390 note appears
+> 4. What we'll know by Friday 8 January: cost and time per check, team-hours per trip, which steps ran on our stack; then whether C$28 a trip holds (C$32.25 left after one companion's checks; about an hour of hands-on work uses it up) and the four decisions if it doesn't
+> 5. The ask: C$390, what happens next (11 Nov, 18 Nov, late Nov to Dec, 8 Jan), and the C$110 of the C$500 we're not asking for
 >
-> **A1** (backup): where every price comes from.
+> **Backups:** A1 does C$28 a trip hold up (the waterfall behind slide 4), A2 where every price comes from, A3 if the first flight moves. Insurance, a moved trip and any fallback are on no core slide: they live in A3 and the Q&A notes, and `npm run check` fails if slides 1–5 mention them.
 >
-> **Numbers.** Budget inputs are `budget` in `src/data/startupData.js`; `src/lib/budget.js` computes every derived figure, and slide copy refers to them as tokens (`{ask}`, `{clearOne}` …) that `src/slides/index.js` fills in. `npm run check` runs `scripts/check-numbers.mjs` first, which asserts every expected value from the brief (section 6.4) and that slide 3's rounded rows add up, then the layout check. **To keep the original C$385 request,** set `ask: 385` in `budget`: slides 1 and 7 show C$385, the "plus C$5" lines disappear, C$110 becomes C$115, and slide 3's Request row stays C$390 with the label "Cost rounded up; we're asking for C$385". The speaker notes are plain text, so say 385 instead of 390 in the script.
+> **Numbers.** Budget inputs are `budget` in `src/data/startupData.js`; `src/lib/budget.js` computes every derived figure, and slide copy refers to them as tokens (`{ask}`, `{clearOne}`, `{kept}` …) that `src/slides/index.js` fills in. `npm run check` runs `scripts/check-numbers.mjs` first, which asserts every expected value from the brief (section 6.4) and that slide 3's rounded rows add up, then the layout check. **To keep the original C$385 request,** set `ask: 385` in `budget`: slides 1 and 5 show C$385, slide 3's "Asked C$385 on 2 Nov" note disappears, C$110 becomes C$115, and slide 3's Request row stays C$390 with the label "Cost rounded up; we're asking for C$385". The speaker notes are plain text, so say 385 instead of 390 in the script.
 >
-> The notes tabs read **3 min** (the live script, 3:00 countdown) and **Q&A** (the answers by slide, 7:00). Keys 1–7 jump to the core slides, A opens the backup and End goes to slide 7; the hash tracks `#/1` … `#/7` and `#/a1`. `/?print` gives 8 pages with "Boardwith. Accelerator Prototype Funding, 6 Nov 2026." bottom left.
+> The notes tabs read **3 min** (the live script, 3:00 countdown; slides add up to 2:50) and **Q&A** (the answers by slide, 7:00). Keys 1–5 jump to the core slides, End goes to slide 5 and A opens the backups at A1; the hash tracks `#/1` … `#/5` and `#/a1` … `#/a3`. `/?print` gives 8 pages with "Boardwith. Accelerator Prototype Funding, 6 Nov 2026." bottom left.
 >
 > **Deployed on Vercel** as the project `boardwith-prototype-pitch` (production branch `prototype-funding-pitch`), using `vercel.json`. `netlify.toml` stays for the other branches; Vercel ignores it.
 >

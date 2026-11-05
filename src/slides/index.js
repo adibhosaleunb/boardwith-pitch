@@ -4,12 +4,12 @@ import PfCover from './PfCover.jsx';
 import PfTest from './PfTest.jsx';
 import PfDollars from './PfDollars.jsx';
 import PfKnow from './PfKnow.jsx';
-import PfMargin from './PfMargin.jsx';
-import PfTimeline from './PfTimeline.jsx';
 import PfAsk from './PfAsk.jsx';
+import PfMargin from './PfMargin.jsx';
 import PfSources from './PfSources.jsx';
+import PfTimeline from './PfTimeline.jsx';
 
-// prototype-funding-pitch: seven core slides and one backup (A1). The Gate 1
+// prototype-funding-pitch: five core slides and three backups. The Gate 1
 // and 3-minute components (Cover, Problem, Solution, Opportunity, Close, the
 // backups and the rest) stay in the repo, unused here, so the pitch
 // branches stay mergeable (gate1-final and 3min-pitch use them).
@@ -18,10 +18,10 @@ const COMPONENTS = {
   'pf-test': PfTest,
   'pf-dollars': PfDollars,
   'pf-know': PfKnow,
-  'pf-margin': PfMargin,
-  'pf-timeline': PfTimeline,
   'pf-ask': PfAsk,
+  'pf-margin': PfMargin,
   'pf-sources': PfSources,
+  'pf-timeline': PfTimeline,
 };
 
 // Copy tokens such as {ask} are filled from src/lib/budget.js here, so every
@@ -30,7 +30,7 @@ export const deck = slides.map((slide) => ({ slide: fillDeep(slide), Component: 
 
 export const CORE_COUNT = slides.filter((s) => typeof s.number === 'number').length;
 
-// '#/1' … '#/7', '#/a1'
+// '#/1' … '#/5', '#/a1' … '#/a3'
 export const hashFor = (index) => `#/${String(slides[index].number).toLowerCase()}`;
 
 export function indexFromHash(hash) {

@@ -9,13 +9,17 @@
 import { spawn } from 'node:child_process';
 import { mkdir } from 'node:fs/promises';
 import { chromium } from 'playwright-core';
+import { slides } from '../src/data/startupData.js';
 
 const EXEC = process.env.CHROMIUM_PATH ?? '/opt/pw-browsers/chromium';
 const OUT = 'screenshots';
-const SLIDES = ['1', '2', '3', '4', '5', '6', '7', 'a1'];
+const SLIDES = ['1', '2', '3', '4', '5', 'a1', 'a2', 'a3'];
 const SAFE = { left: 118, right: 1802, bottom: 1000 }; // flight path lives below y 1000
 const LAYOUT_ONLY = process.argv.includes('--layout-only');
 const MIN_BODY = 32;
+// Core slides never mention these; they live only in backup A3 and the notes.
+const CORE_IDS = new Set(slides.filter((sl) => typeof sl.number === 'number').map((sl) => sl.id));
+const OFF_CORE = /insur|slip|fallback/i;
 
 async function startServer() {
   if (process.env.CHECK_URL) return { url: process.env.CHECK_URL, stop: () => {} };
@@ -88,6 +92,7 @@ function inspect({ SAFE, MIN_BODY }) {
     const bottom = Math.max(...boxes.filter((b) => !b.inPhone).map((b) => b.y + b.h));
     return {
       id: page.dataset.slide,
+      text: page.innerText,
       bottom: Math.round(bottom),
       out,
       overlaps: [...new Set(overlaps)].slice(0, 8),
@@ -108,10 +113,12 @@ try {
   await page.evaluate(() => document.fonts.ready);
   const report = await page.evaluate(inspect, { SAFE, MIN_BODY });
   for (const r of report) {
+    const offCore = CORE_IDS.has(r.id) ? r.text.match(OFF_CORE) : null;
+    if (offCore) r.out.push(`core slide mentions "${offCore[0]}"`);
     const bad = r.out.length || r.overlaps.length;
     problems += bad ? 1 : 0;
     console.log(`\n${bad ? '✗' : '✓'} ${r.id.padEnd(15)} text bottom y=${r.bottom}`);
-    r.out.forEach((o) => console.log(`   out of safe area: ${o}`));
+    r.out.forEach((o) => console.log(`   ${o.startsWith('core slide') ? '' : 'out of safe area: '}${o}`));
     r.overlaps.forEach((o) => console.log(`   overlap: ${o}`));
     if (Object.keys(r.small).length) console.log(`   under ${MIN_BODY}px:`, JSON.stringify(r.small));
   }
@@ -140,7 +147,7 @@ async function shoot() {
     for (const s of SLIDES) {
       await p.evaluate((h) => (window.location.hash = h), `#/${s}`);
       await p.waitForTimeout(w === 1920 ? 1000 : 300);
-      if (w === 1920 || ['1', '3', '5', '7'].includes(s)) {
+      if (w === 1920 || ['1', '3', '5'].includes(s)) {
         await p.screenshot({ path: `${OUT}/${w}x${h}-${s}.png` });
       }
       const hScroll = await p.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);

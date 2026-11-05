@@ -3,19 +3,24 @@
 //
 // Branch prototype-funding-pitch (4 November 2026): the Accelerator
 // Prototype Funding pitch (J Herbert Smith Centre, Fri 6 Nov 2026,
-// 2:40–2:50 pm), cut from 3min-pitch. Seven core slides and one backup:
-// 1 the ask up front, 2 the test, 3 what each dollar buys, 4 what we'll
-// know, 5 does C$28 a trip hold up, 6 timeline and fallback, 7 the ask;
-// A1 where every price comes from.
-// `notes.five` and `timing.five` hold the live script, 3:00 here
-// (`pitch.shortSeconds`); `twenty` holds the Q&A answers.
+// 2:40–2:50 pm), cut from 3min-pitch. Five core slides and three
+// backups: 1 the ask up front, 2 the test, 3 what each dollar buys, 4 what
+// we'll know and what it decides, 5 the ask and what happens next; A1 does
+// C$28 a trip hold up, A2 where every price comes from, A3 if the first
+// flight moves. Insurance and the moved-flight answer live only in A3 and
+// the Q&A notes, never on slides 1–5.
+// `notes.five` and `timing.five` hold the live script, about 2:50 against
+// the 3:00 timer (`pitch.shortSeconds`); `twenty` holds the Q&A answers.
 //
-// Every figure on slides 1–7 that depends on the budget is computed in
+// Every figure on slides 1–5 that depends on the budget is computed in
 // src/lib/budget.js from `budget` below and written into copy as a token:
-// `{ask}`, `{topUp}`, `{clearOne}` and so on (see `tokens` in budget.js).
+// `{ask}`, `{kept}`, `{clearOne}` and so on (see `tokens` in budget.js).
 //
 // Inline markup understood by <Rich>:
 //   **bold**   *italic*   [FOUNDER INPUT: …]  (renders as a visible placeholder)
+//
+// `-\u2060` (hyphen + word joiner) keeps a hyphenated word on one line, e.g.
+// "on-call"; Mukta has no non-breaking hyphen (U+2011) glyph.
 
 export const company = {
   name: 'Boardwith',
@@ -32,8 +37,8 @@ export const company = {
 // Two notes tabs: the live script and the Q&A answers.
 export const pitch = { shortLabel: '3 min', shortSeconds: 180, longLabel: 'Q&A', longSeconds: 420 };
 
-// Slide 5 (`short`) and backup copy. Photos: public/images/team-*.webp.
-// Full bios are in slide 5's longer notes.
+// Team copy for the Gate 1 and 3-minute slides (unused on this branch).
+// Photos: public/images/team-*.webp.
 export const team = [
   {
     name: 'Aditya Bhosale',
@@ -115,20 +120,13 @@ export const slides = [
     title: 'One trip, end to end',
     layout: 'L1',
     theme: 'teal',
-    event: 'Accelerator Prototype Funding · Fri 6 Nov 2026, 2:40 pm',
     headline: 'One trip, end to end, on our own stack',
-    sub: 'Boardwith puts a checked companion on the same flights as someone who shouldn’t fly alone. We’ll run one hand-matched trip from sign-up to landing and learn what it really costs us.',
-    askCard: {
-      label: 'requested',
-      // Shown only when budget.ask > budget.alreadyRequested.
-      topUp: 'C${alreadyRequested} asked on 2 Nov, plus C${topUp} after re-checking Twilio’s Canadian rates',
-    },
-    timing: { five: 20, twenty: 60 },
+    sub: 'Boardwith puts a checked companion on the same flights as someone who shouldn’t fly alone. This runs our first hand-\u2060matched trip and tells us what one really costs.',
+    askCard: { label: 'requested' },
+    timing: { five: 25, twenty: 60 },
     notes: {
-      five: '“I’m Aditya, founder of Boardwith. We put a checked companion on the same flights as someone who shouldn’t fly alone. I’m asking for 390 dollars to run one hand-matched trip, end to end, on our own stack, and to find out what it really costs us.”',
-      twenty: [
-        '**Why the change from C$385?** Twilio prices each leg of a masked call separately (US$0.0085 a minute to receive, US$0.0140 to make), and its Canadian text rate is US$0.0083, up from US$0.0079. The total is C$387.22, rounded up to C$390.',
-      ],
+      five: '“I’m Aditya, founder of Boardwith. We put a checked companion on the same flights as someone who shouldn’t fly alone. I’m asking for 390 dollars to run our first hand-matched trip end to end, on our own stack, and find out what one trip really costs us.”',
+      twenty: [],
     },
   },
 
@@ -161,7 +159,7 @@ export const slides = [
       },
     ],
     sources: ['Boardwith pilot plan, November 2026.'],
-    timing: { five: 30, twenty: 60 },
+    timing: { five: 35, twenty: 60 },
     notes: {
       five: '“Here’s the test. One real trip, from sign-up to landing: sign-up, ID check, criminal record check, deposit, trip chat and masked calls, all on our own systems. Around it, we take three companions through full verification and time and cost each one. And we log every team-hour the trip takes, from match to landing.”',
       twenty: [
@@ -173,7 +171,8 @@ export const slides = [
 
   // ─── 3 ──────────────────────────────────────────────────────────────
   // Every amount comes from src/lib/budget.js, by row id. No orange fill;
-  // the C$34.48 is orange-ink text on white.
+  // the C$34.48 is orange-ink text on white. The C$385 → C$390 note shows
+  // only when budget.ask > budget.alreadyRequested, and only here.
   {
     id: 'pf-dollars',
     number: 3,
@@ -203,25 +202,20 @@ export const slides = [
       ],
     },
     caption: 'Monthly items for {months} months. US dollars at {fx} (Bank of Canada, 3 Nov: {fxBoC}).',
-    stats: [
-      {
-        value: 'C${clearOne}',
-        tone: 'orange',
-        label: 'to verify one companion at list price, with HST: Certn C${certn} plus the OneID step it requires, C${oneid}',
-      },
-      {
-        value: 'US${maskedMinute}',
-        tone: 'teal',
-        label: 'per minute of a masked call: Twilio bills both legs, US${callIn} in and US${callOut} out',
-      },
-    ],
+    stat: {
+      value: 'C${clearOne}',
+      label: 'to verify one companion at list price, with HST: Certn C${certn} plus the OneID step it requires, C${oneid}',
+    },
+    // Shown only when budget.ask > budget.alreadyRequested.
+    askedNote: '**Asked C${alreadyRequested} on 2 Nov.** Re-\u2060checking Twilio on 4 Nov (a masked call bills both legs) brought it to C${ask}.',
     sources: [
       'certn.co/pricing · stripe.com/identity · twilio.com/voice/pricing/ca · twilio.com/en-us/sms/pricing/ca · Claude Pro (support.claude.com) · vercel.com/pricing · docs.railway.com/pricing/plans · Bank of Canada daily rates. All checked 4 Nov 2026.',
     ],
-    timing: { five: 35, twenty: 60 },
+    timing: { five: 40, twenty: 60 },
     notes: {
-      five: '“Every line is a published price. Certn’s record check and the ID step it requires: about 30 dollars a companion, for three companions. Stripe Identity is free for our first 50 checks. Twilio gives us two Canadian numbers so families and companions never swap personal numbers. A masked call bills both legs, so I priced both. Claude Pro for the two of us who build it, Vercel Pro because the free plan bans commercial use, and Railway for the backend. With HST and the card fee, that’s 387 dollars and 22 cents. I’m asking for 390.”',
+      five: '“Every line is a published price. Certn’s record check and the ID step it requires: about 30 dollars a companion, for three companions. Stripe Identity is free for our first 50 checks. Twilio gives us two Canadian numbers, so families and companions never swap personal numbers. Claude Pro for the two of us who build it, Vercel Pro because the free plan bans commercial use, and Railway for the backend. With HST and the card fee, 387 dollars and 22 cents. I asked for 385 on Monday. When I re-checked Twilio, a masked call bills both ends, so it’s 390.”',
       twenty: [
+        '**Why the change from C$385?** Twilio prices each leg of a masked call separately (US${callIn} a minute to receive, US${callOut} to make), and its Canadian text rate is US$0.0083, up from US$0.0079. The total is C$387.22, rounded up to C$390. Masked call minute: US${maskedMinute}, both legs.',
         '**Why Claude Pro?** It’s the only line that buys build speed. Two of us build part-time, and the free tier stalls a build day. The proof is the Gate 2 demo on 18 Nov.',
         '**Why Vercel Pro?** Vercel’s Hobby plan is personal and non-commercial only.',
         '**Why is Railway fine on Hobby?** Railway’s Terms (effective 20 Apr 2026) allow business use, and Hobby includes US$5 of usage a month. We budget another US$5 on top.',
@@ -232,6 +226,8 @@ export const slides = [
   },
 
   // ─── 4 ──────────────────────────────────────────────────────────────
+  // The three outcomes, then what they decide. No orange. If it stops
+  // fitting, cut band line 1 first; line 3 stays.
   {
     id: 'pf-know',
     number: 4,
@@ -242,37 +238,84 @@ export const slides = [
       {
         icon: 'timer',
         head: 'Real cost and time per check.',
-        body: 'For each of the three companions: what we actually paid (quote: C${clearOne} with HST) and how long it took (Certn says 4 to 72 hours).',
+        body: 'What each of the three checks cost and how long it took.',
       },
       {
         icon: 'clock',
         head: 'The team-hours one trip takes.',
-        body: 'Every hour from match to landing, hands-on and on-call kept apart. None of it is in our C${modelKept} a trip today.',
+        body: 'Every hour from match to landing, hands-\u2060on and on-\u2060call kept apart.',
       },
       {
         icon: 'route',
         head: 'Which steps run on our stack.',
-        body: 'Sign-up, ID check, record check, deposit, trip chat and masked calls: which ran clean, which we finished by hand, and what contact cost.',
+        body: 'Which of the six steps ran clean, and which we finished by hand.',
       },
     ],
-    takeaway: 'All three answer one question: does our C${modelKept} a trip hold up against real numbers?',
-    sources: ['Certn pricing (turnaround 4–72 hours). Pre-seed deck, slide 8 (C$28.22 a trip).'],
-    timing: { five: 30, twenty: 60 },
+    band: {
+      lead: 'That tells us whether our C${modelKept} a trip holds.',
+      lines: [
+        { text: 'The checks fit: a companion who flies once still leaves C${kept} after their checks.' },
+        {
+          before: 'Team time is the test: at C${hourCost} an hour',
+          tag: { kind: 'assumption', text: 'Illustrative' },
+          after: ', about an hour of hands-\u2060on work per trip uses that up.',
+        },
+        {
+          text: 'If it doesn’t hold, we decide before launch: raise the price, have companions pay for their own check, accept only companions who’ll take repeat trips, or cut the hands-\u2060on time.',
+          strong: true,
+        },
+      ],
+    },
+    sources: ['Certn pricing (turnaround 4–72 hours). Pre-seed deck, slide 8 (C$28.22 a trip). The working is in backup A1.'],
+    timing: { five: 45, twenty: 60 },
     notes: {
-      five: '“Here’s what you get back by January 8th. The real cost and turnaround of each check. The team-hours one trip takes, from match to landing. And which of the six steps ran clean, which we had to finish by hand, and what contact cost.”',
+      five: '“By January 8th you’ll know three things: what each check really cost and how long it took, every team-hour one trip takes from match to landing, and which steps ran clean and which we finished by hand. That tells us whether our 28 dollars a trip holds. The checks fit: even a companion who flies once leaves us about 32 dollars. Team time is the real test: about an hour of hands-on work per trip uses that up. If it doesn’t hold, we’ll know before launch, and we’ll raise the price, have companions pay for their own check, take only companions who fly with us again, or cut the hands-on time.”',
       twenty: [
         '**How will you log hours honestly?** Each of us logs start and stop times for every task, with hands-on and on-call kept separate. The report includes the raw log.',
         '**Privacy with record checks?** Certn collects each companion’s consent and runs the check. Our privacy notice (v1.0, drafted) covers what we keep.',
+        '**Where does C${hourCost} an hour come from?** It’s illustrative, since nobody draws pay yet. What matters is the break-even: about an hour of hands-on work per trip. The working is in A1.',
+        '**Why not have companions pay now?** We might, if the numbers say so. Companions are the harder side to recruit, so we want the real cost before we shift it onto them.',
       ],
     },
   },
 
   // ─── 5 ──────────────────────────────────────────────────────────────
-  // The waterfall's values come from src/lib/budget.js (`money.waterfall`);
-  // only the labels live here. "Left before team time" is the orange bar.
+  // The C$110 (budget.cap − budget.ask) is the one orange element.
+  {
+    id: 'pf-ask',
+    number: 5,
+    title: 'The ask',
+    layout: 'L1',
+    theme: 'teal',
+    headline: 'The ask: C${ask}',
+    nextHead: 'What happens next',
+    next: [
+      { when: 'Wed 11 Nov', what: 'Demo-ready hand-matched pilot' },
+      { when: 'Wed 18 Nov', what: 'Gate 2 demo' },
+      { when: 'Late Nov to Dec', what: 'Three companions verified; first trip, Canada to India', tag: { kind: 'plan' } },
+      { when: 'Fri 8 Jan', what: 'Report to the committee, with receipts', strong: true },
+    ],
+    body: 'Every line is a published price.',
+    notAskedLabel: 'of the C${cap} we’re not asking for',
+    close: 'The gates change. The face doesn’t.',
+    timing: { five: 25, twenty: 60 },
+    notes: {
+      five: '“Demo-ready next Wednesday, Gate 2 on the 18th, our first trip from late November, and the report with receipts on January 8th. 390 dollars, every line a real quote, and we’re not asking for the other 110. Thank you.” *(Then stop talking.)*',
+      twenty: [
+        '**What happens to unspent money?** We report actual spend with receipts by 8 Jan. Ask the committee how they want unspent funds handled.',
+        '**What if the first flight moves?** All six steps can run before anyone boards, so the 8 January report has the verifications, sign-up to match on our own stack, chat and masked calls, and the hours to the flight. The flight’s own hours follow in a one-page addendum. Open A3.',
+        '**If asked about insurance:** We’ve asked three insurers for quotes. We won’t run a paid trip before cover is bound. That’s part of the trust model, and it’s why insurance isn’t in this prototype budget.',
+      ],
+    },
+  },
+
+  // ─── A1 ─────────────────────────────────────────────────────────────
+  // The working behind slide 4. The waterfall's values come from
+  // src/lib/budget.js (`money.waterfall`); only the labels live here.
+  // "Left before team time" is the orange bar.
   {
     id: 'pf-margin',
-    number: 5,
+    number: 'A1',
     title: 'Does it hold up?',
     layout: 'L4',
     headline: 'Does C${modelKept} a trip hold up?',
@@ -303,76 +346,21 @@ export const slides = [
     sources: [
       'Boardwith pricing (C$275 one connection, C$200 payout). Stripe Canada card fees (2.9% + C$0.30). Certn and Stripe Identity pricing. The pre-seed C$28.22 spreads C$73 of checks, including Indian police clearance (now an optional tier), over two trips.',
     ],
-    timing: { five: 40, twenty: 60 },
+    timing: { five: 0, twenty: 0 },
     notes: {
-      five: '“Why it matters: our model says we keep about 28 dollars a trip. That number spreads the checks over two trips and counts no team time. Put every companion check on this one trip and it still keeps about 32 dollars at pilot prices, and about 28 once our free ID checks run out. So the checks don’t break the margin. Team time might. At 25 dollars an hour, about an hour of hands-on work per trip uses up what’s left. If the numbers don’t hold, we’ll know before launch, and we’ll raise the price, have companions pay for their own check, take only companions who fly with us again, or cut the hands-on time.”',
+      five: 'Open only if asked how the C${modelKept} a trip works out. If you do: “Our model says we keep about 28 dollars a trip. That number spreads the checks over two trips and counts no team time. Put every companion check on this one trip and it still keeps about 32 dollars at pilot prices, and about 28 once our free ID checks run out. So the checks don’t break the margin. Team time might. At 25 dollars an hour, about an hour of hands-on work per trip uses up what’s left.”',
       twenty: [
-        '**Where does C$25 an hour come from?** It’s illustrative, since nobody draws pay yet. What matters is the break-even: about an hour of hands-on work per trip.',
+        '**Where does C${hourCost} an hour come from?** It’s illustrative, since nobody draws pay yet. What matters is the break-even: about an hour of hands-on work per trip.',
         '**Why not have companions pay now?** We might, if the numbers say so. Companions are the harder side to recruit, so we want the real cost before we shift it onto them.',
       ],
     },
   },
 
-  // ─── 6 ──────────────────────────────────────────────────────────────
-  {
-    id: 'pf-timeline',
-    number: 6,
-    title: 'Timeline and fallback',
-    layout: 'L4',
-    headline: 'Timeline, and what we report if the trip slips',
-    steps: [
-      { when: 'Fri 6 Nov', what: 'Funding decision' },
-      { when: 'Wed 11 Nov', what: 'Demo-ready hand-matched pilot' },
-      { when: 'Wed 18 Nov', what: 'Gate 2 demo' },
-      { when: 'Late Nov to Dec', what: 'Three companions verified; one trip, Canada to India', tag: { kind: 'plan' } },
-      { when: 'Fri 8 Jan', what: 'Report to the committee, with receipts' },
-    ],
-    fallback: {
-      head: 'If the trip slips, or insurance isn’t in place (no paid trip runs without it)',
-      items: [
-        'The three verifications, each timed and costed',
-        'The hands-on hours up to a confirmed match',
-        'A dry run of trip chat and masked calls between a real companion and a family',
-      ],
-    },
-    sources: ['Boardwith Gate 2 plan, November 2026.'],
-    timing: { five: 20, twenty: 60 },
-    notes: {
-      five: '“Demo-ready on November 11th, Gate 2 on the 18th, and the trip in late November or December. If the trip slips, or insurance isn’t in place, you still get the three verifications, the hours it took to reach a match, and a dry run of trip chat and masked calls.”',
-      twenty: [
-        '**What if the trip doesn’t happen?** No paid trip runs without insurance. The report still covers the verifications, the hours to a match, and a dry run.',
-      ],
-    },
-  },
-
-  // ─── 7 ──────────────────────────────────────────────────────────────
-  // The C$110 (budget.cap − budget.ask) is the one orange element.
-  {
-    id: 'pf-ask',
-    number: 7,
-    title: 'The ask',
-    layout: 'L1',
-    theme: 'teal',
-    headline: 'The ask: C${ask}',
-    // Shown only when budget.ask > budget.alreadyRequested.
-    topUp: 'C${alreadyRequested} asked on 2 Nov, plus C${topUp} after re-checking Twilio: a masked call bills both legs.',
-    body: 'Every line is a published price. Receipts and the report by Fri 8 Jan.',
-    notAskedLabel: 'of the C${cap} we’re not asking for',
-    close: 'The gates change. The face doesn’t.',
-    timing: { five: 10, twenty: 60 },
-    notes: {
-      five: '“390 dollars, every line a real quote, and we’re not asking for the other 110. Thank you.” *(Then stop talking.)*',
-      twenty: [
-        '**What happens to unspent money?** We report actual spend with receipts by 8 Jan. Ask the committee how they want unspent funds handled.',
-      ],
-    },
-  },
-
-  // ─── A1 ─────────────────────────────────────────────────────────────
+  // ─── A2 ─────────────────────────────────────────────────────────────
   // The published prices behind slide 3, as quoted on each page.
   {
     id: 'pf-sources',
-    number: 'A1',
+    number: 'A2',
     title: 'Where every price comes from',
     layout: 'L4',
     headline: 'Backup: where every price comes from',
@@ -395,6 +383,38 @@ export const slides = [
     notes: {
       five: 'Open only if someone asks where a price came from.',
       twenty: ['Open only if someone asks where a price came from.'],
+    },
+  },
+
+  // ─── A3 ─────────────────────────────────────────────────────────────
+  // What the 8 January report still has if the first flight moves. The
+  // insurance answer stays in the notes, never on the slide. No orange.
+  {
+    id: 'pf-timeline',
+    number: 'A3',
+    title: 'If the first flight moves',
+    layout: 'L4',
+    headline: 'If the first flight moves',
+    sub: 'All six steps can run before anyone boards.',
+    steps: ['Sign-up', 'ID check', 'Criminal record check', 'Deposit', 'Trip chat', 'Masked calls'],
+    report: {
+      head: 'The 8 January report still has:',
+      items: [
+        'The three verifications, each timed and costed',
+        'Every step from sign-up to a confirmed match, on our own stack',
+        'Trip chat and masked calls between a real companion and a family',
+        'The hands-on hours up to the flight',
+      ],
+      foot: 'The flight’s own hours follow in a one-page addendum.',
+    },
+    sources: ['Boardwith pilot plan, November 2026.'],
+    timing: { five: 0, twenty: 0 },
+    notes: {
+      five: 'Open only if asked what happens if the first flight moves.',
+      twenty: [
+        '**What if the first flight moves?** All six steps can run before anyone boards, so the 8 January report has the verifications, sign-up to match on our own stack, chat and masked calls, and the hours to the flight. The flight’s own hours follow in a one-page addendum.',
+        '**If asked about insurance:** We’ve asked three insurers for quotes. We won’t run a paid trip before cover is bound. That’s part of the trust model, and it’s why insurance isn’t in this prototype budget.',
+      ],
     },
   },
 ];

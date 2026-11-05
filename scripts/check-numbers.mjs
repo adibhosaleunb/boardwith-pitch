@@ -49,6 +49,7 @@ expect('Card fee per trip', m.cardFee, 8.28);
 expect('Left before team time, pilot', m.keptPilot, 32.25);
 expect('Left before team time, after free 50', m.keptAfterFree, 27.65);
 expect('Break-even hands-on minutes', m.breakEvenMinutes, 66, 0);
+expect('{kept} token, slide 4', m.tokens.kept, '32.25');
 
 console.log('\nSlide 3 adds up as shown\n');
 const shownRows = ['certn', 'stripeId', 'twilio', 'claude', 'vercel', 'railway', 'hst', 'fxFee'];
@@ -65,8 +66,8 @@ try {
 
 console.log('\nSection 6.3, with ask: 385\n');
 const alt = compute({ ...budget, ask: 385 });
-expect('Ask shown on slides 1 and 7', alt.tokens.ask, '385');
-expect('"plus C$5" lines hidden', alt.hasTopUp, false);
+expect('Ask shown on slides 1 and 5', alt.tokens.ask, '385');
+expect('Slide 3 "Asked C$385" note hidden', alt.hasTopUp, false);
 expect('Not asked for', alt.notAsked, 115);
 expect('Slide 3 Request row stays', alt.request, 390);
 expect('Request row label switches', alt.asksForRequest, false);

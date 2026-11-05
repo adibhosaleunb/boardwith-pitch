@@ -127,6 +127,7 @@ export function compute(b = input) {
       callOut: line.twCallOut.unit.toFixed(4),
       maskedMinute: round(maskedMinute, 4).toFixed(4),
       clearOne: num(clearOne, 2),
+      kept: num(keptPilot, 2), // the waterfall's pilot "Left before team time" (slide 4, A1)
       keptAfterFree: num(keptAfterFree, 2),
       idCheckWithHst: num(idCheckWithHst, 2),
       breakEvenMinutes: num(round(breakEvenMinutes, 0)),
