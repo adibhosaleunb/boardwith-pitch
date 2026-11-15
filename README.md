@@ -1,14 +1,16 @@
 # Boardwith investor deck
 
-> **Branch `3min-pitch`** (12 October 2026): the Summer Institute opening-ceremony pitch, **3 minutes, 5 slides**, cut from `gate1-final`.
+> **Branch `final-pitch`** (15 November 2026): the Summer Institute final pitch, Friday 20 November 2026. **5 minutes, 5 slides, no Q&A**, cut from `3min-pitch`. Deployed on Vercel (`vercel.json`); give it its own Vercel project that tracks this branch.
 >
-> 1. Your story: "Fly alone, with peace of mind."
-> 2. The problem: airline help stops at each gate (45 min, 59%), with the why-now (30%+ wheelchair requests; India's new fee) as the third number
-> 3. The solution: a checked companion on the same flights; both sides checked; payment held until arrival; what families try today
-> 4. Market and money: 878,000 → 183,000 → 106,000 journeys, and one journey (C$225–325 paid, C$75 kept, ≈ C$28 after checks today, ≈ C$46 at 4 trips a year)
-> 5. Traction, team and ask: 401 / 1 / 0, the team, C$75,000, and what we need from the room (an insurer and a lawyer; families and students flying in December)
+> 1. Your story: "Fly alone, with peace of mind." (unchanged)
+> 2. The problem: airline help stops at each gate (45 min, 59%, 30%+ wheelchair requests) (unchanged)
+> 3. The solution: one checked companion the whole way; both sides checked (ID and criminal record; the police clearance check is gone); payment held until arrival; what families try today
+> 4. One trip's money: the C$275 waterfall down to ≈ C$28, then what makes it bigger (≈ C$55 at 4 trips a year; 183,000 journeys; 412,000 on India–US), and what the C$28 leaves out
+> 5. Where we are, team and ask: 6 families, 10 companions, 1 route matched; C$390 of JHSC prototype funding; C$75,000 on a SAFE and what it pays for
 >
-> Backups A1–A7 are unchanged. The notes tab and timer read **3 min** (3:00 countdown; script about 360 words). Keys 1–5 jump to the core slides; End goes to slide 5. The Gate 1 components that this deck drops (why now, how it works, trust, market, business model, team, ask) stay in the repo so the branches merge cleanly. The rest of this README describes the 10-slide Gate 1 deck.
+> There are no backups on this branch, because there is no Q&A to open them in. `/?print` gives a 5-page PDF. The notes tabs read **5 min** (the script, about 640 words, 4:50 on the timer's per-slide targets against a 5:00 countdown) and **Notes** (delivery notes and answers to have ready afterwards). Keys 1–5 jump to the slides; End goes to slide 5. Slide 4 reuses the Gate 1 `BusinessModel` layout. The other Gate 1 and 3-minute components stay in the repo so the branches merge cleanly. The rest of this README describes the 10-slide Gate 1 deck.
+>
+> **Before Friday:** update the three sign-up numbers on slide 5 (`where.numbers` in `src/data/startupData.js`) and the matching sentence in slide 5's script, then run `npm run build && npm run check`.
 
 Web presentation for the Shadow Institute Gate 1 pitch (7 October 2026) and 20-minute investor meetings. 10 core slides plus 7 backups (A1–A7), built with React and Vite and deployed on Netlify.
 

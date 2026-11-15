@@ -10,10 +10,14 @@ export default function BusinessModel({ slide, active }) {
   return (
     <Slide slide={slide} active={active}>
       <Headline>{slide.headline}</Headline>
-      <p className={`${typo.sub} ${s.sub}`}>{slide.sub}</p>
+      {slide.sub ? <p className={`${typo.sub} ${s.sub}`}>{slide.sub}</p> : null}
       <div className={s.grid}>
-        <Waterfall {...slide.waterfall} />
-        <div className={s.levers}>
+        <div>
+          <Waterfall {...slide.waterfall} />
+          {slide.under ? <p className={s.under}>{slide.under}</p> : null}
+        </div>
+        <div className={`${s.levers} ${slide.leversTitle ? s.titled : ''}`}>
+          {slide.leversTitle ? <h3 className={s.leversTitle}>{slide.leversTitle}</h3> : null}
           {slide.levers.map((l) => (
             <div key={l.value} className={s.lever}>
               <p className={typo.medNum}>{l.value}</p>
@@ -22,11 +26,11 @@ export default function BusinessModel({ slide, active }) {
               </p>
             </div>
           ))}
-          <p className={s.conservative}>{slide.conservative}</p>
+          {slide.conservative ? <p className={s.conservative}>{slide.conservative}</p> : null}
         </div>
       </div>
       <div className={s.foot}>
-        <p className={typo.caption}>{slide.caption}</p>
+        {slide.caption ? <p className={typo.caption}>{slide.caption}</p> : null}
         <Sources items={slide.sources} />
       </div>
     </Slide>

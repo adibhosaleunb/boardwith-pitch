@@ -17,8 +17,8 @@ export function targets(version) {
   });
 }
 
-// Counts down from the short pitch (3:00 on this branch) or 20:00, by the
-// active notes tab, and turns orange-ink when the presenter is behind.
+// Counts down from the live pitch (5:00 on this branch; the Notes tab uses
+// the same clock), and turns orange-ink when the presenter is behind.
 export default function Timer({ version, elapsed, running, index, onToggle, onReset, compact = false }) {
   const total = version === 'five' ? pitch.shortSeconds : pitch.longSeconds;
   const target = targets(version)[index];
