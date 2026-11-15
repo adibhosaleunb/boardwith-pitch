@@ -22,7 +22,7 @@ export const company = {
   confidential: true,
   confidentialLine: 'Pre-seed. Confidential.',
   printLine: 'Boardwith. Pre-seed. Confidential.',
-  email: 'adityabhosale@boardwith.com',
+  email: 'aditya.bhosale@boardwith.com',
   website: 'boardwith.com',
 };
 
