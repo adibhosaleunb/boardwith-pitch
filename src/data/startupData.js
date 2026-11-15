@@ -16,7 +16,7 @@
 
 export const company = {
   name: 'Boardwith',
-  oneLiner: 'Fly alone, with peace of mind.',
+  oneLiner: 'The gates change. The face doesn’t.',
   founder: { name: 'Aditya Bhosale', title: 'Founder & CEO' },
   stage: 'Pre-seed',
   confidential: true,
@@ -80,7 +80,7 @@ export const slides = [
     title: 'Your story',
     layout: 'L1',
     theme: 'teal',
-    headline: 'Fly alone, with peace of mind.',
+    headline: 'The gates change. The face doesn’t.',
     sub: 'Checked travel companions on the same flights, for anyone who shouldn’t fly alone. Starting between Canada and India.',
     timing: { five: 52, twenty: 52 },
     notes: {
@@ -237,19 +237,19 @@ export const slides = [
       roomTitle: 'What it pays for',
       room: ['Insurance and legal, so paid trips can run', 'Checks and support for 10 pilot trips', 'The app, and a first year in Atlantic Canada'],
     },
-    close: 'The gates change. The face doesn’t.',
+    close: 'With Boardwith, you can match right, so you travel light.',
     sources: [
       'Pilot sign-ups at boardwith.com, 15 November 2026. JHSC Accelerator Prototype Funding, awarded November 2026. Use of funds proposed 30 September 2026 for twelve months.',
     ],
     timing: { five: 72, twenty: 72 },
     notes: {
-      five: '“Here is where we are. Our pilot page went live this month. Six families and ten companions have signed up, and we have matched our first route. The Fredericton Association of India is helping us reach families. No paid trip has run yet, and none will until insurance is in place. Two weeks ago, the J Herbert Smith Centre awarded us prototype funding to run that first trip end to end, and on January 8th we report what one trip really costs. I worked on identity verification at Copart. Adarsh, our CTO, is a software architect at Tavant. Shivani runs companion operations. We are raising 75,000 dollars on a SAFE. It pays for insurance and legal, for checks and support on our first ten pilot trips, and for the app, to reach 31 journeys a month in Atlantic Canada. My mother got lucky. The next parent shouldn’t need luck. The gates change. The face doesn’t. Thank you.”',
+      five: '“Here is where we are. Our pilot page went live this month. Six families and ten companions have signed up, and we have matched our first route. The Fredericton Association of India is helping us reach families. No paid trip has run yet, and none will until insurance is in place. Two weeks ago, the J Herbert Smith Centre awarded us prototype funding to run that first trip end to end, and on January 8th we report what one trip really costs. I worked on identity verification at Copart. Adarsh, our CTO, is a software architect at Tavant. Shivani runs companion operations. We are raising 75,000 dollars on a SAFE. It pays for insurance and legal, for checks and support on our first ten pilot trips, and for the app, to reach 31 journeys a month in Atlantic Canada. My mother got lucky. The next parent shouldn’t need luck. With Boardwith, you can match right, so you travel light. Thank you.”',
       twenty: [
         'Update the three numbers on Thursday night if sign-ups have moved: `where.numbers` in `src/data/startupData.js`, and the same sentence in this script.',
         'Don’t round up. “Signed up” is not “onboarded”, and “route matched” is not “trip booked”. If a deposit arrives before Friday, say so; it is the strongest line you would have.',
         'Said, not shown: 401 people surveyed and six interviews; Mitacs application submitted with Dr. Kenneth Kent (UNB); at Energia Ventures.',
         'Use of funds over twelve months: insurance and legal C$10,000; verification and companion support C$20,000; app and infrastructure C$25,000; marketing and outreach C$12,500; the Mitacs contribution C$7,500. SAFE: post-money, C$1.5M cap, 20% discount, C$10,000 minimum.',
-        'End on the tagline, say thank you, then stop talking.',
+        'End on the closing line, say thank you, then stop talking.',
       ],
     },
   },
