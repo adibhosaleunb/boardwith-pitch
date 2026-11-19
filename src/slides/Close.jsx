@@ -46,6 +46,7 @@ export default function Close({ slide, active }) {
               <li key={item}>{item}</li>
             ))}
           </ul>
+          {slide.backing ? <p className={s.backing}>{slide.backing}</p> : null}
         </section>
       </div>
       <div className={a.bottom}>

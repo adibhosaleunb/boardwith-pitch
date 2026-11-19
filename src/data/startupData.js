@@ -139,22 +139,31 @@ export const slides = [
     title: 'The solution',
     layout: 'L2',
     headline: 'A checked companion on the same flights, matched before departure.',
-    sub: 'A companion, not a caregiver.',
     lines: [
       { icon: 'plane', text: 'One person, the whole way', detail: 'Same flights, through every layover' },
       { icon: 'shield', text: 'Both sides checked', detail: 'Companion: ID and criminal record. Traveller: ID.' },
       { icon: 'hold', text: 'Payment held until arrival', detail: 'Rematch or refund if a companion cancels' },
+      { icon: 'support', text: 'On call for every trip', detail: 'Missed check-ins escalated; airline help stays booked' },
     ],
+    // Screenshots of the live pilot. When all three `src` values are set
+    // (files in public/images/), they replace the illustration on the right.
+    proof: {
+      title: 'The pilot, live',
+      items: [
+        { src: '', alt: 'The family sign-up form at boardwith.com', caption: 'Family sign-up at boardwith.com' },
+        { src: '', alt: 'The screening page showing the Toronto to Ahmedabad match, names masked', caption: 'Screening page: our first match, names masked' },
+        { src: '', alt: 'A completed Stripe Identity ID and selfie check', caption: 'ID + selfie check, live (Stripe Identity)' },
+      ],
+    },
     instead: {
       title: 'What families try today',
       items: [
-        { name: 'Airline help', gap: 'free, but one airport at a time' },
+        { name: 'Airline help', gap: 'one airport at a time' },
         { name: 'Family flies along', gap: 'a second ticket and time off' },
-        { name: 'Matching sites', gap: 'cheap, but no background check' },
-        { name: 'Community groups', gap: 'unchecked, and prone to scams' },
+        { name: 'Matching sites', gap: 'no background check' },
       ],
     },
-    sources: ['Interviews and matching-site websites, September 2026. Checks: Stripe Identity and Certn. Trip terms: Terms of Service v1.1, draft.'],
+    sources: ['Interviews, Sept 2026. Stripe Identity; Certn. Terms v1.1 (draft).'],
     timing: { five: 60, twenty: 60 },
     notes: {
       five: '“Boardwith gives that traveller one companion, on the same flights, for the whole trip. A companion, not a caregiver. The family books the ticket and tells us the flights. We match a companion already booked on them, often a student flying home. Before any match, the companion passes an ID check and a criminal record check, and we check the traveller’s ID too. The family pays up front, and we hold the money until the traveller lands. If a companion cancels, we rematch or refund. Airline help is free, so why would a family pay? Because it hands their parent over airport by airport. Flying along costs a second ticket. Matching sites and community groups check no one. Boardwith is the only one that is checked, stays the whole way, and doesn’t cost a second ticket.”',
@@ -162,6 +171,8 @@ export const slides = [
         'This slide answers the first objection (“airline help is free”) out loud. Don’t skip the question; ask it yourself and answer it.',
         'Changed since October: the Indian police clearance check is gone (13 November). The required checks are the ID check and the criminal record check. Don’t say “police clearance” from habit.',
         'Not built yet, so not claimed here: in-app trip chat, masked calls and booking-reference (PNR) trip verification. The pilot matches by hand.',
+        'Shown, not said: on call for every trip (8-hour rota), missed check-ins escalated, airline assistance stays booked (Terms v1.1, draft). “A companion, not a caregiver” is now said only, not on screen.',
+        'The right half shows the illustration until all three screenshots are set in `proof.items`; then it shows the live pilot instead.',
         'If asked afterwards about competitors: MatchMyFlight has a head start with our exact customers and checks phone, email and ticket only. Never say we have no competition.',
       ],
     },
@@ -227,7 +238,7 @@ export const slides = [
         { value: '10', label: 'companions signed up' },
         { value: '1', label: 'route matched' },
       ],
-      partner: 'Listed on the Association of Indo-Canadians (AIC) Fredericton website. No paid trip yet: none runs before insurance is in place. C$390 of JHSC prototype funding pays for our first trip; we report its real cost on 8 January.',
+      partner: 'Most families asked said yes to the full fare; deposits open after our legal review. Listed on the Association of Indo-Canadians (AIC) Fredericton website. C$390 of JHSC prototype funding pays for our first trip.',
     },
     teamTitle: 'Team',
     ask: {
@@ -235,11 +246,12 @@ export const slides = [
       value: 'C$75,000',
       instrument: 'Pre-seed SAFE, C$1.5M cap',
       roomTitle: 'What it pays for',
-      room: ['Insurance and legal, so paid trips can run', 'Checks and support for 10 pilot trips', 'The app, and a first year in Atlantic Canada'],
+      room: ['Insurance and legal, so paid trips can run', 'Checks and support for 10 pilot trips by month six', 'The app, and 31 journeys a month by month twelve'],
     },
+    backing: 'Incubated at Energia Ventures. Mitacs application submitted with Dr. Kenneth Kent (UNB).',
     close: 'With Boardwith, you can match right, so you travel light.',
     sources: [
-      'Pilot sign-ups at boardwith.com, 19 November 2026. Association of Indo-Canadians (AIC) Fredericton website listing, November 2026. JHSC Accelerator Prototype Funding, awarded November 2026. Use of funds proposed 30 September 2026 for twelve months.',
+      'Pilot sign-ups and family calls, 19 November 2026. Association of Indo-Canadians (AIC) Fredericton website listing, November 2026. JHSC Accelerator Prototype Funding, awarded November 2026. Use of funds and milestones proposed 30 September 2026 for twelve months.',
     ],
     timing: { five: 78, twenty: 78 },
     notes: {
@@ -247,7 +259,7 @@ export const slides = [
       twenty: [
         'Update the three numbers on Thursday night if sign-ups have moved: `where.numbers` in `src/data/startupData.js`, and the same sentence in this script.',
         'Don’t round up. “Signed up” is not “onboarded”, and “route matched” is not “trip booked”. If a deposit arrives before Friday, say so; it is the strongest line you would have.',
-        'Said, not shown: 401 people surveyed and six interviews; all six families spoken with; Mitacs application submitted with Dr. Kenneth Kent (UNB); at Energia Ventures.',
+        'Said, not shown: 401 people surveyed and six interviews; all six families spoken with. Shown, not said: Energia Ventures and the Mitacs application (submitted, not approved; never say approved).',
         'Use of funds over twelve months: insurance and legal C$10,000; verification and companion support C$20,000; app and infrastructure C$25,000; marketing and outreach C$12,500; the Mitacs contribution C$7,500. SAFE: post-money, C$1.5M cap, 20% discount, C$10,000 minimum.',
         'End on the closing line, say thank you, then stop talking.',
       ],

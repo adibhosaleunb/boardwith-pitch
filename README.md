@@ -4,13 +4,16 @@
 >
 > 1. Your story, under the tagline: "The gates change. The face doesn't."
 > 2. The problem: airline help stops at each gate (45 min, 59%, 30%+ wheelchair requests) (unchanged)
-> 3. The solution: one checked companion the whole way; both sides checked (ID and criminal record; the police clearance check is gone); payment held until arrival; what families try today
+> 3. The solution: one checked companion the whole way; both sides checked (ID and criminal record; the police clearance check is gone); payment held until arrival; on call for every trip; what families try today. The right half shows three screenshots of the live pilot once they're added (below), and the illustration until then
 > 4. One trip's money: the C$275 waterfall down to ≈ C$27 (ID checks at US$1.50 each), then what makes it bigger (≈ C$55 at 4 trips a year; 183,000 journeys; 412,000 on India–US), and what the C$27 leaves out
-> 5. Where we are, team and ask: 6 families, 10 companions, 1 route matched; listed on the Association of Indo-Canadians (AIC) Fredericton website; families mostly said yes to the fare, none paid yet; C$390 of JHSC prototype funding; C$75,000 on a SAFE and what it pays for; closing line "With Boardwith, you can match right, so you travel light."
+> 5. Where we are, team and ask: 6 families, 10 companions, 1 route matched; families mostly said yes to the full fare, deposits open after the legal review; listed on the Association of Indo-Canadians (AIC) Fredericton website; C$390 of JHSC prototype funding; milestones (10 pilot trips by month six, 31 journeys a month by month twelve); Energia Ventures and the Mitacs application (submitted); C$75,000 on a SAFE and what it pays for; closing line "With Boardwith, you can match right, so you travel light."
 >
 > There are no backups on this branch, because there is no Q&A to open them in. `/?print` gives a 5-page PDF. The notes tabs read **5 min** (the script, about 660 words, 4:51 on the timer's per-slide targets against a 5:00 countdown) and **Notes** (delivery notes and answers to have ready afterwards). Keys 1–5 jump to the slides; End goes to slide 5. Slide 4 reuses the Gate 1 `BusinessModel` layout. The other Gate 1 and 3-minute components stay in the repo so the branches merge cleanly. The rest of this README describes the 10-slide Gate 1 deck.
 >
-> **Before Friday:** update the three sign-up numbers on slide 5 (`where.numbers` in `src/data/startupData.js`) and the matching sentence in slide 5's script, then run `npm run build && npm run check`.
+> **Before Friday:**
+> 1. Add three screenshots of the live pilot to `public/images/` (PNG or WebP, landscape): the family sign-up form, the screening page with the Toronto → Ahmedabad match (mask names), and a completed Stripe Identity check (mask the document). Set their paths in slide 3's `proof.items[].src` in `src/data/startupData.js`.
+> 2. Update the three sign-up numbers on slide 5 (`where.numbers`) and the matching sentence in slide 5's script if they move.
+> 3. Run `npm run build && npm run check`.
 
 Web presentation for the Shadow Institute Gate 1 pitch (7 October 2026) and 20-minute investor meetings. 10 core slides plus 7 backups (A1–A7), built with React and Vite and deployed on Netlify.
 

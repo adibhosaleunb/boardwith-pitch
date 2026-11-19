@@ -1,21 +1,26 @@
-import { Plane, ShieldCheck, HeartHandshake, LockKeyhole } from 'lucide-react';
+import { Plane, ShieldCheck, HeartHandshake, LockKeyhole, Headset } from 'lucide-react';
 import { images } from '../data/startupData.js';
 import Slide from '../components/Slide.jsx';
 import Headline from '../components/Headline.jsx';
 import Sources from '../components/Sources.jsx';
 import StoryImage from '../components/StoryImage.jsx';
+import ProofPanel, { proofReady } from './ProofPanel.jsx';
 import typo from '../styles/type.module.css';
 import s from './Split.module.css';
 
-const ICONS = { plane: Plane, shield: ShieldCheck, companion: HeartHandshake, hold: LockKeyhole };
+const ICONS = { plane: Plane, shield: ShieldCheck, companion: HeartHandshake, hold: LockKeyhole, support: Headset };
 
 export default function Solution({ slide, active }) {
   return (
     <Slide slide={slide} active={active}>
-      <StoryImage image={images.solution} active={active} />
+      {proofReady(slide.proof) ? (
+        <ProofPanel proof={slide.proof} />
+      ) : (
+        <StoryImage image={images.solution} active={active} />
+      )}
       <div className={s.column}>
         <Headline size="l2">{slide.headline}</Headline>
-        <p className={`${typo.sub} ${s.sub} ${s.subStrong}`}>{slide.sub}</p>
+        {slide.sub ? <p className={`${typo.sub} ${s.sub} ${s.subStrong}`}>{slide.sub}</p> : null}
         <ul className={s.iconLines}>
           {slide.lines.map(({ icon, text, detail }) => {
             const Icon = ICONS[icon];

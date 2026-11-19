@@ -110,3 +110,15 @@
   width: 10px;
   height: 10px;
 }
+
+.backing {
+  margin-top: 32px;
+  font-family: var(--font-text);
+  font-size: 26px;
+  line-height: 1.3;
+  color: var(--bw-teal-100);
+}
+
+:global(.is-reading) .backing {
+  font-size: clamp(14px, 3.8vw, 16px);
+}
