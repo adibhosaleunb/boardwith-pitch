@@ -228,9 +228,11 @@ function ReadingDeck() {
 function PrintDeck() {
   const pages = useMemo(
     () =>
-      deck.map(({ slide, Component }) => (
+      deck.map(({ slide, Component }, i) => (
         <div key={slide.id} className={styles.page}>
           <Component slide={slide} active />
+          {/* The flight path, plane at this slide, on every printed page too. */}
+          <FlightPath index={i} onGo={() => {}} />
         </div>
       )),
     [],

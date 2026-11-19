@@ -42,11 +42,12 @@
   position: absolute;
 }
 
-/* ?print: "Boardwith. Pre-seed. Confidential." bottom left of every page. */
+/* ?print: "Boardwith. Pre-seed. Confidential." top left of every page, so the
+   flight path (and its plane) can run along the bottom as on stage. */
 .printLine {
   position: absolute;
   left: 120px;
-  bottom: 36px;
+  top: 36px;
   font-family: var(--font-text);
   font-size: 24px;
   line-height: 1.2;

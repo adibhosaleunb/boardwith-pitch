@@ -8,7 +8,7 @@
 > 4. One trip's money: the C$275 waterfall down to ≈ C$27 (ID checks at US$1.50 each), then what makes it bigger (≈ C$55 at 4 trips a year) and the three-year plan (372, 2,772 and 20,160 journeys; C$27,900, C$207,900 and C$1.51M at C$75 kept; year 3 is 11% of 183,000), and what the C$27 leaves out
 > 5. Where we are, team and ask: 6 families, 10 companions, 1 route matched; families mostly said yes to the full fare, deposits open after the legal review; listed on the Association of Indo-Canadians (AIC) Fredericton website; C$390 of JHSC prototype funding; milestones (10 pilot trips by month six, 31 journeys a month by month twelve); Energia Ventures and the Mitacs application (submitted); C$75,000 on a SAFE and what it pays for; closing line "With Boardwith, you can match right, so you travel light."
 >
-> There are no backups on this branch, because there is no Q&A to open them in. `/?print` gives a 5-page PDF. The notes tabs read **5 min** (the script, about 670 words, 4:53 on the timer's per-slide targets against a 5:00 countdown) and **Notes** (delivery notes and answers to have ready afterwards). Keys 1–5 jump to the slides; End goes to slide 5. Slide 4 reuses the Gate 1 `BusinessModel` layout. The other Gate 1 and 3-minute components stay in the repo so the branches merge cleanly. The rest of this README describes the 10-slide Gate 1 deck.
+> There are no backups on this branch, because there is no Q&A to open them in. `/?print` gives a 5-page PDF, each page with the flight path and the plane at that slide (1 to 5). The notes tabs read **5 min** (the script, about 670 words, 4:53 on the timer's per-slide targets against a 5:00 countdown) and **Notes** (delivery notes and answers to have ready afterwards). Keys 1–5 jump to the slides; End goes to slide 5. Slide 4 reuses the Gate 1 `BusinessModel` layout. The other Gate 1 and 3-minute components stay in the repo so the branches merge cleanly. The rest of this README describes the 10-slide Gate 1 deck.
 >
 > **Before Friday:**
 > 1. Add three screenshots of the live pilot to `public/images/` (PNG or WebP, landscape): the family sign-up form, the screening page with the Toronto → Ahmedabad match (mask names), and a completed Stripe Identity check (mask the document). Set their paths in slide 3's `proof.items[].src` in `src/data/startupData.js`.
@@ -58,7 +58,7 @@ The URL hash tracks the slide (`#/4`, `#/a2`), so a reload keeps your place. The
 
 **Founder inputs:** none show on the slides. One sits in slide 1's 20-minute notes (a detail from your own first arrival). The rest are listed in the brief, section 16; until they're settled the slides keep the figures they already use, such as about 88,000 parent journeys (labelled an estimate being re-sized) and about 125 new UNB students (labelled an assumption). If you add one back, write it as `[FOUNDER INPUT: …]` in `src/data/startupData.js`. It then renders as a dashed peach box, and `npm run dev` counts it in a corner badge.
 
-**Print footer:** every `?print` page carries "Boardwith. Pre-seed. Confidential." bottom left.
+**Print line:** every `?print` page carries "Boardwith. Pre-seed. Confidential." top left, and the flight path with the plane at that slide along the bottom.
 
 ## Checking the layout
 
