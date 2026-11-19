@@ -1,7 +1,7 @@
 // All deck copy lives here. Copy is final (brief, section 0): headlines,
 // numbers and quotes are word for word. Slide components only lay it out.
 //
-// Branch final-pitch (15 November 2026): the Summer Institute final pitch,
+// Branch final-pitch (15 November 2026; numbers updated 19 November): the Summer Institute final pitch,
 // Friday 20 November 2026. Five minutes, five slides, no Q&A, so the script
 // answers the objections itself. Cut from 3min-pitch.
 // 1 story, 2 problem (why now folded in), 3 solution (trust and the
@@ -175,7 +175,7 @@ export const slides = [
     number: 4,
     title: 'One trip’s money',
     layout: 'L4',
-    headline: 'We keep C$75 a trip: about C$28 after card fees and checks.',
+    headline: 'We keep C$75 a trip: about C$27 after card fees and checks.',
     sub: 'One trip, Delhi to Toronto to Fredericton, with every check charged to this one trip.',
     waterfall: {
       steps: [
@@ -183,8 +183,8 @@ export const slides = [
         { key: 'companion', label: 'Companion', value: -200, display: '−C$200', kind: 'companion' },
         { key: 'card', label: 'Card fee', value: -8.28, display: '−C$8.28', kind: 'cost' },
         { key: 'record', label: 'Record check', value: -34.48, display: '−C$34.48', kind: 'cost' },
-        { key: 'id', label: 'ID checks', value: -4.6, display: '−C$4.60', kind: 'cost' },
-        { key: 'kept', label: 'We keep', value: 27.64, display: '≈ C$28', kind: 'kept' },
+        { key: 'id', label: 'ID checks', value: -4.86, display: '−C$4.86', kind: 'cost' },
+        { key: 'kept', label: 'We keep', value: 27.38, display: '≈ C$27', kind: 'kept' },
       ],
     },
     leversTitle: 'What makes it bigger',
@@ -193,19 +193,19 @@ export const slides = [
       { value: '183,000', label: 'first-time solo journeys a year, India to Canada', tag: { kind: 'estimate' } },
       { value: '412,000', label: 'more a year on India–US, our next route', tag: { kind: 'estimate' } },
     ],
-    under: 'Not in the C$28 yet: insurance (quotes requested) and our own time on each trip. Our first trip measures that time; we report on 8 January.',
+    under: 'Not in the C$27 yet: insurance (quotes requested) and our own time on each trip. Our first trip measures that time; we report on 8 January.',
     sources: [
-      'Stripe card fee 2.9% + C$0.30. Certn record check C$24.99 + OneID C$4.99, and two Stripe Identity checks at C$2.00, all with 15% HST. Market: Statistics Canada 2024, IRCC 2025, NTTO 2025.',
+      'Stripe card fee 2.9% + C$0.30. Certn record check C$24.99 + OneID C$4.99, and two Stripe Identity checks at US$1.50 each (C$1.41 per US$), all with 15% HST. Market: Statistics Canada 2024, IRCC 2025, NTTO 2025.',
     ],
     timing: { five: 60, twenty: 60 },
     notes: {
-      five: '“Here is the money on one trip: Delhi to Toronto to Fredericton. The family pays 275 dollars. The companion earns 200. The card fee is about 8 dollars, the companion’s criminal record check about 34, and the two ID checks about 5. We keep about 28 dollars. That is the floor: it charges every check to a companion’s very first trip. When a companion flies with us four times a year, we keep about 55. And the route is big. Parents and students flying alone for the first time make about 183,000 journeys a year between India and Canada, and India to the US is more than twice that. Two costs are not in that 28 yet: insurance, and our own time on each trip. We are pricing both now, before we scale.”',
+      five: '“Here is the money on one trip: Delhi to Toronto to Fredericton. The family pays 275 dollars. The companion earns 200. The card fee is about 8 dollars, the companion’s criminal record check about 34, and the two ID checks about 5. We keep about 27 dollars. That is the floor: it charges every check to a companion’s very first trip. When a companion flies with us four times a year, we keep about 55. And the route is big. Parents and students flying alone for the first time make about 183,000 journeys a year between India and Canada, and India to the US is more than twice that. Two costs are not in that 27 yet: insurance, and our own time on each trip. We are pricing both now, before we scale.”',
       twenty: [
         'This slide answers the second objection (“C$28 a trip is thin”), which a judge raised on 7 October. Say the floor, then the lever, then the volume, in that order.',
-        'The honest gap, said out loud: at an illustrative C$25 an hour, about an hour of hands-on work per trip uses up the C$28. The first trip logs every team-hour so we know before launch.',
+        'The honest gap, said out loud: at an illustrative C$25 an hour, about an hour of hands-on work per trip uses up the C$27. The first trip logs every team-hour so we know before launch.',
         'If it doesn’t hold, the options are: raise the price, have companions pay for their own check, accept only companions who will take repeat trips, or cut the hands-on time.',
         'Said, not shown: 183,000 is about 88,000 parents plus about 95,000 first-time students. Every price signal is stated, not paid: buyers offered C$150–400.',
-        'The working: C$275 − C$200 − C$8.28 − C$34.48 − C$4.60 = C$27.64. The ≈ C$55 is new on this deck: one record check and one ID check per companion a year (C$36.78) spread over four trips, plus the traveller’s ID check each trip, leaves C$55.23.',
+        'The working: C$275 − C$200 − C$8.28 − C$34.48 − C$4.86 = C$27.38 (ID checks at US$1.50 each, at 1.41, plus HST). The ≈ C$55: one record check and one ID check per companion a year (C$36.91) spread over four trips, plus the traveller’s ID check each trip, leaves C$55.07.',
       ],
     },
   },
@@ -227,7 +227,7 @@ export const slides = [
         { value: '10', label: 'companions signed up' },
         { value: '1', label: 'route matched' },
       ],
-      partner: 'No paid trip yet: none runs before insurance is in place. C$390 of JHSC prototype funding pays for our first trip; we report its real cost on 8 January.',
+      partner: 'Listed on the Association of Indo-Canadians (AIC) Fredericton website. No paid trip yet: none runs before insurance is in place. C$390 of JHSC prototype funding pays for our first trip; we report its real cost on 8 January.',
     },
     teamTitle: 'Team',
     ask: {
@@ -239,15 +239,15 @@ export const slides = [
     },
     close: 'With Boardwith, you can match right, so you travel light.',
     sources: [
-      'Pilot sign-ups at boardwith.com, 15 November 2026. JHSC Accelerator Prototype Funding, awarded November 2026. Use of funds proposed 30 September 2026 for twelve months.',
+      'Pilot sign-ups at boardwith.com, 19 November 2026. Association of Indo-Canadians (AIC) Fredericton website listing, November 2026. JHSC Accelerator Prototype Funding, awarded November 2026. Use of funds proposed 30 September 2026 for twelve months.',
     ],
-    timing: { five: 72, twenty: 72 },
+    timing: { five: 78, twenty: 78 },
     notes: {
-      five: '“Here is where we are. Our pilot page went live this month. Six families and ten companions have signed up, and we have matched our first route. The Fredericton Association of India is helping us reach families. No paid trip has run yet, and none will until insurance is in place. Two weeks ago, the J Herbert Smith Centre awarded us prototype funding to run that first trip end to end, and on January 8th we report what one trip really costs. I worked on identity verification at Copart. Adarsh, our CTO, is a software architect at Tavant. Shivani runs companion operations. We are raising 75,000 dollars on a SAFE. It pays for insurance and legal, for checks and support on our first ten pilot trips, and for the app, to reach 31 journeys a month in Atlantic Canada. My mother got lucky. The next parent shouldn’t need luck. With Boardwith, you can match right, so you travel light. Thank you.”',
+      five: '“Here is where we are. Our pilot page went live on October 27th. Six families and ten companions have signed up, and we have matched our first route. The Association of Indo-Canadians in Fredericton lists us on its website. Families who heard the full fare mostly said yes, but no one has paid: deposits open once a New Brunswick lawyer reviews our terms, and no paid trip runs until insurance is in place. This month, the J Herbert Smith Centre awarded us prototype funding to run that first trip end to end, and on January 8th we report what one trip really costs. I worked on identity verification at Copart. Adarsh, our CTO, is a software architect at Tavant. Shivani runs companion operations. We are raising 75,000 dollars on a SAFE. It pays for insurance and legal, for checks and support on our first ten pilot trips, and for the app, to reach 31 journeys a month in Atlantic Canada. My mother got lucky. The next parent shouldn’t need luck. With Boardwith, you can match right, so you travel light. Thank you.”',
       twenty: [
         'Update the three numbers on Thursday night if sign-ups have moved: `where.numbers` in `src/data/startupData.js`, and the same sentence in this script.',
         'Don’t round up. “Signed up” is not “onboarded”, and “route matched” is not “trip booked”. If a deposit arrives before Friday, say so; it is the strongest line you would have.',
-        'Said, not shown: 401 people surveyed and six interviews; Mitacs application submitted with Dr. Kenneth Kent (UNB); at Energia Ventures.',
+        'Said, not shown: 401 people surveyed and six interviews; all six families spoken with; Mitacs application submitted with Dr. Kenneth Kent (UNB); at Energia Ventures.',
         'Use of funds over twelve months: insurance and legal C$10,000; verification and companion support C$20,000; app and infrastructure C$25,000; marketing and outreach C$12,500; the Mitacs contribution C$7,500. SAFE: post-money, C$1.5M cap, 20% discount, C$10,000 minimum.',
         'End on the closing line, say thank you, then stop talking.',
       ],
