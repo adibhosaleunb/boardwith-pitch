@@ -201,21 +201,34 @@ export const slides = [
     leversTitle: 'What makes it bigger',
     levers: [
       { value: '≈ C$55', label: 'a trip, if a companion flies 4 times a year', tag: { kind: 'assumption' } },
-      { value: '183,000', label: 'first-time solo journeys a year, India to Canada', tag: { kind: 'estimate' } },
-      { value: '412,000', label: 'more a year on India–US, our next route', tag: { kind: 'estimate' } },
     ],
+    // Three-year plan (Go-to-Market and Execution Outline, 5 October 2026).
+    // Revenue counts the C$75 we keep per journey, before card fees and checks.
+    projection: {
+      title: 'Three-year plan',
+      tag: { kind: 'projection' },
+      rows: [
+        { year: 'Year 1', where: 'Atlantic Canada', journeys: '372', revenue: 'C$27,900' },
+        { year: 'Year 2', where: 'Eastern Canada', journeys: '2,772', revenue: 'C$207,900' },
+        { year: 'Year 3', where: 'All of Canada', journeys: '20,160', revenue: 'C$1.51M' },
+      ],
+      columns: { journeys: 'journeys', revenue: 'at C$75 kept' },
+      note: 'Year 3: 11% of 183,000 solo journeys a year',
+      noteTag: { kind: 'estimate' },
+    },
     under: 'Not in the C$27 yet: insurance (quotes requested) and our own time on each trip. Our first trip measures that time; we report on 8 January.',
     sources: [
-      'Stripe card fee 2.9% + C$0.30. Certn record check C$24.99 + OneID C$4.99, and two Stripe Identity checks at US$1.50 each (C$1.41 per US$), all with 15% HST. Market: Statistics Canada 2024, IRCC 2025, NTTO 2025.',
+      'Stripe card fee 2.9% + C$0.30. Certn record check C$24.99 + OneID C$4.99, and two Stripe Identity checks at US$1.50 each (C$1.41 per US$), all with 15% HST. Plan: Go-to-Market and Execution Outline, 5 October 2026. Market: Statistics Canada 2024, IRCC 2025.',
     ],
-    timing: { five: 55, twenty: 55 },
+    timing: { five: 57, twenty: 57 },
     notes: {
-      five: '“Here is the money on one trip: Delhi to Toronto to Fredericton. The family pays 275 dollars. The companion earns 200. The card fee is about 8 dollars, the companion’s criminal record check about 34, and the two ID checks about 5. We keep about 27 dollars. That is the floor: it charges every check to a companion’s very first trip. When a companion flies with us four times a year, we keep about 55. And the route is big. Parents and students flying alone for the first time make about 183,000 journeys a year between India and Canada. Two costs are not in that 27 yet: insurance, and our own time on each trip. We are pricing both now, before we scale.”',
+      five: '“Here is the money on one trip: Delhi to Toronto to Fredericton. The family pays 275 dollars. The companion earns 200. The card fee is about 8 dollars, the companion’s criminal record check about 34, and the two ID checks about 5. We keep about 27 dollars. That is the floor: it charges every check to a companion’s very first trip. When a companion flies with us four times a year, we keep about 55. And the route is big. Parents and students flying alone for the first time make about 183,000 journeys a year between India and Canada. Our plan: 372 journeys in year one, about 20,000 by year three. Two costs are not in that 27 yet: insurance, and our own time on each trip.”',
       twenty: [
         'This slide answers the second objection (“C$28 a trip is thin”), which a judge raised on 7 October. Say the floor, then the lever, then the volume, in that order.',
         'The honest gap, said out loud: at an illustrative C$25 an hour, about an hour of hands-on work per trip uses up the C$27. The first trip logs every team-hour so we know before launch.',
         'If it doesn’t hold, the options are: raise the price, have companions pay for their own check, accept only companions who will take repeat trips, or cut the hands-on time.',
         'Said, not shown: 183,000 is about 88,000 parents plus about 95,000 first-time students. Every price signal is stated, not paid: buyers offered C$150–400.',
+        'The three-year plan is a projection: 31, 231 and 1,680 journeys a month (parents 21, 171 and 1,280; students 10, 60 and 400). Revenue counts the C$75 kept per journey; at about C$27 a journey, year 3 contributes about C$552,000. India–US (about 412,000 a year) stays off screen.',
         'The working: C$275 − C$200 − C$8.28 − C$34.48 − C$4.86 = C$27.38 (ID checks at US$1.50 each, at 1.41, plus HST). The ≈ C$55: one record check and one ID check per companion a year (C$36.91) spread over four trips, plus the traveller’s ID check each trip, leaves C$55.07.',
       ],
     },

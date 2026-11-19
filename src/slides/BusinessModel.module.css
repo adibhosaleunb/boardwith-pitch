@@ -109,3 +109,91 @@
   position: static;
   margin-top: 20px;
 }
+
+/* final-pitch: the three-year plan under the lever, right column. */
+.projection {
+  padding-top: 16px;
+  border-top: 1px solid var(--bw-grey-300);
+}
+
+.projTitle {
+  font-family: var(--font-text);
+  font-size: 30px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: var(--bw-grey-600);
+}
+
+.projTable {
+  margin-top: 10px;
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.projTable thead th {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--bw-grey-600);
+  text-align: right;
+  padding: 0 0 6px 16px;
+}
+
+.projTable tbody th {
+  text-align: left;
+  font-weight: 600;
+  padding: 4px 0;
+}
+
+.projTable td {
+  text-align: right;
+  font-size: 32px;
+  font-weight: 600;
+  padding: 4px 0 4px 16px;
+  white-space: nowrap;
+}
+
+.projYear {
+  display: block;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.projWhere {
+  display: block;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: var(--bw-grey-600);
+}
+
+.projNote {
+  margin-top: 10px;
+  font-family: var(--font-text);
+  font-size: 26px;
+  line-height: 1.3;
+  color: var(--bw-grey-600);
+  text-wrap: pretty;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+:global(.is-reading) .projTitle,
+:global(.is-reading) .projNote,
+:global(.is-reading) .projWhere,
+:global(.is-reading) .projTable thead th {
+  font-size: clamp(14px, 3.8vw, 16px);
+}
+
+:global(.is-reading) .projYear,
+:global(.is-reading) .projTable td {
+  font-size: clamp(16px, 4.2vw, 19px);
+}

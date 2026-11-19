@@ -27,6 +27,39 @@ export default function BusinessModel({ slide, active }) {
             </div>
           ))}
           {slide.conservative ? <p className={s.conservative}>{slide.conservative}</p> : null}
+          {slide.projection ? (
+            <section className={s.projection} aria-label={slide.projection.title}>
+              <h3 className={s.projTitle}>
+                {slide.projection.title} <Tag tag={slide.projection.tag} />
+              </h3>
+              <table className={s.projTable}>
+                <thead>
+                  <tr>
+                    <th scope="col"><span className={s.srOnly}>Year</span></th>
+                    <th scope="col">{slide.projection.columns.journeys}</th>
+                    <th scope="col">{slide.projection.columns.revenue}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {slide.projection.rows.map((r) => (
+                    <tr key={r.year}>
+                      <th scope="row">
+                        <span className={s.projYear}>{r.year}</span>
+                        <span className={s.projWhere}>{r.where}</span>
+                      </th>
+                      <td>{r.journeys}</td>
+                      <td>{r.revenue}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              {slide.projection.note ? (
+                <p className={s.projNote}>
+                  {slide.projection.note} <Tag tag={slide.projection.noteTag} />
+                </p>
+              ) : null}
+            </section>
+          ) : null}
         </div>
       </div>
       <div className={s.foot}>
