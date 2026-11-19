@@ -197,9 +197,9 @@ export const slides = [
     sources: [
       'Stripe card fee 2.9% + C$0.30. Certn record check C$24.99 + OneID C$4.99, and two Stripe Identity checks at US$1.50 each (C$1.41 per US$), all with 15% HST. Market: Statistics Canada 2024, IRCC 2025, NTTO 2025.',
     ],
-    timing: { five: 60, twenty: 60 },
+    timing: { five: 55, twenty: 55 },
     notes: {
-      five: '“Here is the money on one trip: Delhi to Toronto to Fredericton. The family pays 275 dollars. The companion earns 200. The card fee is about 8 dollars, the companion’s criminal record check about 34, and the two ID checks about 5. We keep about 27 dollars. That is the floor: it charges every check to a companion’s very first trip. When a companion flies with us four times a year, we keep about 55. And the route is big. Parents and students flying alone for the first time make about 183,000 journeys a year between India and Canada, and India to the US is more than twice that. Two costs are not in that 27 yet: insurance, and our own time on each trip. We are pricing both now, before we scale.”',
+      five: '“Here is the money on one trip: Delhi to Toronto to Fredericton. The family pays 275 dollars. The companion earns 200. The card fee is about 8 dollars, the companion’s criminal record check about 34, and the two ID checks about 5. We keep about 27 dollars. That is the floor: it charges every check to a companion’s very first trip. When a companion flies with us four times a year, we keep about 55. And the route is big. Parents and students flying alone for the first time make about 183,000 journeys a year between India and Canada. Two costs are not in that 27 yet: insurance, and our own time on each trip. We are pricing both now, before we scale.”',
       twenty: [
         'This slide answers the second objection (“C$28 a trip is thin”), which a judge raised on 7 October. Say the floor, then the lever, then the volume, in that order.',
         'The honest gap, said out loud: at an illustrative C$25 an hour, about an hour of hands-on work per trip uses up the C$27. The first trip logs every team-hour so we know before launch.',
@@ -219,7 +219,7 @@ export const slides = [
     title: 'Where we are, team and ask',
     layout: 'L1',
     theme: 'teal',
-    headline: 'C$75,000 gets us to 10 safe pilot trips, then 31 journeys a month.',
+    headline: 'C$75,000 gets us to 10 pilot trips, then 31 journeys a month.',
     where: {
       title: 'Where we are',
       numbers: [
